@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Mobile;
 use App\Brand;
 use App\Http\Resources\BrandResource;
+use App\Http\Resources\BrandCollection;
 use App\Http\Resources\MobileResource;
 use Illuminate\Http\Request;
 use App\Util\UnlockBase;
@@ -19,7 +20,7 @@ class MobileController extends Controller
     public function index()
     {
         //
-        return (Brand::all());
+        return new BrandCollection(Brand::paginate());
     }
 
     /**
@@ -34,24 +35,24 @@ class MobileController extends Controller
         // dd($UnlockBase);
         $XML = $UnlockBase::CallAPI('GetMobiles');
         // if (is_string($XML)) {
-            /* Parse the XML stream */
-            // $Data = UnlockBase::ParseXML($XML);
-            $temp = simplexml_load_string($XML);
-            $json = json_encode($temp);
-            $Mobiles = json_decode($json, true);
-            // return $Networks;
-            foreach ($Mobiles['Brand'] as $brand) {
-                $Brand = Brand::firstorCreate(['brandID' => $brand['ID'], 'brandName' => $brand['Name']]);
-                if (isset($brand['Mobile']['0'])) {
-                    foreach ($brand['Mobile'] as $mobile) {
-                        // $Mobile = Mobile::firstorCreate(['mobileID'=> $mobile['ID'], 'mobileName' => $mobile['Name'], 'mobilePhoto' => $mobile['Photo']]);
-                        $Brand->mobiles()->create(['mobileID'=> $mobile['ID'], 'mobileName' => $mobile['Name'], 'mobilePhoto' => $mobile['Photo']]);
-                    }
-                } else {
+        /* Parse the XML stream */
+        // $Data = UnlockBase::ParseXML($XML);
+        $temp = simplexml_load_string($XML);
+        $json = json_encode($temp);
+        $Mobiles = json_decode($json, true);
+        // return $Networks;
+        foreach ($Mobiles['Brand'] as $brand) {
+            $Brand = Brand::firstorCreate(['brandID' => $brand['ID'], 'brandName' => $brand['Name']]);
+            if (isset($brand['Mobile']['0'])) {
+                foreach ($brand['Mobile'] as $mobile) {
                     // $Mobile = Mobile::firstorCreate(['mobileID'=> $mobile['ID'], 'mobileName' => $mobile['Name'], 'mobilePhoto' => $mobile['Photo']]);
                     $Brand->mobiles()->create(['mobileID'=> $mobile['ID'], 'mobileName' => $mobile['Name'], 'mobilePhoto' => $mobile['Photo']]);
                 }
-                echo $Brand;
+            } else {
+                // $Mobile = Mobile::firstorCreate(['mobileID'=> $mobile['ID'], 'mobileName' => $mobile['Name'], 'mobilePhoto' => $mobile['Photo']]);
+                $Brand->mobiles()->create(['mobileID'=> $mobile['ID'], 'mobileName' => $mobile['Name'], 'mobilePhoto' => $mobile['Photo']]);
+            }
+            echo $Brand;
             // }
         }
     }

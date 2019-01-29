@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Network;
 use App\Country;
 use App\Http\Resources\CountryResource;
+use App\Http\Resources\CountryCollection;
 use App\Http\Resources\NetworkResource;
 use Illuminate\Http\Request;
 use App\Util\UnlockBase;
@@ -19,7 +20,7 @@ class NetworkController extends Controller
     public function index()
     {
         // Get from database and send as json
-        return CountryResource::collection(Country::all());
+        return new CountryCollection(Country::paginate());
 
     }
 
