@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\ResourceCollection;
 
-class CountryCollection extends ResourceCollection
+class GroupCollection extends ResourceCollection
 {
     /**
      * Transform the resource collection into an array.
@@ -14,13 +14,11 @@ class CountryCollection extends ResourceCollection
      */
     public function toArray($request)
     {
-        // neither works
-        return parent::toArray($request);
-        // return [
-        //     'data' => $this->collection,
-            // 'links' => [
-            //     'self' => 'link-value',
-            // ],
-        // ];
+        return [
+            'data' => $this->collection,
+            'links' => [
+                'self' => 'link-value',
+            ],
+        ];
     }
 }

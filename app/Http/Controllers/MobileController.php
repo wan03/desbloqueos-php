@@ -20,7 +20,7 @@ class MobileController extends Controller
     public function index()
     {
         //
-        return new BrandCollection(Brand::paginate());
+        return BrandResource::collection(Brand::paginate());
     }
 
     /**
@@ -63,9 +63,10 @@ class MobileController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function all(Request $request)
     {
         //
+        return BrandResource::collection(Brand::all());
     }
 
     /**

@@ -20,7 +20,9 @@ class NetworkController extends Controller
     public function index()
     {
         // Get from database and send as json
-        return new CountryCollection(Country::paginate());
+        $Countries = Country::paginate(15);
+
+        return CountryResource::collection($Countries);
 
     }
 
@@ -69,9 +71,12 @@ class NetworkController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function all(Request $request)
     {
-        //Probably wont be used but keeping for now.
+        //
+        $Countries = Country::all();
+
+        return CountryResource::collection($Countries);
     }
 
     /**
