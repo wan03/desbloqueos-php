@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Network;
 use App\Country;
 use App\Http\Resources\CountryResource;
+use App\Http\Resources\CountryCollection;
 use App\Http\Resources\NetworkResource;
 use Illuminate\Http\Request;
 use App\Util\UnlockBase;
@@ -19,7 +20,9 @@ class NetworkController extends Controller
     public function index()
     {
         // Get from database and send as json
-        return CountryResource::collection(Country::all());
+        $Countries = Country::paginate(15);
+
+        return CountryResource::collection($Countries);
 
     }
 
@@ -68,9 +71,12 @@ class NetworkController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function all(Request $request)
     {
-        //Probably wont be used but keeping for now.
+        //
+        $Countries = Country::all();
+
+        return CountryResource::collection($Countries);
     }
 
     /**

@@ -18,17 +18,16 @@ class CreateToolsTable extends Migration
             $table->timestamps();
             $table->string('provider')->default('UnlockBase');
             $table->boolean('active')->default(true);
-            $table->integer('groupID');
-            $table->string('groupName');
             $table->integer('toolID');
             $table->string('toolName');
             $table->integer('toolCredits');
-            $table->boolean('toolSMS');
-            $table->string('toolMessage');
-            $table->integer('toolDeliveryMin');
-            $table->integer('toolDeliveryMax');
+            $table->string('toolSMS');
+            $table->longText('toolMessage')->nullable();
+            $table->integer('toolDeliveryMin')->nullable();
+            $table->integer('toolDeliveryMax')->nullable();
             $table->string('toolDeliveryUnit');
             $table->string('toolRequiresNetwork');
+            $table->string('toolRequiresMobile');
             $table->string('toolRequiresProvider');
             $table->string('toolRequiresPin');
             $table->string('toolRequiresType');
@@ -38,6 +37,12 @@ class CreateToolsTable extends Migration
             $table->integer('toolRequiresLocks');
             $table->string('toolRequiresSN');
             $table->string('toolRequiresSecRO');
+            $table->string('toolRequiresServiceTag');
+            $table->string('toolRequiresICloudEmail');
+            $table->string('toolRequiresICloudPhone');
+            $table->string('toolRequiresICloudUDID');
+            $table->unsignedInteger('group_id');
+            $table->foreign('group_id')->references('id')->on('groups');
         });
     }
 

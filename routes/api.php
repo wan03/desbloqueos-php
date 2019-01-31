@@ -18,7 +18,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/networks/create', 'NetworkController@create');
+Route::get('/networks/all', 'NetworkController@all');
 Route::get('/networks', 'NetworkController@index');
 
 Route::get('/mobiles/create', 'MobileController@create');
+Route::get('/mobiles/all', 'MobileController@all');
 Route::get('/mobiles', 'MobileController@index');
+
+Route::get('/tools/create', 'ToolController@create');
+Route::get('/tools/all', 'ToolController@all');
+Route::get('/tools', 'ToolController@index');
