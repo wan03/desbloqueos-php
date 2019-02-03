@@ -11,6 +11,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
+        <link href="/css/app.css" rel="stylesheet" type="text/css">
 
         {{-- <!-- Styles -->
         <style>
@@ -97,7 +98,7 @@
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
             </div> --}}
-            <div id="example"></div>
+            <div id="app"></div>
         <script src="{{asset('js/app.js')}}" ></script>
         </div>
     </body>
