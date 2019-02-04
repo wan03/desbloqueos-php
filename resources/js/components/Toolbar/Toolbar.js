@@ -6,7 +6,7 @@ import './Toolbar.css'
 
 
 
-const toolbar = props => (
+const Toolbar = props => (
     <header className="toolbar">
         <nav className="toolbar_nav">
             <div>
@@ -26,4 +26,4 @@ const toolbar = props => (
     </header>
 );
 
-export default toolbar;
+export default Toolbar;

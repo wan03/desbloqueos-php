@@ -12,22 +12,17 @@ import { Card, Button, CardImg, CardTitle, CardText, CardDeck,
         {
             name: "andriod",
             price: 200,
-            img: "ldsf"
+            img: "https://www.sprint.com/content/dam/sprint/commerce/devices/apple/apple_iphone_6s_plus/silver/new/devicenb_650x900.png/jcr:content/renditions/cq5dam.thumbnail.290.370.png"
         },
         {
             name: "google",
             price: 200,
-            img: "ldsf"
+            img: "https://www.sprint.com/content/dam/sprint/commerce/devices/apple/apple_iphone_6s_plus/rose_gold/new/devicenb_650x900.png/jcr:content/renditions/cq5dam.thumbnail.290.370.png"
         },
         {
             name: "att",
             price: 200,
-            img: "ldsf"
-        },
-        {
-            name: "test",
-            price: 200,
-            img: "ldsf"
+            img: "https://www.sprint.com/content/dam/sprint/commerce/devices/apple/apple_iphone_6s_plus/gold/new/devicenb_650x900.png/jcr:content/renditions/cq5dam.thumbnail.290.370.png"
         }
 
     ]
