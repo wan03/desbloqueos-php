@@ -1,11 +1,28 @@
 import React from 'react';
+import YouTube from 'react-youtube';
 
 
-const HomeVideo = props => (
-   <div>
-       <h2>Home Video</h2>
-   </div>
+export default class HomeVideo extends React.Component {
+  render() {
+    const opts = {
+      height: '400',
+      width: '100%',
+      playerVars: { // https://developers.google.com/youtube/player_parameters
+        autoplay: 1
+      }
+    };
 
-);
+    return (
+      <YouTube
+        videoId="rM7hACndrqM"
+        opts={opts}
+        // onReady={this._onReady}
+      />
+    );
+  }
 
-export default HomeVideo;
+  _onReady(event) {
+    // access to player in all event handlers via event.target
+    event.target.pauseVideo();
+  }
+}

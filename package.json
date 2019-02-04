@@ -31,6 +31,10 @@
     "dependencies": {
         "react-bootstrap": "^1.0.0-beta.5",
         "react-burger-menu": "^2.6.2",
-        "reactstrap": "^7.1.0"
+        "react-html5video": "^2.5.1",
+        "react-player": "^1.9.3",
+        "react-youtube": "^7.9.0",
+        "reactstrap": "^7.1.0",
+        "video-react": "^0.13.2"
     }
 }
