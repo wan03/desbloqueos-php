@@ -241,6 +241,52 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime/helpers/extends.js":
+/*!********************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/extends.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _extends() {
+  module.exports = _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
+module.exports = _extends;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/inheritsLoose.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/inheritsLoose.js ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _inheritsLoose(subClass, superClass) {
+  subClass.prototype = Object.create(superClass.prototype);
+  subClass.prototype.constructor = subClass;
+  subClass.__proto__ = superClass;
+}
+
+module.exports = _inheritsLoose;
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js":
 /*!**********************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/interopRequireDefault.js ***!
@@ -255,6 +301,32 @@ function _interopRequireDefault(obj) {
 }
 
 module.exports = _interopRequireDefault;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+
+  return target;
+}
+
+module.exports = _objectWithoutPropertiesLoose;
 
 /***/ }),
 
@@ -6296,29 +6368,10 @@ exports.push([module.i, "/*!\n * Bootstrap v4.2.1 (https://getbootstrap.com/)\n 
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Footer/Footer.css":
-/*!***********************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/Footer/Footer.css ***!
-  \***********************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".footer {\n    position: fixed;\n   left: 0;\n   bottom: 0;\n   width: 100%;\n    background: #333333;\n    height:56px;\n}\n\n.footer_nav {\n    display: flex;\n    height:100%;\n    align-items: center;\n    padding: 0 1rem;\n}\n\n.footer_nav_items ul{\n    list-style: none;\n    margin:0;\n    padding: 0;\n    display:flex;\n\n}\n\n.footer_nav_items li{\n    padding: 0 0.5rem;\n\n}\n\n.footer_logo {\n    margin-left:1rem;\n\n}\n\n.footer_logo a {\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n\n}\n\n.footer_spacer {\n    flex: 1;\n}\n\n.footer_nav_items a{\n    color: white;\n    text-decoration: none;\n\n}\n\n.footer_nav_items a:hover,\n.footer_nav_items a:active{\n    color: #999999;\n}\n\n\n\n\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Pages/HomePage/HomePage.css":
-/*!*********************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/Pages/HomePage/HomePage.css ***!
-  \*********************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Pages/ProductInfoPage/ProductInfoPage.css":
+/*!***********************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/Pages/ProductInfoPage/ProductInfoPage.css ***!
+  \***********************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6327,16 +6380,16 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".HeaderWrapper {\n    display: flex;\n    min-height: 100vh;\n    flex-direction: column;\n    height: 45px;\n  }\n\n  .HolyGrail-body {\n    display: flex;\n    flex: 1;\n  }\n\n  .carousel-inner {\n      height: 300px;\n  }\n\n  /* PHONE */\n.phonesWrapper {\n   padding: 30px;\n}\n", ""]);
+exports.push([module.i, ".img-fluid {\n    max-height: 440px;\n}\n\nbody{\n\n    font-size: 100%;\n}\n\n\n/* Phone Ordering */\n\n.center {\n    margin: auto;\n    width: 95%;\n    border: 3px solid green;\n    padding: 10px;\n  }\n\n\n.padded{\n    padding:10px;\n}\n\n.ProductInfoText {\n\n\n}\n\n.ProductInfoText h3 {\ncolor: #353535;\nfont-size:3rem\n}\n\n.ProductInfoText h6 {\n    color: #7c1515;\n    font-size: 2rem;\n    }\n\n.smallText {\n    font-size: 11px;\n\n}\n\n.delivery-time-box{\n    border:0px;\n    border-color:#7c1515;\n    margin-top: 15px;\n    margin-left: -5px;\n}\n.delivery-time-box h6{\n    color:#999999;\n    text-transform: uppercase;\n}\n.delivery-time-box p{\ncolor: #333333;\n}\n\n\n/* Product Tabs */\n\n.tabsBox {\n    display: block;\n    position: relative;\n    padding: 1em 2em 15em;\n    border-width: 0px;\n    border-style: none;\n    border-color: rgb(216, 216, 216);\n    -o-border-image: initial;\n       border-image: initial;\n    margin: 1.5rem 0px 0px;\n    width:100%;\n\n}\n\n.tabContent {\n    padding-top:1.5rem;\n\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Pages/Main.css":
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Pages/main.css":
 /*!********************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/Pages/Main.css ***!
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/Pages/main.css ***!
   \********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -6346,7 +6399,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "html {\n    height:100%;\n}\n\nbody {\n    margin:0;\n    padding:0;\n    height: 100%;\n}\n\n\n\n", ""]);
+exports.push([module.i, "html {\n    height:100%;\n}\n\nbody {\n    margin:0;\n    padding:0;\n    height: 100%;\n    font-size: 100%;\n}\n\n  h1 {\n    font-size: 2rem;\n    /* 2x body copy size = 32px */\n    line-height: 1.25;\n    /* 45px / 36px */\n  }\n\n  h2 {\n    font-size: 1.625rem;\n    /* 1.625x body copy size = 26px */\n    line-height: 1.15384615;\n    /* 30px / 26px */\n  }\n\n  h3 {\n    font-size: 1.375rem;\n    /* 1.375x body copy size = 22px */\n    line-height: 1.13636364;\n    /* 25px / 22px */\n  }\n\n  h4 {\n    font-size: 1.125rem;\n    /* 1.125x body copy size = 18px */\n    line-height: 1.11111111;\n  }\n\n  /* Body Content */\n\n  #page {\n    font-size: 1rem;\n    /* equivalent to 16px */\n    line-height: 1.25;\n    /* equivalent to 20px */\n  }\n\n\n  .jumbotron h3 {\n    font-size: 3rem;\n  }\n\n\n\n\n\n\n  @media (min-width: 43.75em) {\n    #page {\n      font-size: 1rem;\n      /* equivalent to 16px */\n      line-height: 1.375;\n      /* equivalent to 22px */\n    }\n  }\n\n\n/* MEDIA Q*/\n\n@media (min-width: 43.75em) {\n    h1 {\n      font-size: 2.5rem;\n      /* 2.5x body copy size = 40px */\n      line-height: 1.125;\n    }\n\n    h2 {\n        font-size: 2rem;\n        /* 2x body copy size = 32px */\n        line-height: 1.25;\n      }\n\n      h3 {\n        font-size: 1.5rem;\n        /* 1.5x body copy size = 24px */\n        line-height: 1.25;\n      }\n\n      h4 {\n        line-height: 1.22222222;\n        /* (22px / 18px */\n      }\n  }\n\n  @media (min-width: 56.25em) {\n    h1 {\n      font-size: 3rem;\n      /* 3x body copy size = 48px */\n      line-height: 1.05;\n      /* keep to a multiple of the 20px line height\n      and something more appropriate for display headings */\n    }\n\n    h2 {\n        font-size: 2.25rem;\n        /* 2.25x body copy size = 36px */\n        line-height: 1.25;\n      }\n\n      h3 {\n        font-size: 1.75rem;\n        /* 1.75x body copy size = 28px */\n        line-height: 1.25;\n      }\n\n      h4 {\n        line-height: 1.10;\n        /* (22px / 18px */\n      }\n  }\n\n", ""]);
 
 // exports
 
@@ -6541,73 +6594,6 @@ function replaceClassName(origClass, classToRemove) {
 module.exports = function removeClass(element, className) {
   if (element.classList) element.classList.remove(className);else if (typeof element.className === 'string') element.className = replaceClassName(element.className, className);else element.setAttribute('class', replaceClassName(element.className && element.className.baseVal || '', className));
 };
-
-/***/ }),
-
-/***/ "./node_modules/fast-deep-equal/index.js":
-/*!***********************************************!*\
-  !*** ./node_modules/fast-deep-equal/index.js ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var isArray = Array.isArray;
-var keyList = Object.keys;
-var hasProp = Object.prototype.hasOwnProperty;
-
-module.exports = function equal(a, b) {
-  if (a === b) return true;
-
-  if (a && b && typeof a == 'object' && typeof b == 'object') {
-    var arrA = isArray(a)
-      , arrB = isArray(b)
-      , i
-      , length
-      , key;
-
-    if (arrA && arrB) {
-      length = a.length;
-      if (length != b.length) return false;
-      for (i = length; i-- !== 0;)
-        if (!equal(a[i], b[i])) return false;
-      return true;
-    }
-
-    if (arrA != arrB) return false;
-
-    var dateA = a instanceof Date
-      , dateB = b instanceof Date;
-    if (dateA != dateB) return false;
-    if (dateA && dateB) return a.getTime() == b.getTime();
-
-    var regexpA = a instanceof RegExp
-      , regexpB = b instanceof RegExp;
-    if (regexpA != regexpB) return false;
-    if (regexpA && regexpB) return a.toString() == b.toString();
-
-    var keys = keyList(a);
-    length = keys.length;
-
-    if (length !== keyList(b).length)
-      return false;
-
-    for (i = length; i-- !== 0;)
-      if (!hasProp.call(b, keys[i])) return false;
-
-    for (i = length; i-- !== 0;) {
-      key = keys[i];
-      if (!equal(a[key], b[key])) return false;
-    }
-
-    return true;
-  }
-
-  return a!==a && b!==b;
-};
-
 
 /***/ }),
 
@@ -17015,82 +17001,6 @@ if ( !noGlobal ) {
 
 return jQuery;
 } );
-
-
-/***/ }),
-
-/***/ "./node_modules/load-script/index.js":
-/*!*******************************************!*\
-  !*** ./node_modules/load-script/index.js ***!
-  \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-module.exports = function load (src, opts, cb) {
-  var head = document.head || document.getElementsByTagName('head')[0]
-  var script = document.createElement('script')
-
-  if (typeof opts === 'function') {
-    cb = opts
-    opts = {}
-  }
-
-  opts = opts || {}
-  cb = cb || function() {}
-
-  script.type = opts.type || 'text/javascript'
-  script.charset = opts.charset || 'utf8';
-  script.async = 'async' in opts ? !!opts.async : true
-  script.src = src
-
-  if (opts.attrs) {
-    setAttributes(script, opts.attrs)
-  }
-
-  if (opts.text) {
-    script.text = '' + opts.text
-  }
-
-  var onend = 'onload' in script ? stdOnEnd : ieOnEnd
-  onend(script, cb)
-
-  // some good legacy browsers (firefox) fail the 'in' detection above
-  // so as a fallback we always set onload
-  // old IE will ignore this and new IE will set onload
-  if (!script.onload) {
-    stdOnEnd(script, cb);
-  }
-
-  head.appendChild(script)
-}
-
-function setAttributes(script, attrs) {
-  for (var attr in attrs) {
-    script.setAttribute(attr, attrs[attr]);
-  }
-}
-
-function stdOnEnd (script, cb) {
-  script.onload = function () {
-    this.onerror = this.onload = null
-    cb(null, script)
-  }
-  script.onerror = function () {
-    // this.onload = null here is necessary
-    // because even IE9 works not like others
-    this.onerror = this.onload = null
-    cb(new Error('Failed to load ' + this.src), script)
-  }
-}
-
-function ieOnEnd (script, cb) {
-  script.onreadystatechange = function () {
-    if (this.readyState != 'complete' && this.readyState != 'loaded') return
-    this.onreadystatechange = null
-    cb(null, script) // there is no way to catch loading errors in IE8
-  }
-}
 
 
 /***/ }),
@@ -34597,169 +34507,6 @@ module.exports = toNumber;
 
 /***/ }),
 
-/***/ "./node_modules/ms/index.js":
-/*!**********************************!*\
-  !*** ./node_modules/ms/index.js ***!
-  \**********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/**
- * Helpers.
- */
-
-var s = 1000;
-var m = s * 60;
-var h = m * 60;
-var d = h * 24;
-var y = d * 365.25;
-
-/**
- * Parse or format the given `val`.
- *
- * Options:
- *
- *  - `long` verbose formatting [false]
- *
- * @param {String|Number} val
- * @param {Object} [options]
- * @throws {Error} throw an error if val is not a non-empty string or a number
- * @return {String|Number}
- * @api public
- */
-
-module.exports = function(val, options) {
-  options = options || {};
-  var type = typeof val;
-  if (type === 'string' && val.length > 0) {
-    return parse(val);
-  } else if (type === 'number' && isNaN(val) === false) {
-    return options.long ? fmtLong(val) : fmtShort(val);
-  }
-  throw new Error(
-    'val is not a non-empty string or a valid number. val=' +
-      JSON.stringify(val)
-  );
-};
-
-/**
- * Parse the given `str` and return milliseconds.
- *
- * @param {String} str
- * @return {Number}
- * @api private
- */
-
-function parse(str) {
-  str = String(str);
-  if (str.length > 100) {
-    return;
-  }
-  var match = /^((?:\d+)?\.?\d+) *(milliseconds?|msecs?|ms|seconds?|secs?|s|minutes?|mins?|m|hours?|hrs?|h|days?|d|years?|yrs?|y)?$/i.exec(
-    str
-  );
-  if (!match) {
-    return;
-  }
-  var n = parseFloat(match[1]);
-  var type = (match[2] || 'ms').toLowerCase();
-  switch (type) {
-    case 'years':
-    case 'year':
-    case 'yrs':
-    case 'yr':
-    case 'y':
-      return n * y;
-    case 'days':
-    case 'day':
-    case 'd':
-      return n * d;
-    case 'hours':
-    case 'hour':
-    case 'hrs':
-    case 'hr':
-    case 'h':
-      return n * h;
-    case 'minutes':
-    case 'minute':
-    case 'mins':
-    case 'min':
-    case 'm':
-      return n * m;
-    case 'seconds':
-    case 'second':
-    case 'secs':
-    case 'sec':
-    case 's':
-      return n * s;
-    case 'milliseconds':
-    case 'millisecond':
-    case 'msecs':
-    case 'msec':
-    case 'ms':
-      return n;
-    default:
-      return undefined;
-  }
-}
-
-/**
- * Short format for `ms`.
- *
- * @param {Number} ms
- * @return {String}
- * @api private
- */
-
-function fmtShort(ms) {
-  if (ms >= d) {
-    return Math.round(ms / d) + 'd';
-  }
-  if (ms >= h) {
-    return Math.round(ms / h) + 'h';
-  }
-  if (ms >= m) {
-    return Math.round(ms / m) + 'm';
-  }
-  if (ms >= s) {
-    return Math.round(ms / s) + 's';
-  }
-  return ms + 'ms';
-}
-
-/**
- * Long format for `ms`.
- *
- * @param {Number} ms
- * @return {String}
- * @api private
- */
-
-function fmtLong(ms) {
-  return plural(ms, d, 'day') ||
-    plural(ms, h, 'hour') ||
-    plural(ms, m, 'minute') ||
-    plural(ms, s, 'second') ||
-    ms + ' ms';
-}
-
-/**
- * Pluralization helper.
- */
-
-function plural(ms, n, name) {
-  if (ms < n) {
-    return;
-  }
-  if (ms < n * 1.5) {
-    return Math.floor(ms / n) + ' ' + name;
-  }
-  return Math.ceil(ms / n) + ' ' + name + 's';
-}
-
-
-/***/ }),
-
 /***/ "./node_modules/object-assign/index.js":
 /*!*********************************************!*\
   !*** ./node_modules/object-assign/index.js ***!
@@ -38378,6 +38125,211 @@ var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 
 module.exports = ReactPropTypesSecret;
 
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/Image.js":
+/*!***********************************************!*\
+  !*** ./node_modules/react-bootstrap/Image.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+exports.__esModule = true;
+exports.default = void 0;
+
+var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
+
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js"));
+
+var _inheritsLoose2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inheritsLoose */ "./node_modules/@babel/runtime/helpers/inheritsLoose.js"));
+
+var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _ThemeProvider = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/ThemeProvider.js");
+
+var Image =
+/*#__PURE__*/
+function (_React$Component) {
+  (0, _inheritsLoose2.default)(Image, _React$Component);
+
+  function Image() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = Image.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        bsPrefix = _this$props.bsPrefix,
+        className = _this$props.className,
+        fluid = _this$props.fluid,
+        rounded = _this$props.rounded,
+        roundedCircle = _this$props.roundedCircle,
+        thumbnail = _this$props.thumbnail,
+        props = (0, _objectWithoutPropertiesLoose2.default)(_this$props, ["bsPrefix", "className", "fluid", "rounded", "roundedCircle", "thumbnail"]);
+    var classes = (0, _classnames.default)(fluid && bsPrefix + "-fluid", rounded && "rounded", roundedCircle && "rounded-circle", thumbnail && bsPrefix + "-thumbnail");
+    return _react.default.createElement("img", (0, _extends2.default)({}, props, {
+      className: (0, _classnames.default)(className, classes)
+    }));
+  };
+
+  return Image;
+}(_react.default.Component);
+
+Image.defaultProps = {
+  fluid: false,
+  rounded: false,
+  roundedCircle: false,
+  thumbnail: false
+};
+
+var _default = (0, _ThemeProvider.createBootstrapComponent)(Image, 'img');
+
+exports.default = _default;
+module.exports = exports["default"];
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/ThemeProvider.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/react-bootstrap/ThemeProvider.js ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+exports.__esModule = true;
+exports.createBootstrapComponent = createBootstrapComponent;
+exports.default = exports.ThemeConsumer = void 0;
+
+var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
+
+var _inheritsLoose2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inheritsLoose */ "./node_modules/@babel/runtime/helpers/inheritsLoose.js"));
+
+var _forwardRef = _interopRequireDefault(__webpack_require__(/*! react-context-toolbox/forwardRef */ "./node_modules/react-context-toolbox/forwardRef.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _React$createContext = _react.default.createContext(new Map()),
+    Provider = _React$createContext.Provider,
+    Consumer = _React$createContext.Consumer;
+
+exports.ThemeConsumer = Consumer;
+
+var ThemeProvider =
+/*#__PURE__*/
+function (_React$Component) {
+  (0, _inheritsLoose2.default)(ThemeProvider, _React$Component);
+
+  function ThemeProvider() {
+    var _this;
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _React$Component.call.apply(_React$Component, [this].concat(args)) || this;
+    _this.prefixes = new Map();
+    Object.keys(_this.props.prefixes).forEach(function (key) {
+      _this.prefixes.set(key, _this.props.prefixes[key]);
+    });
+    return _this;
+  }
+
+  var _proto = ThemeProvider.prototype;
+
+  _proto.render = function render() {
+    return _react.default.createElement(Provider, {
+      value: this.prefixes
+    }, this.props.children);
+  };
+
+  return ThemeProvider;
+}(_react.default.Component);
+
+function createBootstrapComponent(Component, opts) {
+  if (typeof opts === 'string') opts = {
+    prefix: opts
+  };
+  var isClassy = Component.prototype && Component.prototype.isReactComponent; // If it's a functional component make sure we don't break it with a ref
+
+  var _opts = opts,
+      prefix = _opts.prefix,
+      _opts$forwardRefAs = _opts.forwardRefAs,
+      forwardRefAs = _opts$forwardRefAs === void 0 ? isClassy ? 'ref' : 'innerRef' : _opts$forwardRefAs;
+  return (0, _forwardRef.default)(function (_ref, ref) {
+    var props = (0, _extends2.default)({}, _ref);
+    props[forwardRefAs] = ref;
+    return _react.default.createElement(Consumer, null, function (prefixes) {
+      return _react.default.createElement(Component, (0, _extends2.default)({}, props, {
+        bsPrefix: props.bsPrefix || prefixes.get(prefix) || prefix
+      }));
+    });
+  }, {
+    displayName: "Bootstrap(" + (Component.displayName || Component.name) + ")"
+  });
+}
+
+var _default = ThemeProvider;
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/react-context-toolbox/forwardRef.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/react-context-toolbox/forwardRef.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.default = forwardRef;
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function forwardRef(renderFn, _ref) {
+  var displayName = _ref.displayName,
+      propTypes = _ref.propTypes,
+      defaultProps = _ref.defaultProps,
+      _ref$allowFallback = _ref.allowFallback,
+      allowFallback = _ref$allowFallback === void 0 ? false : _ref$allowFallback;
+
+  var render = function render(props, ref) {
+    return renderFn(props, ref);
+  };
+
+  Object.assign(render, {
+    displayName: displayName
+  });
+  if (_react.default.forwardRef || !allowFallback) return Object.assign(_react.default.forwardRef(render), {
+    propTypes: propTypes,
+    defaultProps: defaultProps
+  });
+  return Object.assign(function (props) {
+    return render(props, null);
+  }, {
+    displayName: displayName,
+    propTypes: propTypes,
+    defaultProps: defaultProps
+  });
+}
 
 /***/ }),
 
@@ -60216,381 +60168,6 @@ exports.classNamesShape = classNamesShape;
 
 /***/ }),
 
-/***/ "./node_modules/react-youtube/es/YouTube.js":
-/*!**************************************************!*\
-  !*** ./node_modules/react-youtube/es/YouTube.js ***!
-  \**************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var fast_deep_equal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! fast-deep-equal */ "./node_modules/fast-deep-equal/index.js");
-/* harmony import */ var fast_deep_equal__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(fast_deep_equal__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var youtube_player__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! youtube-player */ "./node_modules/youtube-player/dist/index.js");
-/* harmony import */ var youtube_player__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(youtube_player__WEBPACK_IMPORTED_MODULE_3__);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-
-
-/**
- * Check whether a `props` change should result in the video being updated.
- *
- * @param {Object} prevProps
- * @param {Object} props
- */
-function shouldUpdateVideo(prevProps, props) {
-  // A changing video should always trigger an update
-  if (prevProps.videoId !== props.videoId) {
-    return true;
-  }
-
-  // Otherwise, a change in the start/end time playerVars also requires a player
-  // update.
-  var prevVars = prevProps.opts.playerVars || {};
-  var vars = props.opts.playerVars || {};
-
-  return prevVars.start !== vars.start || prevVars.end !== vars.end;
-}
-
-/**
- * Neutralise API options that only require a video update, leaving only options
- * that require a player reset. The results can then be compared to see if a
- * player reset is necessary.
- *
- * @param {Object} opts
- */
-function filterResetOptions(opts) {
-  return _extends({}, opts, {
-    playerVars: _extends({}, opts.playerVars, {
-      autoplay: 0,
-      start: 0,
-      end: 0
-    })
-  });
-}
-
-/**
- * Check whether a `props` change should result in the player being reset.
- * The player is reset when the `props.opts` change, except if the only change
- * is in the `start` and `end` playerVars, because a video update can deal with
- * those.
- *
- * @param {Object} prevProps
- * @param {Object} props
- */
-function shouldResetPlayer(prevProps, props) {
-  return !fast_deep_equal__WEBPACK_IMPORTED_MODULE_2___default()(filterResetOptions(prevProps.opts), filterResetOptions(props.opts));
-}
-
-/**
- * Check whether a props change should result in an id or className update.
- *
- * @param {Object} prevProps
- * @param {Object} props
- */
-function shouldUpdatePlayer(prevProps, props) {
-  return prevProps.id !== props.id || prevProps.className !== props.className;
-}
-
-var YouTube = function (_React$Component) {
-  _inherits(YouTube, _React$Component);
-
-  function YouTube(props) {
-    _classCallCheck(this, YouTube);
-
-    var _this = _possibleConstructorReturn(this, (YouTube.__proto__ || Object.getPrototypeOf(YouTube)).call(this, props));
-
-    _this.onPlayerReady = function (event) {
-      return _this.props.onReady(event);
-    };
-
-    _this.onPlayerError = function (event) {
-      return _this.props.onError(event);
-    };
-
-    _this.onPlayerStateChange = function (event) {
-      _this.props.onStateChange(event);
-      switch (event.data) {
-
-        case YouTube.PlayerState.ENDED:
-          _this.props.onEnd(event);
-          break;
-
-        case YouTube.PlayerState.PLAYING:
-          _this.props.onPlay(event);
-          break;
-
-        case YouTube.PlayerState.PAUSED:
-          _this.props.onPause(event);
-          break;
-
-        default:
-      }
-    };
-
-    _this.onPlayerPlaybackRateChange = function (event) {
-      return _this.props.onPlaybackRateChange(event);
-    };
-
-    _this.onPlayerPlaybackQualityChange = function (event) {
-      return _this.props.onPlaybackQualityChange(event);
-    };
-
-    _this.createPlayer = function () {
-      // do not attempt to create a player server-side, it won't work
-      if (typeof document === 'undefined') return;
-      // create player
-      var playerOpts = _extends({}, _this.props.opts, {
-        // preload the `videoId` video if one is already given
-        videoId: _this.props.videoId
-      });
-      _this.internalPlayer = youtube_player__WEBPACK_IMPORTED_MODULE_3___default()(_this.container, playerOpts);
-      // attach event handlers
-      _this.internalPlayer.on('ready', _this.onPlayerReady);
-      _this.internalPlayer.on('error', _this.onPlayerError);
-      _this.internalPlayer.on('stateChange', _this.onPlayerStateChange);
-      _this.internalPlayer.on('playbackRateChange', _this.onPlayerPlaybackRateChange);
-      _this.internalPlayer.on('playbackQualityChange', _this.onPlayerPlaybackQualityChange);
-    };
-
-    _this.resetPlayer = function () {
-      return _this.internalPlayer.destroy().then(_this.createPlayer);
-    };
-
-    _this.updatePlayer = function () {
-      _this.internalPlayer.getIframe().then(function (iframe) {
-        if (_this.props.id) iframe.setAttribute('id', _this.props.id);else iframe.removeAttribute('id');
-        if (_this.props.className) iframe.setAttribute('class', _this.props.className);else iframe.removeAttribute('class');
-      });
-    };
-
-    _this.updateVideo = function () {
-      if (typeof _this.props.videoId === 'undefined' || _this.props.videoId === null) {
-        _this.internalPlayer.stopVideo();
-        return;
-      }
-
-      // set queueing options
-      var autoplay = false;
-      var opts = {
-        videoId: _this.props.videoId
-      };
-      if ('playerVars' in _this.props.opts) {
-        autoplay = _this.props.opts.playerVars.autoplay === 1;
-        if ('start' in _this.props.opts.playerVars) {
-          opts.startSeconds = _this.props.opts.playerVars.start;
-        }
-        if ('end' in _this.props.opts.playerVars) {
-          opts.endSeconds = _this.props.opts.playerVars.end;
-        }
-      }
-
-      // if autoplay is enabled loadVideoById
-      if (autoplay) {
-        _this.internalPlayer.loadVideoById(opts);
-        return;
-      }
-      // default behaviour just cues the video
-      _this.internalPlayer.cueVideoById(opts);
-    };
-
-    _this.refContainer = function (container) {
-      _this.container = container;
-    };
-
-    _this.container = null;
-    _this.internalPlayer = null;
-    return _this;
-  }
-
-  /**
-    * Expose PlayerState constants for convenience. These constants can also be
-    * accessed through the global YT object after the YouTube IFrame API is instantiated.
-    * https://developers.google.com/youtube/iframe_api_reference#onStateChange
-    */
-
-
-  _createClass(YouTube, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      this.createPlayer();
-    }
-  }, {
-    key: 'componentDidUpdate',
-    value: function componentDidUpdate(prevProps) {
-      if (shouldUpdatePlayer(prevProps, this.props)) {
-        this.updatePlayer();
-      }
-
-      if (shouldResetPlayer(prevProps, this.props)) {
-        this.resetPlayer();
-      }
-
-      if (shouldUpdateVideo(prevProps, this.props)) {
-        this.updateVideo();
-      }
-    }
-  }, {
-    key: 'componentWillUnmount',
-    value: function componentWillUnmount() {
-      /**
-       * Note: The `youtube-player` package that is used promisifies all Youtube
-       * Player API calls, which introduces a delay of a tick before it actually
-       * gets destroyed. Since React attempts to remove the element instantly
-       * this method isn't quick enough to reset the container element.
-       */
-      this.internalPlayer.destroy();
-    }
-
-    /**
-     * https://developers.google.com/youtube/iframe_api_reference#onReady
-     *
-     * @param {Object} event
-     *   @param {Object} target - player object
-     */
-
-
-    /**
-     * https://developers.google.com/youtube/iframe_api_reference#onError
-     *
-     * @param {Object} event
-     *   @param {Integer} data  - error type
-     *   @param {Object} target - player object
-     */
-
-
-    /**
-     * https://developers.google.com/youtube/iframe_api_reference#onStateChange
-     *
-     * @param {Object} event
-     *   @param {Integer} data  - status change type
-     *   @param {Object} target - actual YT player
-     */
-
-
-    /**
-     * https://developers.google.com/youtube/iframe_api_reference#onPlaybackRateChange
-     *
-     * @param {Object} event
-     *   @param {Float} data    - playback rate
-     *   @param {Object} target - actual YT player
-     */
-
-
-    /**
-     * https://developers.google.com/youtube/iframe_api_reference#onPlaybackQualityChange
-     *
-     * @param {Object} event
-     *   @param {String} data   - playback quality
-     *   @param {Object} target - actual YT player
-     */
-
-
-    /**
-     * Initialize the Youtube Player API on the container and attach event handlers
-     */
-
-
-    /**
-     * Shorthand for destroying and then re-creating the Youtube Player
-     */
-
-
-    /**
-     * Method to update the id and class of the Youtube Player iframe.
-     * React should update this automatically but since the Youtube Player API
-     * replaced the DIV that is mounted by React we need to do this manually.
-     */
-
-
-    /**
-     * Call Youtube Player API methods to update the currently playing video.
-     * Depeding on the `opts.playerVars.autoplay` this function uses one of two
-     * Youtube Player API methods to update the video.
-     */
-
-  }, {
-    key: 'render',
-    value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(
-        'div',
-        { className: this.props.containerClassName },
-        react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement('div', { id: this.props.id, className: this.props.className, ref: this.refContainer })
-      );
-    }
-  }]);
-
-  return YouTube;
-}(react__WEBPACK_IMPORTED_MODULE_1___default.a.Component);
-
-YouTube.propTypes = {
-  videoId: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
-
-  // custom ID for player element
-  id: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
-
-  // custom class name for player element
-  className: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
-  // custom class name for player container element
-  containerClassName: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
-
-  // https://developers.google.com/youtube/iframe_api_reference#Loading_a_Video_Player
-  opts: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.objectOf(prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.any),
-
-  // event subscriptions
-  onReady: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func,
-  onError: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func,
-  onPlay: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func,
-  onPause: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func,
-  onEnd: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func,
-  onStateChange: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func,
-  onPlaybackRateChange: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func,
-  onPlaybackQualityChange: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func
-};
-YouTube.defaultProps = {
-  id: null,
-  className: null,
-  opts: {},
-  containerClassName: '',
-  onReady: function onReady() {},
-  onError: function onError() {},
-  onPlay: function onPlay() {},
-  onPause: function onPause() {},
-  onEnd: function onEnd() {},
-  onStateChange: function onStateChange() {},
-  onPlaybackRateChange: function onPlaybackRateChange() {},
-  onPlaybackQualityChange: function onPlaybackQualityChange() {}
-};
-YouTube.PlayerState = {
-  UNSTARTED: -1,
-  ENDED: 0,
-  PLAYING: 1,
-  PAUSED: 2,
-  BUFFERING: 3,
-  CUED: 5
-};
-
-
-/* harmony default export */ __webpack_exports__["default"] = (YouTube);
-
-/***/ }),
-
 /***/ "./node_modules/react/cjs/react.development.js":
 /*!*****************************************************!*\
   !*** ./node_modules/react/cjs/react.development.js ***!
@@ -72422,79 +71999,6 @@ if (false) {} else {
 
 /***/ }),
 
-/***/ "./node_modules/sister/src/sister.js":
-/*!*******************************************!*\
-  !*** ./node_modules/sister/src/sister.js ***!
-  \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var Sister;
-
-/**
-* @link https://github.com/gajus/sister for the canonical source repository
-* @license https://github.com/gajus/sister/blob/master/LICENSE BSD 3-Clause
-*/
-Sister = function () {
-    var sister = {},
-        events = {};
-
-    /**
-     * @name handler
-     * @function
-     * @param {Object} data Event data.
-     */
-
-    /**
-     * @param {String} name Event name.
-     * @param {handler} handler
-     * @return {listener}
-     */
-    sister.on = function (name, handler) {
-        var listener = {name: name, handler: handler};
-        events[name] = events[name] || [];
-        events[name].unshift(listener);
-        return listener;
-    };
-
-    /**
-     * @param {listener}
-     */
-    sister.off = function (listener) {
-        var index = events[listener.name].indexOf(listener);
-
-        if (index !== -1) {
-            events[listener.name].splice(index, 1);
-        }
-    };
-
-    /**
-     * @param {String} name Event name.
-     * @param {Object} data Event data.
-     */
-    sister.trigger = function (name, data) {
-        var listeners = events[name],
-            i;
-
-        if (listeners) {
-            i = listeners.length;
-            while (i--) {
-                listeners[i].handler(data);
-            }
-        }
-    };
-
-    return sister;
-};
-
-module.exports = Sister;
-
-
-/***/ }),
-
 /***/ "./node_modules/style-loader/lib/addStyles.js":
 /*!****************************************************!*\
   !*** ./node_modules/style-loader/lib/addStyles.js ***!
@@ -73068,904 +72572,6 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./node_modules/youtube-player/dist/FunctionStateMap.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/youtube-player/dist/FunctionStateMap.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _PlayerStates = __webpack_require__(/*! ./constants/PlayerStates */ "./node_modules/youtube-player/dist/constants/PlayerStates.js");
-
-var _PlayerStates2 = _interopRequireDefault(_PlayerStates);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = {
-  pauseVideo: {
-    acceptableStates: [_PlayerStates2.default.ENDED, _PlayerStates2.default.PAUSED],
-    stateChangeRequired: false
-  },
-  playVideo: {
-    acceptableStates: [_PlayerStates2.default.ENDED, _PlayerStates2.default.PLAYING],
-    stateChangeRequired: false
-  },
-  seekTo: {
-    acceptableStates: [_PlayerStates2.default.ENDED, _PlayerStates2.default.PLAYING, _PlayerStates2.default.PAUSED],
-    stateChangeRequired: true,
-
-    // TRICKY: `seekTo` may not cause a state change if no buffering is
-    // required.
-    timeout: 3000
-  }
-};
-module.exports = exports['default'];
-
-/***/ }),
-
-/***/ "./node_modules/youtube-player/dist/YouTubePlayer.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/youtube-player/dist/YouTubePlayer.js ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _debug = __webpack_require__(/*! debug */ "./node_modules/youtube-player/node_modules/debug/src/browser.js");
-
-var _debug2 = _interopRequireDefault(_debug);
-
-var _functionNames = __webpack_require__(/*! ./functionNames */ "./node_modules/youtube-player/dist/functionNames.js");
-
-var _functionNames2 = _interopRequireDefault(_functionNames);
-
-var _eventNames = __webpack_require__(/*! ./eventNames */ "./node_modules/youtube-player/dist/eventNames.js");
-
-var _eventNames2 = _interopRequireDefault(_eventNames);
-
-var _FunctionStateMap = __webpack_require__(/*! ./FunctionStateMap */ "./node_modules/youtube-player/dist/FunctionStateMap.js");
-
-var _FunctionStateMap2 = _interopRequireDefault(_FunctionStateMap);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/* eslint-disable promise/prefer-await-to-then */
-
-var debug = (0, _debug2.default)('youtube-player');
-
-var YouTubePlayer = {};
-
-/**
- * Construct an object that defines an event handler for all of the YouTube
- * player events. Proxy captured events through an event emitter.
- *
- * @todo Capture event parameters.
- * @see https://developers.google.com/youtube/iframe_api_reference#Events
- */
-YouTubePlayer.proxyEvents = function (emitter) {
-  var events = {};
-
-  var _loop = function _loop(eventName) {
-    var onEventName = 'on' + eventName.slice(0, 1).toUpperCase() + eventName.slice(1);
-
-    events[onEventName] = function (event) {
-      debug('event "%s"', onEventName, event);
-
-      emitter.trigger(eventName, event);
-    };
-  };
-
-  var _iteratorNormalCompletion = true;
-  var _didIteratorError = false;
-  var _iteratorError = undefined;
-
-  try {
-    for (var _iterator = _eventNames2.default[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-      var eventName = _step.value;
-
-      _loop(eventName);
-    }
-  } catch (err) {
-    _didIteratorError = true;
-    _iteratorError = err;
-  } finally {
-    try {
-      if (!_iteratorNormalCompletion && _iterator.return) {
-        _iterator.return();
-      }
-    } finally {
-      if (_didIteratorError) {
-        throw _iteratorError;
-      }
-    }
-  }
-
-  return events;
-};
-
-/**
- * Delays player API method execution until player state is ready.
- *
- * @todo Proxy all of the methods using Object.keys.
- * @todo See TRICKY below.
- * @param playerAPIReady Promise that resolves when player is ready.
- * @param strictState A flag designating whether or not to wait for
- * an acceptable state when calling supported functions.
- * @returns {Object}
- */
-YouTubePlayer.promisifyPlayer = function (playerAPIReady) {
-  var strictState = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-
-  var functions = {};
-
-  var _loop2 = function _loop2(functionName) {
-    if (strictState && _FunctionStateMap2.default[functionName]) {
-      functions[functionName] = function () {
-        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-          args[_key] = arguments[_key];
-        }
-
-        return playerAPIReady.then(function (player) {
-          var stateInfo = _FunctionStateMap2.default[functionName];
-          var playerState = player.getPlayerState();
-
-          // eslint-disable-next-line no-warning-comments
-          // TODO: Just spread the args into the function once Babel is fixed:
-          // https://github.com/babel/babel/issues/4270
-          //
-          // eslint-disable-next-line prefer-spread
-          var value = player[functionName].apply(player, args);
-
-          // TRICKY: For functions like `seekTo`, a change in state must be
-          // triggered given that the resulting state could match the initial
-          // state.
-          if (stateInfo.stateChangeRequired ||
-
-          // eslint-disable-next-line no-extra-parens
-          Array.isArray(stateInfo.acceptableStates) && stateInfo.acceptableStates.indexOf(playerState) === -1) {
-            return new Promise(function (resolve) {
-              var onPlayerStateChange = function onPlayerStateChange() {
-                var playerStateAfterChange = player.getPlayerState();
-
-                var timeout = void 0;
-
-                if (typeof stateInfo.timeout === 'number') {
-                  timeout = setTimeout(function () {
-                    player.removeEventListener('onStateChange', onPlayerStateChange);
-
-                    resolve();
-                  }, stateInfo.timeout);
-                }
-
-                if (Array.isArray(stateInfo.acceptableStates) && stateInfo.acceptableStates.indexOf(playerStateAfterChange) !== -1) {
-                  player.removeEventListener('onStateChange', onPlayerStateChange);
-
-                  clearTimeout(timeout);
-
-                  resolve();
-                }
-              };
-
-              player.addEventListener('onStateChange', onPlayerStateChange);
-            }).then(function () {
-              return value;
-            });
-          }
-
-          return value;
-        });
-      };
-    } else {
-      functions[functionName] = function () {
-        for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-          args[_key2] = arguments[_key2];
-        }
-
-        return playerAPIReady.then(function (player) {
-          // eslint-disable-next-line no-warning-comments
-          // TODO: Just spread the args into the function once Babel is fixed:
-          // https://github.com/babel/babel/issues/4270
-          //
-          // eslint-disable-next-line prefer-spread
-          return player[functionName].apply(player, args);
-        });
-      };
-    }
-  };
-
-  var _iteratorNormalCompletion2 = true;
-  var _didIteratorError2 = false;
-  var _iteratorError2 = undefined;
-
-  try {
-    for (var _iterator2 = _functionNames2.default[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-      var functionName = _step2.value;
-
-      _loop2(functionName);
-    }
-  } catch (err) {
-    _didIteratorError2 = true;
-    _iteratorError2 = err;
-  } finally {
-    try {
-      if (!_iteratorNormalCompletion2 && _iterator2.return) {
-        _iterator2.return();
-      }
-    } finally {
-      if (_didIteratorError2) {
-        throw _iteratorError2;
-      }
-    }
-  }
-
-  return functions;
-};
-
-exports.default = YouTubePlayer;
-module.exports = exports['default'];
-
-/***/ }),
-
-/***/ "./node_modules/youtube-player/dist/constants/PlayerStates.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/youtube-player/dist/constants/PlayerStates.js ***!
-  \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = {
-  BUFFERING: 3,
-  ENDED: 0,
-  PAUSED: 2,
-  PLAYING: 1,
-  UNSTARTED: -1,
-  VIDEO_CUED: 5
-};
-module.exports = exports["default"];
-
-/***/ }),
-
-/***/ "./node_modules/youtube-player/dist/eventNames.js":
-/*!********************************************************!*\
-  !*** ./node_modules/youtube-player/dist/eventNames.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-
-/**
- * @see https://developers.google.com/youtube/iframe_api_reference#Events
- * `volumeChange` is not officially supported but seems to work
- * it emits an object: `{volume: 82.6923076923077, muted: false}`
- */
-exports.default = ['ready', 'stateChange', 'playbackQualityChange', 'playbackRateChange', 'error', 'apiChange', 'volumeChange'];
-module.exports = exports['default'];
-
-/***/ }),
-
-/***/ "./node_modules/youtube-player/dist/functionNames.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/youtube-player/dist/functionNames.js ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-
-/**
- * @see https://developers.google.com/youtube/iframe_api_reference#Functions
- */
-exports.default = ['cueVideoById', 'loadVideoById', 'cueVideoByUrl', 'loadVideoByUrl', 'playVideo', 'pauseVideo', 'stopVideo', 'getVideoLoadedFraction', 'cuePlaylist', 'loadPlaylist', 'nextVideo', 'previousVideo', 'playVideoAt', 'setShuffle', 'setLoop', 'getPlaylist', 'getPlaylistIndex', 'setOption', 'mute', 'unMute', 'isMuted', 'setVolume', 'getVolume', 'seekTo', 'getPlayerState', 'getPlaybackRate', 'setPlaybackRate', 'getAvailablePlaybackRates', 'getPlaybackQuality', 'setPlaybackQuality', 'getAvailableQualityLevels', 'getCurrentTime', 'getDuration', 'removeEventListener', 'getVideoUrl', 'getVideoEmbedCode', 'getOptions', 'getOption', 'addEventListener', 'destroy', 'setSize', 'getIframe'];
-module.exports = exports['default'];
-
-/***/ }),
-
-/***/ "./node_modules/youtube-player/dist/index.js":
-/*!***************************************************!*\
-  !*** ./node_modules/youtube-player/dist/index.js ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-var _sister = __webpack_require__(/*! sister */ "./node_modules/sister/src/sister.js");
-
-var _sister2 = _interopRequireDefault(_sister);
-
-var _loadYouTubeIframeApi = __webpack_require__(/*! ./loadYouTubeIframeApi */ "./node_modules/youtube-player/dist/loadYouTubeIframeApi.js");
-
-var _loadYouTubeIframeApi2 = _interopRequireDefault(_loadYouTubeIframeApi);
-
-var _YouTubePlayer = __webpack_require__(/*! ./YouTubePlayer */ "./node_modules/youtube-player/dist/YouTubePlayer.js");
-
-var _YouTubePlayer2 = _interopRequireDefault(_YouTubePlayer);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * @typedef YT.Player
- * @see https://developers.google.com/youtube/iframe_api_reference
- * */
-
-/**
- * @see https://developers.google.com/youtube/iframe_api_reference#Loading_a_Video_Player
- */
-var youtubeIframeAPI = void 0;
-
-/**
- * A factory function used to produce an instance of YT.Player and queue function calls and proxy events of the resulting object.
- *
- * @param maybeElementId Either An existing YT.Player instance,
- * the DOM element or the id of the HTML element where the API will insert an <iframe>.
- * @param options See `options` (Ignored when using an existing YT.Player instance).
- * @param strictState A flag designating whether or not to wait for
- * an acceptable state when calling supported functions. Default: `false`.
- * See `FunctionStateMap.js` for supported functions and acceptable states.
- */
-
-exports.default = function (maybeElementId) {
-  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-  var strictState = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
-
-  var emitter = (0, _sister2.default)();
-
-  if (!youtubeIframeAPI) {
-    youtubeIframeAPI = (0, _loadYouTubeIframeApi2.default)(emitter);
-  }
-
-  if (options.events) {
-    throw new Error('Event handlers cannot be overwritten.');
-  }
-
-  if (typeof maybeElementId === 'string' && !document.getElementById(maybeElementId)) {
-    throw new Error('Element "' + maybeElementId + '" does not exist.');
-  }
-
-  options.events = _YouTubePlayer2.default.proxyEvents(emitter);
-
-  var playerAPIReady = new Promise(function (resolve) {
-    if ((typeof maybeElementId === 'undefined' ? 'undefined' : _typeof(maybeElementId)) === 'object' && maybeElementId.playVideo instanceof Function) {
-      var player = maybeElementId;
-
-      resolve(player);
-    } else {
-      // asume maybeElementId can be rendered inside
-      // eslint-disable-next-line promise/catch-or-return
-      youtubeIframeAPI.then(function (YT) {
-        // eslint-disable-line promise/prefer-await-to-then
-        var player = new YT.Player(maybeElementId, options);
-
-        emitter.on('ready', function () {
-          resolve(player);
-        });
-
-        return null;
-      });
-    }
-  });
-
-  var playerApi = _YouTubePlayer2.default.promisifyPlayer(playerAPIReady, strictState);
-
-  playerApi.on = emitter.on;
-  playerApi.off = emitter.off;
-
-  return playerApi;
-};
-
-module.exports = exports['default'];
-
-/***/ }),
-
-/***/ "./node_modules/youtube-player/dist/loadYouTubeIframeApi.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/youtube-player/dist/loadYouTubeIframeApi.js ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _loadScript = __webpack_require__(/*! load-script */ "./node_modules/load-script/index.js");
-
-var _loadScript2 = _interopRequireDefault(_loadScript);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = function (emitter) {
-  /**
-   * A promise that is resolved when window.onYouTubeIframeAPIReady is called.
-   * The promise is resolved with a reference to window.YT object.
-   */
-  var iframeAPIReady = new Promise(function (resolve) {
-    if (window.YT && window.YT.Player && window.YT.Player instanceof Function) {
-      resolve(window.YT);
-
-      return;
-    } else {
-      var protocol = window.location.protocol === 'http:' ? 'http:' : 'https:';
-
-      (0, _loadScript2.default)(protocol + '//www.youtube.com/iframe_api', function (error) {
-        if (error) {
-          emitter.trigger('error', error);
-        }
-      });
-    }
-
-    var previous = window.onYouTubeIframeAPIReady;
-
-    // The API will call this function when page has finished downloading
-    // the JavaScript for the player API.
-    window.onYouTubeIframeAPIReady = function () {
-      if (previous) {
-        previous();
-      }
-
-      resolve(window.YT);
-    };
-  });
-
-  return iframeAPIReady;
-};
-
-module.exports = exports['default'];
-
-/***/ }),
-
-/***/ "./node_modules/youtube-player/node_modules/debug/src/browser.js":
-/*!***********************************************************************!*\
-  !*** ./node_modules/youtube-player/node_modules/debug/src/browser.js ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(process) {/**
- * This is the web browser implementation of `debug()`.
- *
- * Expose `debug()` as the module.
- */
-
-exports = module.exports = __webpack_require__(/*! ./debug */ "./node_modules/youtube-player/node_modules/debug/src/debug.js");
-exports.log = log;
-exports.formatArgs = formatArgs;
-exports.save = save;
-exports.load = load;
-exports.useColors = useColors;
-exports.storage = 'undefined' != typeof chrome
-               && 'undefined' != typeof chrome.storage
-                  ? chrome.storage.local
-                  : localstorage();
-
-/**
- * Colors.
- */
-
-exports.colors = [
-  'lightseagreen',
-  'forestgreen',
-  'goldenrod',
-  'dodgerblue',
-  'darkorchid',
-  'crimson'
-];
-
-/**
- * Currently only WebKit-based Web Inspectors, Firefox >= v31,
- * and the Firebug extension (any Firefox version) are known
- * to support "%c" CSS customizations.
- *
- * TODO: add a `localStorage` variable to explicitly enable/disable colors
- */
-
-function useColors() {
-  // NB: In an Electron preload script, document will be defined but not fully
-  // initialized. Since we know we're in Chrome, we'll just detect this case
-  // explicitly
-  if (typeof window !== 'undefined' && window.process && window.process.type === 'renderer') {
-    return true;
-  }
-
-  // is webkit? http://stackoverflow.com/a/16459606/376773
-  // document is undefined in react-native: https://github.com/facebook/react-native/pull/1632
-  return (typeof document !== 'undefined' && document.documentElement && document.documentElement.style && document.documentElement.style.WebkitAppearance) ||
-    // is firebug? http://stackoverflow.com/a/398120/376773
-    (typeof window !== 'undefined' && window.console && (window.console.firebug || (window.console.exception && window.console.table))) ||
-    // is firefox >= v31?
-    // https://developer.mozilla.org/en-US/docs/Tools/Web_Console#Styling_messages
-    (typeof navigator !== 'undefined' && navigator.userAgent && navigator.userAgent.toLowerCase().match(/firefox\/(\d+)/) && parseInt(RegExp.$1, 10) >= 31) ||
-    // double check webkit in userAgent just in case we are in a worker
-    (typeof navigator !== 'undefined' && navigator.userAgent && navigator.userAgent.toLowerCase().match(/applewebkit\/(\d+)/));
-}
-
-/**
- * Map %j to `JSON.stringify()`, since no Web Inspectors do that by default.
- */
-
-exports.formatters.j = function(v) {
-  try {
-    return JSON.stringify(v);
-  } catch (err) {
-    return '[UnexpectedJSONParseError]: ' + err.message;
-  }
-};
-
-
-/**
- * Colorize log arguments if enabled.
- *
- * @api public
- */
-
-function formatArgs(args) {
-  var useColors = this.useColors;
-
-  args[0] = (useColors ? '%c' : '')
-    + this.namespace
-    + (useColors ? ' %c' : ' ')
-    + args[0]
-    + (useColors ? '%c ' : ' ')
-    + '+' + exports.humanize(this.diff);
-
-  if (!useColors) return;
-
-  var c = 'color: ' + this.color;
-  args.splice(1, 0, c, 'color: inherit')
-
-  // the final "%c" is somewhat tricky, because there could be other
-  // arguments passed either before or after the %c, so we need to
-  // figure out the correct index to insert the CSS into
-  var index = 0;
-  var lastC = 0;
-  args[0].replace(/%[a-zA-Z%]/g, function(match) {
-    if ('%%' === match) return;
-    index++;
-    if ('%c' === match) {
-      // we only are interested in the *last* %c
-      // (the user may have provided their own)
-      lastC = index;
-    }
-  });
-
-  args.splice(lastC, 0, c);
-}
-
-/**
- * Invokes `console.log()` when available.
- * No-op when `console.log` is not a "function".
- *
- * @api public
- */
-
-function log() {
-  // this hackery is required for IE8/9, where
-  // the `console.log` function doesn't have 'apply'
-  return 'object' === typeof console
-    && console.log
-    && Function.prototype.apply.call(console.log, console, arguments);
-}
-
-/**
- * Save `namespaces`.
- *
- * @param {String} namespaces
- * @api private
- */
-
-function save(namespaces) {
-  try {
-    if (null == namespaces) {
-      exports.storage.removeItem('debug');
-    } else {
-      exports.storage.debug = namespaces;
-    }
-  } catch(e) {}
-}
-
-/**
- * Load `namespaces`.
- *
- * @return {String} returns the previously persisted debug modes
- * @api private
- */
-
-function load() {
-  var r;
-  try {
-    r = exports.storage.debug;
-  } catch(e) {}
-
-  // If debug isn't set in LS, and we're in Electron, try to load $DEBUG
-  if (!r && typeof process !== 'undefined' && 'env' in process) {
-    r = Object({"MIX_PUSHER_APP_KEY":"","MIX_PUSHER_APP_CLUSTER":"mt1","NODE_ENV":"development"}).DEBUG;
-  }
-
-  return r;
-}
-
-/**
- * Enable namespaces listed in `localStorage.debug` initially.
- */
-
-exports.enable(load());
-
-/**
- * Localstorage attempts to return the localstorage.
- *
- * This is necessary because safari throws
- * when a user disables cookies/localstorage
- * and you attempt to access it.
- *
- * @return {LocalStorage}
- * @api private
- */
-
-function localstorage() {
-  try {
-    return window.localStorage;
-  } catch (e) {}
-}
-
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../process/browser.js */ "./node_modules/process/browser.js")))
-
-/***/ }),
-
-/***/ "./node_modules/youtube-player/node_modules/debug/src/debug.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/youtube-player/node_modules/debug/src/debug.js ***!
-  \*********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-/**
- * This is the common logic for both the Node.js and web browser
- * implementations of `debug()`.
- *
- * Expose `debug()` as the module.
- */
-
-exports = module.exports = createDebug.debug = createDebug['default'] = createDebug;
-exports.coerce = coerce;
-exports.disable = disable;
-exports.enable = enable;
-exports.enabled = enabled;
-exports.humanize = __webpack_require__(/*! ms */ "./node_modules/ms/index.js");
-
-/**
- * The currently active debug mode names, and names to skip.
- */
-
-exports.names = [];
-exports.skips = [];
-
-/**
- * Map of special "%n" handling functions, for the debug "format" argument.
- *
- * Valid key names are a single, lower or upper-case letter, i.e. "n" and "N".
- */
-
-exports.formatters = {};
-
-/**
- * Previous log timestamp.
- */
-
-var prevTime;
-
-/**
- * Select a color.
- * @param {String} namespace
- * @return {Number}
- * @api private
- */
-
-function selectColor(namespace) {
-  var hash = 0, i;
-
-  for (i in namespace) {
-    hash  = ((hash << 5) - hash) + namespace.charCodeAt(i);
-    hash |= 0; // Convert to 32bit integer
-  }
-
-  return exports.colors[Math.abs(hash) % exports.colors.length];
-}
-
-/**
- * Create a debugger with the given `namespace`.
- *
- * @param {String} namespace
- * @return {Function}
- * @api public
- */
-
-function createDebug(namespace) {
-
-  function debug() {
-    // disabled?
-    if (!debug.enabled) return;
-
-    var self = debug;
-
-    // set `diff` timestamp
-    var curr = +new Date();
-    var ms = curr - (prevTime || curr);
-    self.diff = ms;
-    self.prev = prevTime;
-    self.curr = curr;
-    prevTime = curr;
-
-    // turn the `arguments` into a proper Array
-    var args = new Array(arguments.length);
-    for (var i = 0; i < args.length; i++) {
-      args[i] = arguments[i];
-    }
-
-    args[0] = exports.coerce(args[0]);
-
-    if ('string' !== typeof args[0]) {
-      // anything else let's inspect with %O
-      args.unshift('%O');
-    }
-
-    // apply any `formatters` transformations
-    var index = 0;
-    args[0] = args[0].replace(/%([a-zA-Z%])/g, function(match, format) {
-      // if we encounter an escaped % then don't increase the array index
-      if (match === '%%') return match;
-      index++;
-      var formatter = exports.formatters[format];
-      if ('function' === typeof formatter) {
-        var val = args[index];
-        match = formatter.call(self, val);
-
-        // now we need to remove `args[index]` since it's inlined in the `format`
-        args.splice(index, 1);
-        index--;
-      }
-      return match;
-    });
-
-    // apply env-specific formatting (colors, etc.)
-    exports.formatArgs.call(self, args);
-
-    var logFn = debug.log || exports.log || console.log.bind(console);
-    logFn.apply(self, args);
-  }
-
-  debug.namespace = namespace;
-  debug.enabled = exports.enabled(namespace);
-  debug.useColors = exports.useColors();
-  debug.color = selectColor(namespace);
-
-  // env-specific initialization logic for debug instances
-  if ('function' === typeof exports.init) {
-    exports.init(debug);
-  }
-
-  return debug;
-}
-
-/**
- * Enables a debug mode by namespaces. This can include modes
- * separated by a colon and wildcards.
- *
- * @param {String} namespaces
- * @api public
- */
-
-function enable(namespaces) {
-  exports.save(namespaces);
-
-  exports.names = [];
-  exports.skips = [];
-
-  var split = (typeof namespaces === 'string' ? namespaces : '').split(/[\s,]+/);
-  var len = split.length;
-
-  for (var i = 0; i < len; i++) {
-    if (!split[i]) continue; // ignore empty strings
-    namespaces = split[i].replace(/\*/g, '.*?');
-    if (namespaces[0] === '-') {
-      exports.skips.push(new RegExp('^' + namespaces.substr(1) + '$'));
-    } else {
-      exports.names.push(new RegExp('^' + namespaces + '$'));
-    }
-  }
-}
-
-/**
- * Disable debug output.
- *
- * @api public
- */
-
-function disable() {
-  exports.enable('');
-}
-
-/**
- * Returns true if the given mode name is enabled, false otherwise.
- *
- * @param {String} name
- * @return {Boolean}
- * @api public
- */
-
-function enabled(name) {
-  var i, len;
-  for (i = 0, len = exports.skips.length; i < len; i++) {
-    if (exports.skips[i].test(name)) {
-      return false;
-    }
-  }
-  for (i = 0, len = exports.names.length; i < len; i++) {
-    if (exports.names[i].test(name)) {
-      return true;
-    }
-  }
-  return false;
-}
-
-/**
- * Coerce `val`.
- *
- * @param {Mixed} val
- * @return {Mixed}
- * @api private
- */
-
-function coerce(val) {
-  if (val instanceof Error) return val.stack || val.message;
-  return val;
-}
-
-
-/***/ }),
-
 /***/ "./resources/js/Index.js":
 /*!*******************************!*\
   !*** ./resources/js/Index.js ***!
@@ -73982,11 +72588,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
 /* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_Footer_Footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Footer/Footer */ "./resources/js/components/Footer/Footer.js");
-/* harmony import */ var _components_Toolbar_Toolbar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/Toolbar/Toolbar */ "./resources/js/components/Toolbar/Toolbar.js");
-/* harmony import */ var _components_Pages_HomePage_HomePage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/Pages/HomePage/HomePage */ "./resources/js/components/Pages/HomePage/HomePage.js");
-/* harmony import */ var _components_Pages_Main_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/Pages/Main.css */ "./resources/js/components/Pages/Main.css");
-/* harmony import */ var _components_Pages_Main_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_Pages_Main_css__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _components_Toolbar_Toolbar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Toolbar/Toolbar */ "./resources/js/components/Toolbar/Toolbar.js");
+/* harmony import */ var _components_Pages_ProductInfoPage_ProductInfoPage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/Pages/ProductInfoPage/ProductInfoPage */ "./resources/js/components/Pages/ProductInfoPage/ProductInfoPage.js");
+/* harmony import */ var _components_Pages_main_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/Pages/main.css */ "./resources/js/components/Pages/main.css");
+/* harmony import */ var _components_Pages_main_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_Pages_main_css__WEBPACK_IMPORTED_MODULE_5__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -74007,8 +72612,9 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+ // import Footer from './components/Footer/Footer'
 
-
+ // import HomePage from './components/Pages/HomePage/HomePage'
 
  // Page Main Style
 
@@ -74032,11 +72638,11 @@ function (_Component) {
         style: {
           height: '100%'
         }
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Toolbar_Toolbar__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Toolbar_Toolbar__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", {
         style: {
-          marginTop: '56px'
+          marginTop: '60px'
         }
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Pages_HomePage_HomePage__WEBPACK_IMPORTED_MODULE_5__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], null)));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Pages_ProductInfoPage_ProductInfoPage__WEBPACK_IMPORTED_MODULE_4__["default"], null)));
     }
   }]);
 
@@ -74133,40 +72739,10 @@ if (token) {
 
 /***/ }),
 
-/***/ "./resources/js/components/Footer/Footer.css":
-/*!***************************************************!*\
-  !*** ./resources/js/components/Footer/Footer.css ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/postcss-loader/src??ref--6-2!./Footer.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Footer/Footer.css");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
-/***/ "./resources/js/components/Footer/Footer.js":
-/*!**************************************************!*\
-  !*** ./resources/js/components/Footer/Footer.js ***!
-  \**************************************************/
+/***/ "./resources/js/components/CatchErr/ErrorBoundary.js":
+/*!***********************************************************!*\
+  !*** ./resources/js/components/CatchErr/ErrorBoundary.js ***!
+  \***********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -74174,39 +72750,79 @@ if(false) {}
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Footer_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Footer.css */ "./resources/js/components/Footer/Footer.css");
-/* harmony import */ var _Footer_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Footer_css__WEBPACK_IMPORTED_MODULE_1__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 
 
-var Footer = function Footer(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
-    className: "footer"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-    className: "footer_nav"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "footer_spacer"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "footer_nav_items"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/"
-  }, "HOME")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/celulares"
-  }, "CELULARES")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/about"
-  }, "ABOUT")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/contact"
-  }, "CONTACT"))))));
-};
+var ErrorBoundary =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(ErrorBoundary, _React$Component);
 
-/* harmony default export */ __webpack_exports__["default"] = (Footer);
+  function ErrorBoundary(props) {
+    var _this;
+
+    _classCallCheck(this, ErrorBoundary);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(ErrorBoundary).call(this, props));
+    _this.state = {
+      error: null,
+      errorInfo: null
+    };
+    return _this;
+  }
+
+  _createClass(ErrorBoundary, [{
+    key: "componentDidCatch",
+    value: function componentDidCatch(error, errorInfo) {
+      this.setState({
+        error: error,
+        errorInfo: errorInfo
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      if (this.state.errorInfo) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Something went wrong"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("details", {
+          style: {
+            whiteSpace: 'pre-wrap'
+          }
+        }, this.state.error && this.state.error.toString(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), this.state.errorInfo.componentStack));
+      } // Render children if there's no error
+
+
+      return this.props.children;
+    }
+  }]);
+
+  return ErrorBoundary;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (ErrorBoundary);
 
 /***/ }),
 
-/***/ "./resources/js/components/Pages/HomePage/FeaturedPhones.js":
-/*!******************************************************************!*\
-  !*** ./resources/js/components/Pages/HomePage/FeaturedPhones.js ***!
-  \******************************************************************/
+/***/ "./resources/js/components/Pages/ProductInfoPage/PhoneImage.js":
+/*!*********************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage/PhoneImage.js ***!
+  \*********************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -74214,49 +72830,27 @@ var Footer = function Footer(props) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Phone_Phone__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../Phone/Phone */ "./resources/js/components/Phone/Phone.js");
-/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var react_bootstrap_Image__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-bootstrap/Image */ "./node_modules/react-bootstrap/Image.js");
+/* harmony import */ var react_bootstrap_Image__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap_Image__WEBPACK_IMPORTED_MODULE_1__);
+ // Layout imports
 
 
 
-var phones = [{
-  name: "iphone",
-  price: 200,
-  img: "https://www.sprint.com/content/dam/sprint/commerce/devices/apple/apple_iphone_6s_plus/gray/new/devicenb_650x900.png/jcr:content/renditions/cq5dam.thumbnail.290.370.png"
-}, {
-  name: "andriod",
-  price: 200,
-  img: "https://www.sprint.com/content/dam/sprint/commerce/devices/apple/apple_iphone_6s_plus/silver/new/devicenb_650x900.png/jcr:content/renditions/cq5dam.thumbnail.290.370.png"
-}, {
-  name: "google",
-  price: 200,
-  img: "https://www.sprint.com/content/dam/sprint/commerce/devices/apple/apple_iphone_6s_plus/rose_gold/new/devicenb_650x900.png/jcr:content/renditions/cq5dam.thumbnail.290.370.png"
-}, {
-  name: "att",
-  price: 200,
-  img: "https://www.sprint.com/content/dam/sprint/commerce/devices/apple/apple_iphone_6s_plus/gold/new/devicenb_650x900.png/jcr:content/renditions/cq5dam.thumbnail.290.370.png"
-}];
+function PhoneImage(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Image__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    src: "https://www.boostmobile.com/content/dam/boostmobile/en/products/phones/apple/iphone-6/space-gray/device-front.png.transform/pdpCarousel/image.jpg",
+    fluid: true
+  }));
+}
 
-var FeaturedPhones = function FeaturedPhones(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "phonesWrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__["CardDeck"], null, phones.map(function (e) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Phone_Phone__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      img: e.img,
-      name: e.name,
-      price: e.price
-    });
-  })));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (FeaturedPhones);
+/* harmony default export */ __webpack_exports__["default"] = (PhoneImage);
 
 /***/ }),
 
-/***/ "./resources/js/components/Pages/HomePage/HomeHeader.js":
-/*!**************************************************************!*\
-  !*** ./resources/js/components/Pages/HomePage/HomeHeader.js ***!
-  \**************************************************************/
+/***/ "./resources/js/components/Pages/ProductInfoPage/PhoneOrdering.js":
+/*!************************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage/PhoneOrdering.js ***!
+  \************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -74265,47 +72859,129 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var _ProductInfoPage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ProductInfoPage */ "./resources/js/components/Pages/ProductInfoPage/ProductInfoPage.js");
 
 
-var items = [{
-  src: 'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ba800aa1d%20text%20%7B%20fill%3A%23555%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ba800aa1d%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22285.921875%22%20y%3D%22218.3%22%3EFirst%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E',
-  altText: 'Slide 1',
-  caption: 'Slide 1',
-  header: 'Slide 1 Header'
-}, {
-  src: 'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ba800aa20%20text%20%7B%20fill%3A%23444%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ba800aa20%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23666%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22247.3203125%22%20y%3D%22218.3%22%3ESecond%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E',
-  altText: 'Slide 2',
-  caption: 'Slide 2',
-  header: 'Slide 2 Header'
-}, {
-  src: 'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ba800aa21%20text%20%7B%20fill%3A%23333%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ba800aa21%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23555%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22277%22%20y%3D%22218.3%22%3EThird%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E',
-  altText: 'Slide 3',
-  caption: 'Slide 3',
-  header: 'Slide 3 Header'
-}];
+ // Layout imports
 
-var HomeHeader = function HomeHeader() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["UncontrolledCarousel"], {
-    style: {
-      height: 200 + "px"
-    },
-    items: items
-  });
-};
+function PhoneOrdering(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "ProductInfoText"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "iPhone"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "$35")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Form"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["FormGroup"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Label"], {
+    for: "exampleSelect",
+    className: "mr-sm-3"
+  }, "Select"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Input"], {
+    type: "select",
+    name: "select",
+    id: "exampleSelect",
+    className: "mr-sm-3"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Att"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Sprint"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Verizon"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["FormGroup"], {
+    className: "mb-2 mr-sm-12 mb-sm-0"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Label"], {
+    for: "imei",
+    className: "mr-sm-3"
+  }, "Password"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Input"], {
+    type: "text",
+    name: "ime",
+    id: "examplePassword",
+    placeholder: "Enter IMEI Number Here",
+    className: "mr-sm-3"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "smallText"
+  }, "Dial *#06# or Options, Status, IMEI Should be a 15-digit number")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Button"], {
+    color: "primary",
+    size: "lg",
+    block: true
+  }, "Ordena Ahora")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "delivery-time-box"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "ESTIMATED DELIVERY TIME:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "5-15 BUSINESS DAYS")))));
+}
 
-/* harmony default export */ __webpack_exports__["default"] = (HomeHeader);
+/* harmony default export */ __webpack_exports__["default"] = (PhoneOrdering);
 
 /***/ }),
 
-/***/ "./resources/js/components/Pages/HomePage/HomePage.css":
-/*!*************************************************************!*\
-  !*** ./resources/js/components/Pages/HomePage/HomePage.css ***!
-  \*************************************************************/
+/***/ "./resources/js/components/Pages/ProductInfoPage/PhonePlacement.js":
+/*!*************************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage/PhonePlacement.js ***!
+  \*************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var _PhoneImage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PhoneImage */ "./resources/js/components/Pages/ProductInfoPage/PhoneImage.js");
+/* harmony import */ var _PhoneOrdering__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./PhoneOrdering */ "./resources/js/components/Pages/ProductInfoPage/PhoneOrdering.js");
+/* harmony import */ var _CatchErr_ErrorBoundary__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../CatchErr/ErrorBoundary */ "./resources/js/components/CatchErr/ErrorBoundary.js");
+ // Layout imports
+
+
+
+
+
+
+function PhonePlacement(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+    md: "4"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PhoneImage__WEBPACK_IMPORTED_MODULE_2__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+    md: "8"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CatchErr_ErrorBoundary__WEBPACK_IMPORTED_MODULE_4__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PhoneOrdering__WEBPACK_IMPORTED_MODULE_3__["default"], null)))));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (PhonePlacement);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage/ProductInfoHeader.js":
+/*!****************************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage/ProductInfoHeader.js ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../main.css */ "./resources/js/components/Pages/main.css");
+/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_main_css__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+var ProductInfoHeader = function ProductInfoHeader(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Jumbotron"], {
+    fluid: true,
+    style: {
+      backgroundColor: '',
+      color: ''
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], {
+    fluid: true
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "display-3"
+  }, "DESBLOQUEA TU CEL"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "lead"
+  }, "Vamos, Busca tu celular para desbloquearlo hoy. Liberate!"))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (ProductInfoHeader);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage/ProductInfoPage.css":
+/*!***************************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage/ProductInfoPage.css ***!
+  \***************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../../../node_modules/css-loader??ref--6-1!../../../../../node_modules/postcss-loader/src??ref--6-2!./HomePage.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Pages/HomePage/HomePage.css");
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader??ref--6-1!../../../../../node_modules/postcss-loader/src??ref--6-2!./ProductInfoPage.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Pages/ProductInfoPage/ProductInfoPage.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -74327,10 +73003,10 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./resources/js/components/Pages/HomePage/HomePage.js":
-/*!************************************************************!*\
-  !*** ./resources/js/components/Pages/HomePage/HomePage.js ***!
-  \************************************************************/
+/***/ "./resources/js/components/Pages/ProductInfoPage/ProductInfoPage.js":
+/*!**************************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage/ProductInfoPage.js ***!
+  \**************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -74338,46 +73014,45 @@ if(false) {}
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
-/* harmony import */ var _HomeHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./HomeHeader */ "./resources/js/components/Pages/HomePage/HomeHeader.js");
-/* harmony import */ var _FeaturedPhones__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./FeaturedPhones */ "./resources/js/components/Pages/HomePage/FeaturedPhones.js");
-/* harmony import */ var _HomeVideo__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./HomeVideo */ "./resources/js/components/Pages/HomePage/HomeVideo.js");
-/* harmony import */ var _HomePage_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./HomePage.css */ "./resources/js/components/Pages/HomePage/HomePage.css");
-/* harmony import */ var _HomePage_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_HomePage_css__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _ProductInfoPage_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ProductInfoPage.css */ "./resources/js/components/Pages/ProductInfoPage/ProductInfoPage.css");
+/* harmony import */ var _ProductInfoPage_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_ProductInfoPage_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _ProductInfoHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ProductInfoHeader */ "./resources/js/components/Pages/ProductInfoPage/ProductInfoHeader.js");
+/* harmony import */ var _WrapperA__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./WrapperA */ "./resources/js/components/Pages/ProductInfoPage/WrapperA.js");
+/* harmony import */ var _WrapperB__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./WrapperB */ "./resources/js/components/Pages/ProductInfoPage/WrapperB.js");
+/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../main.css */ "./resources/js/components/Pages/main.css");
+/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_main_css__WEBPACK_IMPORTED_MODULE_5__);
+
+ // Component imports
 
 
 
 
 
 
-
-function HomePage(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "HeaderWrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_HomeHeader__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FeaturedPhones__WEBPACK_IMPORTED_MODULE_3__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
-    md: "6"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Como Desbloquear Tu Celular"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Empieza este video. Todo lo que necesitas es el numero IMEI de tu telefono.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
-    md: "6"
-  }, "Home Video", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_HomeVideo__WEBPACK_IMPORTED_MODULE_4__["default"], null))))));
+function ProductInfoPage(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProductInfoHeader__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WrapperA__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WrapperB__WEBPACK_IMPORTED_MODULE_4__["default"], null));
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (HomePage);
+/* harmony default export */ __webpack_exports__["default"] = (ProductInfoPage);
 
 /***/ }),
 
-/***/ "./resources/js/components/Pages/HomePage/HomeVideo.js":
-/*!*************************************************************!*\
-  !*** ./resources/js/components/Pages/HomePage/HomeVideo.js ***!
-  \*************************************************************/
+/***/ "./resources/js/components/Pages/ProductInfoPage/ProductTabs.js":
+/*!**********************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage/ProductTabs.js ***!
+  \**********************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return HomeVideo; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ProductTabs; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_youtube__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-youtube */ "./node_modules/react-youtube/es/YouTube.js");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _ProductInfoPage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ProductInfoPage */ "./resources/js/components/Pages/ProductInfoPage/ProductInfoPage.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -74388,69 +73063,161 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 
 
-var HomeVideo =
+
+
+
+var ProductTabs =
 /*#__PURE__*/
 function (_React$Component) {
-  _inherits(HomeVideo, _React$Component);
+  _inherits(ProductTabs, _React$Component);
 
-  function HomeVideo() {
-    _classCallCheck(this, HomeVideo);
+  function ProductTabs(props) {
+    var _this;
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(HomeVideo).apply(this, arguments));
+    _classCallCheck(this, ProductTabs);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(ProductTabs).call(this, props));
+    _this.toggle = _this.toggle.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.state = {
+      activeTab: '1'
+    };
+    return _this;
   }
 
-  _createClass(HomeVideo, [{
-    key: "render",
-    value: function render() {
-      var opts = {
-        height: '400',
-        width: '100%',
-        playerVars: {
-          // https://developers.google.com/youtube/player_parameters
-          autoplay: 1
-        }
-      };
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_youtube__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        videoId: "rM7hACndrqM",
-        opts: opts // onReady={this._onReady}
-
-      });
+  _createClass(ProductTabs, [{
+    key: "toggle",
+    value: function toggle(tab) {
+      if (this.state.activeTab !== tab) {
+        this.setState({
+          activeTab: tab
+        });
+      }
     }
   }, {
-    key: "_onReady",
-    value: function _onReady(event) {
-      // access to player in all event handlers via event.target
-      event.target.pauseVideo();
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "tabsBox"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Nav"], {
+        tabs: true
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+        className: classnames__WEBPACK_IMPORTED_MODULE_2___default()({
+          active: this.state.activeTab === '1'
+        }),
+        onClick: function onClick() {
+          _this2.toggle('1');
+        }
+      }, "Tab1")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+        className: classnames__WEBPACK_IMPORTED_MODULE_2___default()({
+          active: this.state.activeTab === '2'
+        }),
+        onClick: function onClick() {
+          _this2.toggle('2');
+        }
+      }, "Moar Tabs"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["TabContent"], {
+        activeTab: this.state.activeTab
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["TabPane"], {
+        tabId: "1"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+        sm: "12"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "tabContent"
+      }, "Tab 1 Contents")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["TabPane"], {
+        tabId: "2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+        sm: "6"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Card"], {
+        body: true
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["CardTitle"], null, "Special Title Treatment"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["CardText"], null, "With supporting text below as a natural lead-in to additional content."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Button"], null, "Go somewhere"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+        sm: "6"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Card"], {
+        body: true
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["CardTitle"], null, "Special Title Treatment"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["CardText"], null, "With supporting text below as a natural lead-in to additional content."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Button"], null, "Go somewhere")))))));
     }
   }]);
 
-  return HomeVideo;
+  return ProductTabs;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 
 
 /***/ }),
 
-/***/ "./resources/js/components/Pages/Main.css":
+/***/ "./resources/js/components/Pages/ProductInfoPage/WrapperA.js":
+/*!*******************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage/WrapperA.js ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var _PhonePlacement__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PhonePlacement */ "./resources/js/components/Pages/ProductInfoPage/PhonePlacement.js");
+ // Layout imports
+
+
+
+
+function WrapperA(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PhonePlacement__WEBPACK_IMPORTED_MODULE_2__["default"], null)));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (WrapperA);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage/WrapperB.js":
+/*!*******************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage/WrapperB.js ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var _ProductTabs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ProductTabs */ "./resources/js/components/Pages/ProductInfoPage/ProductTabs.js");
+ // Layout imports
+
+
+
+
+function WrapperB(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+    className: ".col-sm-12 .col-md-7 .offset-md-2"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProductTabs__WEBPACK_IMPORTED_MODULE_2__["default"], null))));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (WrapperB);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/main.css":
 /*!************************************************!*\
-  !*** ./resources/js/components/Pages/Main.css ***!
+  !*** ./resources/js/components/Pages/main.css ***!
   \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/postcss-loader/src??ref--6-2!./Main.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Pages/Main.css");
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/postcss-loader/src??ref--6-2!./main.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Pages/main.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -74469,34 +73236,6 @@ var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/a
 if(content.locals) module.exports = content.locals;
 
 if(false) {}
-
-/***/ }),
-
-/***/ "./resources/js/components/Phone/Phone.js":
-/*!************************************************!*\
-  !*** ./resources/js/components/Phone/Phone.js ***!
-  \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
-
-
-
-function Phone(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Card"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["CardImg"], {
-    top: true,
-    width: "100%",
-    src: props.img,
-    alt: "Card image cap"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["CardBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["CardTitle"], null, props.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Button"], null, "Button")));
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (Phone);
 
 /***/ }),
 
