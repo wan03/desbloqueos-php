@@ -72870,7 +72870,7 @@ function PhoneOrdering(props) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "iPhone"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "$35")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Form"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["FormGroup"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Label"], {
     for: "exampleSelect",
     className: "mr-sm-3"
-  }, "Select"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Input"], {
+  }, "Select Your Phone's Carrier:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Input"], {
     type: "select",
     name: "select",
     id: "exampleSelect",
@@ -72880,11 +72880,11 @@ function PhoneOrdering(props) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Label"], {
     for: "imei",
     className: "mr-sm-3"
-  }, "Password"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Input"], {
+  }, "Enter Your Phone's IMEI Number:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Input"], {
     type: "text",
     name: "ime",
-    id: "examplePassword",
-    placeholder: "Enter IMEI Number Here",
+    id: "ime-field",
+    placeholder: "Enter 15 digit number here",
     className: "mr-sm-3"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "smallText"
@@ -73119,14 +73119,14 @@ function (_React$Component) {
         onClick: function onClick() {
           _this2.toggle('1');
         }
-      }, "Tab1")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+      }, "Instructions")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
         className: classnames__WEBPACK_IMPORTED_MODULE_2___default()({
           active: this.state.activeTab === '2'
         }),
         onClick: function onClick() {
           _this2.toggle('2');
         }
-      }, "Moar Tabs"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["TabContent"], {
+      }, "Information"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["TabContent"], {
         activeTab: this.state.activeTab
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["TabPane"], {
         tabId: "1"
@@ -73134,17 +73134,13 @@ function (_React$Component) {
         sm: "12"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "tabContent"
-      }, "Tab 1 Contents")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["TabPane"], {
+      }, "THIS IS HOW TO UNLOCK YOUR APPLE IPHONE 8 FROM ANY GSM NETWORKS SUCH AS AT&T, T-MOBILE, VODAFONE,SPRINT,VERIZON AND MANY MORE.\u2028\u2028Your Apple device is simple to unlock! Simply connect your Apple iPhone to your computer and turn on iTunes after we have processed your order. Follow the instructions on iTunes and this will unlock your cell phone to be used with any GSM network such as Rogers, Bell, Vodafone, and others! Once you place your order for your Apple iPhone Network Unlock, we will have your IMEI Number processed and email you as soon as it is completed. Once unlocked, your Apple iPhone 8 will be factory unlocked for another GSM Network.")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["TabPane"], {
         tabId: "2"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
-        sm: "6"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Card"], {
-        body: true
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["CardTitle"], null, "Special Title Treatment"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["CardText"], null, "With supporting text below as a natural lead-in to additional content."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Button"], null, "Go somewhere"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
-        sm: "6"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Card"], {
-        body: true
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["CardTitle"], null, "Special Title Treatment"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["CardText"], null, "With supporting text below as a natural lead-in to additional content."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Button"], null, "Go somewhere")))))));
+        sm: "12"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "tabContent"
+      }, "Other content for Tab 2"))))));
     }
   }]);
 

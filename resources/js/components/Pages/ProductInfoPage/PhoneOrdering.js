@@ -21,7 +21,7 @@ function PhoneOrdering(props) {
                 <Col>
                 <Form>
                     <FormGroup>
-                        <Label for="exampleSelect" className="mr-sm-3">Select</Label>
+                        <Label for="exampleSelect" className="mr-sm-3">Select Your Phone's Carrier:</Label>
                         <Input type="select" name="select" id="exampleSelect" className="mr-sm-3">
                             <option>Att</option>
                             <option>Sprint</option>
@@ -30,8 +30,8 @@ function PhoneOrdering(props) {
                     </FormGroup>
 
                     <FormGroup className="mb-2 mr-sm-12 mb-sm-0">
-                        <Label for="imei" className="mr-sm-3">Password</Label>
-                        <Input type="text" name="ime" id="examplePassword" placeholder="Enter IMEI Number Here" className="mr-sm-3" />
+                        <Label for="imei" className="mr-sm-3">Enter Your Phone's IMEI Number:</Label>
+                        <Input type="text" name="ime" id="ime-field" placeholder="Enter 15 digit number here" className="mr-sm-3" />
                         <p className="smallText">Dial *#06# or Options, Status, IMEI Should be a 15-digit number</p>
                     </FormGroup>
                     <Button color="primary" size="lg" block>Ordena Ahora</Button>
