@@ -1,12 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import Input from '@material-ui/core/Input';
 import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
+import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-
 
 const styles = theme => ({
   root: {
@@ -16,73 +14,23 @@ const styles = theme => ({
   formControl: {
     margin: theme.spacing.unit,
     minWidth: 120,
-    maxWidth: 300,
   },
-  chips: {
-    display: 'flex',
-    flexWrap: 'wrap',
-  },
-  chip: {
-    margin: theme.spacing.unit / 4,
-  },
-  noLabel: {
-    marginTop: theme.spacing.unit * 3,
+  selectEmpty: {
+    marginTop: theme.spacing.unit * 2,
   },
 });
 
-const ITEM_HEIGHT = 48;
-const ITEM_PADDING_TOP = 8;
-const MenuProps = {
-  PaperProps: {
-    style: {
-      maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-      width: 250,
-    },
-  },
-};
-
-const names = [
-  'Oliver Hansen',
-  'Van Henry',
-  'April Tucker',
-  'Ralph Hubbard',
-  'Omar Alexander',
-  'Carlos Abbott',
-  'Miriam Wagner',
-  'Bradley Wilkerson',
-  'Virginia Andrews',
-  'Kelly Snyder',
-];
-
-function getStyles(name, that) {
-  return {
-    fontWeight:
-      that.state.name.indexOf(name) === -1
-        ? that.props.theme.typography.fontWeightRegular
-        : that.props.theme.typography.fontWeightMedium,
-  };
-}
-
 class SearchDropDown extends React.Component {
   state = {
-    name: [],
+    age: '',
+    name: 'hai',
+    labelWidth: 0,
   };
 
-  handleChange = event => {
-    this.setState({ name: event.target.value });
-  };
 
-  handleChangeMultiple = event => {
-    const { options } = event.target;
-    const value = [];
-    for (let i = 0, l = options.length; i < l; i += 1) {
-      if (options[i].selected) {
-        value.push(options[i].value);
-      }
-    }
-    this.setState({
-      name: value,
-    });
+
+  handleChange = name => event => {
+    this.setState({ [name]: event.target.value });
   };
 
   render() {
@@ -90,22 +38,28 @@ class SearchDropDown extends React.Component {
 
     return (
       <div className={classes.root}>
-        <FormControl className={classes.formControl}>
-          <InputLabel htmlFor="select-multiple">Name</InputLabel>
+
+
+        <FormControl required className={classes.formControl}>
+          <InputLabel htmlFor="age-native-required">Requerido</InputLabel>
           <Select
-            multiple
-            value={this.state.name}
-            onChange={this.handleChange}
-            input={<Input id="select-multiple" />}
-            MenuProps={MenuProps}
+            native
+            value={this.state.age}
+            onChange={this.handleChange('age')}
+            name="age"
+            inputProps={{
+              id: 'age-native-required',
+            }}
           >
-            {names.map(name => (
-              <MenuItem key={name} value={name} style={getStyles(name, this)}>
-                {name}
-              </MenuItem>
-            ))}
+            <option value="" />
+            <option value={10}>US</option>
+            <option value={20}>Mexico</option>
+            <option value={30}>Costa Rica</option>
           </Select>
+          <FormHelperText>En que país comprastes el teléfono?</FormHelperText>
         </FormControl>
+
+
       </div>
     );
   }
@@ -115,4 +69,4 @@ SearchDropDown.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles, { withTheme: true })(SearchDropDown);
+export default withStyles(styles)(SearchDropDown);

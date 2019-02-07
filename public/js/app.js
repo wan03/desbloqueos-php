@@ -2737,6 +2737,244 @@ var _ButtonBase = _interopRequireDefault(__webpack_require__(/*! ./ButtonBase */
 
 /***/ }),
 
+/***/ "./node_modules/@material-ui/core/Checkbox/Checkbox.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/@material-ui/core/Checkbox/Checkbox.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = exports.styles = void 0;
+
+var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
+
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
+
+var _objectWithoutProperties2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/objectWithoutProperties.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
+
+var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
+
+var _SwitchBase = _interopRequireDefault(__webpack_require__(/*! ../internal/SwitchBase */ "./node_modules/@material-ui/core/internal/SwitchBase.js"));
+
+var _CheckBoxOutlineBlank = _interopRequireDefault(__webpack_require__(/*! ../internal/svg-icons/CheckBoxOutlineBlank */ "./node_modules/@material-ui/core/internal/svg-icons/CheckBoxOutlineBlank.js"));
+
+var _CheckBox = _interopRequireDefault(__webpack_require__(/*! ../internal/svg-icons/CheckBox */ "./node_modules/@material-ui/core/internal/svg-icons/CheckBox.js"));
+
+var _IndeterminateCheckBox = _interopRequireDefault(__webpack_require__(/*! ../internal/svg-icons/IndeterminateCheckBox */ "./node_modules/@material-ui/core/internal/svg-icons/IndeterminateCheckBox.js"));
+
+var _helpers = __webpack_require__(/*! ../utils/helpers */ "./node_modules/@material-ui/core/utils/helpers.js");
+
+var _withStyles = _interopRequireDefault(__webpack_require__(/*! ../styles/withStyles */ "./node_modules/@material-ui/core/styles/withStyles.js"));
+
+var styles = function styles(theme) {
+  return {
+    /* Styles applied to the root element. */
+    root: {
+      color: theme.palette.text.secondary
+    },
+
+    /* Styles applied to the root element if `checked={true}`. */
+    checked: {},
+
+    /* Styles applied to the root element if `disabled={true}`. */
+    disabled: {},
+
+    /* Styles applied to the root element if `indeterminate={true}`. */
+    indeterminate: {},
+
+    /* Styles applied to the root element if `color="primary"`. */
+    colorPrimary: {
+      '&$checked': {
+        color: theme.palette.primary.main
+      },
+      '&$disabled': {
+        color: theme.palette.action.disabled
+      }
+    },
+
+    /* Styles applied to the root element if `color="secondary"`. */
+    colorSecondary: {
+      '&$checked': {
+        color: theme.palette.secondary.main
+      },
+      '&$disabled': {
+        color: theme.palette.action.disabled
+      }
+    }
+  };
+};
+
+exports.styles = styles;
+
+function Checkbox(props) {
+  var checkedIcon = props.checkedIcon,
+      classes = props.classes,
+      className = props.className,
+      color = props.color,
+      icon = props.icon,
+      indeterminate = props.indeterminate,
+      indeterminateIcon = props.indeterminateIcon,
+      inputProps = props.inputProps,
+      other = (0, _objectWithoutProperties2.default)(props, ["checkedIcon", "classes", "className", "color", "icon", "indeterminate", "indeterminateIcon", "inputProps"]);
+  return _react.default.createElement(_SwitchBase.default, (0, _extends2.default)({
+    type: "checkbox",
+    checkedIcon: indeterminate ? indeterminateIcon : checkedIcon,
+    className: (0, _classnames.default)((0, _defineProperty2.default)({}, classes.indeterminate, indeterminate), className),
+    classes: {
+      root: (0, _classnames.default)(classes.root, classes["color".concat((0, _helpers.capitalize)(color))]),
+      checked: classes.checked,
+      disabled: classes.disabled
+    },
+    inputProps: (0, _extends2.default)({
+      'data-indeterminate': indeterminate
+    }, inputProps),
+    icon: indeterminate ? indeterminateIcon : icon
+  }, other));
+}
+
+ true ? Checkbox.propTypes = {
+  /**
+   * If `true`, the component is checked.
+   */
+  checked: _propTypes.default.oneOfType([_propTypes.default.bool, _propTypes.default.string]),
+
+  /**
+   * The icon to display when the component is checked.
+   */
+  checkedIcon: _propTypes.default.node,
+
+  /**
+   * Override or extend the styles applied to the component.
+   * See [CSS API](#css-api) below for more details.
+   */
+  classes: _propTypes.default.object.isRequired,
+
+  /**
+   * @ignore
+   */
+  className: _propTypes.default.string,
+
+  /**
+   * The color of the component. It supports those theme colors that make sense for this component.
+   */
+  color: _propTypes.default.oneOf(['primary', 'secondary', 'default']),
+
+  /**
+   * If `true`, the switch will be disabled.
+   */
+  disabled: _propTypes.default.bool,
+
+  /**
+   * If `true`, the ripple effect will be disabled.
+   */
+  disableRipple: _propTypes.default.bool,
+
+  /**
+   * The icon to display when the component is unchecked.
+   */
+  icon: _propTypes.default.node,
+
+  /**
+   * The id of the `input` element.
+   */
+  id: _propTypes.default.string,
+
+  /**
+   * If `true`, the component appears indeterminate.
+   * This does not set the native input element to indeterminate due
+   * to inconsistent behavior across browsers.
+   * However, we set a `data-indeterminate` attribute on the input.
+   */
+  indeterminate: _propTypes.default.bool,
+
+  /**
+   * The icon to display when the component is indeterminate.
+   */
+  indeterminateIcon: _propTypes.default.node,
+
+  /**
+   * Properties applied to the `input` element.
+   */
+  inputProps: _propTypes.default.object,
+
+  /**
+   * Use that property to pass a ref callback to the native input component.
+   */
+  inputRef: _propTypes.default.oneOfType([_propTypes.default.func, _propTypes.default.object]),
+
+  /**
+   * Callback fired when the state is changed.
+   *
+   * @param {object} event The event source of the callback.
+   * You can pull out the new value by accessing `event.target.checked`.
+   * @param {boolean} checked The `checked` value of the switch
+   */
+  onChange: _propTypes.default.func,
+
+  /**
+   * The input component property `type`.
+   */
+  type: _propTypes.default.string,
+
+  /**
+   * The value of the component.
+   */
+  value: _propTypes.default.string
+} : undefined;
+Checkbox.defaultProps = {
+  checkedIcon: _react.default.createElement(_CheckBox.default, null),
+  color: 'secondary',
+  icon: _react.default.createElement(_CheckBoxOutlineBlank.default, null),
+  indeterminate: false,
+  indeterminateIcon: _react.default.createElement(_IndeterminateCheckBox.default, null)
+};
+
+var _default = (0, _withStyles.default)(styles, {
+  name: 'MuiCheckbox'
+})(Checkbox);
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/Checkbox/index.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/@material-ui/core/Checkbox/index.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "default", {
+  enumerable: true,
+  get: function get() {
+    return _Checkbox.default;
+  }
+});
+
+var _Checkbox = _interopRequireDefault(__webpack_require__(/*! ./Checkbox */ "./node_modules/@material-ui/core/Checkbox/Checkbox.js"));
+
+/***/ }),
+
 /***/ "./node_modules/@material-ui/core/Divider/Divider.js":
 /*!***********************************************************!*\
   !*** ./node_modules/@material-ui/core/Divider/Divider.js ***!
@@ -3908,6 +4146,219 @@ function withFormControlContext(Component) {
   (0, _hoistNonReactStatics.default)(EnhancedComponent, Component);
   return EnhancedComponent;
 }
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/FormHelperText/FormHelperText.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/@material-ui/core/FormHelperText/FormHelperText.js ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = exports.styles = void 0;
+
+var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
+
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
+
+var _objectWithoutProperties2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/objectWithoutProperties.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
+
+var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
+
+var _utils = __webpack_require__(/*! @material-ui/utils */ "./node_modules/@material-ui/utils/index.es.js");
+
+var _formControlState = _interopRequireDefault(__webpack_require__(/*! ../FormControl/formControlState */ "./node_modules/@material-ui/core/FormControl/formControlState.js"));
+
+var _withFormControlContext = _interopRequireDefault(__webpack_require__(/*! ../FormControl/withFormControlContext */ "./node_modules/@material-ui/core/FormControl/withFormControlContext.js"));
+
+var _withStyles = _interopRequireDefault(__webpack_require__(/*! ../styles/withStyles */ "./node_modules/@material-ui/core/styles/withStyles.js"));
+
+var styles = function styles(theme) {
+  return {
+    /* Styles applied to the root element. */
+    root: {
+      color: theme.palette.text.secondary,
+      fontFamily: theme.typography.fontFamily,
+      fontSize: theme.typography.pxToRem(12),
+      textAlign: 'left',
+      marginTop: 8,
+      lineHeight: '1em',
+      minHeight: '1em',
+      margin: 0,
+      '&$disabled': {
+        color: theme.palette.text.disabled
+      },
+      '&$error': {
+        color: theme.palette.error.main
+      }
+    },
+
+    /* Styles applied to the root element if `error={true}`. */
+    error: {},
+
+    /* Styles applied to the root element if `disabled={true}`. */
+    disabled: {},
+
+    /* Styles applied to the root element if `margin="dense"`. */
+    marginDense: {
+      marginTop: 4
+    },
+
+    /* Styles applied to the root element if `variant="filled"` or `variant="outlined"`. */
+    contained: {
+      margin: '8px 12px 0'
+    },
+
+    /* Styles applied to the root element if `focused={true}`. */
+    focused: {},
+
+    /* Styles applied to the root element if `filled={true}`. */
+    filled: {},
+
+    /* Styles applied to the root element if `required={true}`. */
+    required: {}
+  };
+};
+
+exports.styles = styles;
+
+function FormHelperText(props) {
+  var _classNames;
+
+  var classes = props.classes,
+      classNameProp = props.className,
+      Component = props.component,
+      disabled = props.disabled,
+      error = props.error,
+      filled = props.filled,
+      focused = props.focused,
+      margin = props.margin,
+      muiFormControl = props.muiFormControl,
+      required = props.required,
+      variant = props.variant,
+      other = (0, _objectWithoutProperties2.default)(props, ["classes", "className", "component", "disabled", "error", "filled", "focused", "margin", "muiFormControl", "required", "variant"]);
+  var fcs = (0, _formControlState.default)({
+    props: props,
+    muiFormControl: muiFormControl,
+    states: ['variant', 'margin', 'disabled', 'error', 'filled', 'focused', 'required']
+  });
+  return _react.default.createElement(Component, (0, _extends2.default)({
+    className: (0, _classnames.default)(classes.root, (_classNames = {}, (0, _defineProperty2.default)(_classNames, classes.contained, fcs.variant === 'filled' || fcs.variant === 'outlined'), (0, _defineProperty2.default)(_classNames, classes.marginDense, fcs.margin === 'dense'), (0, _defineProperty2.default)(_classNames, classes.disabled, fcs.disabled), (0, _defineProperty2.default)(_classNames, classes.error, fcs.error), (0, _defineProperty2.default)(_classNames, classes.filled, fcs.filled), (0, _defineProperty2.default)(_classNames, classes.focused, fcs.focused), (0, _defineProperty2.default)(_classNames, classes.required, fcs.required), _classNames), classNameProp)
+  }, other));
+}
+
+ true ? FormHelperText.propTypes = {
+  /**
+   * The content of the component.
+   */
+  children: _propTypes.default.node,
+
+  /**
+   * Override or extend the styles applied to the component.
+   * See [CSS API](#css-api) below for more details.
+   */
+  classes: _propTypes.default.object.isRequired,
+
+  /**
+   * @ignore
+   */
+  className: _propTypes.default.string,
+
+  /**
+   * The component used for the root node.
+   * Either a string to use a DOM element or a component.
+   */
+  component: _utils.componentPropType,
+
+  /**
+   * If `true`, the helper text should be displayed in a disabled state.
+   */
+  disabled: _propTypes.default.bool,
+
+  /**
+   * If `true`, helper text should be displayed in an error state.
+   */
+  error: _propTypes.default.bool,
+
+  /**
+   * If `true`, the helper text should use filled classes key.
+   */
+  filled: _propTypes.default.bool,
+
+  /**
+   * If `true`, the helper text should use focused classes key.
+   */
+  focused: _propTypes.default.bool,
+
+  /**
+   * If `dense`, will adjust vertical spacing. This is normally obtained via context from
+   * FormControl.
+   */
+  margin: _propTypes.default.oneOf(['dense']),
+
+  /**
+   * @ignore
+   */
+  muiFormControl: _propTypes.default.object,
+
+  /**
+   * If `true`, the helper text should use required classes key.
+   */
+  required: _propTypes.default.bool,
+
+  /**
+   * The variant to use.
+   */
+  variant: _propTypes.default.oneOf(['standard', 'outlined', 'filled'])
+} : undefined;
+FormHelperText.defaultProps = {
+  component: 'p'
+};
+
+var _default = (0, _withStyles.default)(styles, {
+  name: 'MuiFormHelperText'
+})((0, _withFormControlContext.default)(FormHelperText));
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/FormHelperText/index.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/@material-ui/core/FormHelperText/index.js ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "default", {
+  enumerable: true,
+  get: function get() {
+    return _FormHelperText.default;
+  }
+});
+
+var _FormHelperText = _interopRequireDefault(__webpack_require__(/*! ./FormHelperText */ "./node_modules/@material-ui/core/FormHelperText/FormHelperText.js"));
 
 /***/ }),
 
@@ -6880,6 +7331,225 @@ Object.defineProperty(exports, "default", {
 });
 
 var _ListItem = _interopRequireDefault(__webpack_require__(/*! ./ListItem */ "./node_modules/@material-ui/core/ListItem/ListItem.js"));
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/ListItemText/ListItemText.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/@material-ui/core/ListItemText/ListItemText.js ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = exports.styles = void 0;
+
+var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
+
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
+
+var _objectWithoutProperties2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/objectWithoutProperties.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
+
+var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
+
+var _withStyles = _interopRequireDefault(__webpack_require__(/*! ../styles/withStyles */ "./node_modules/@material-ui/core/styles/withStyles.js"));
+
+var _Typography = _interopRequireDefault(__webpack_require__(/*! ../Typography */ "./node_modules/@material-ui/core/Typography/index.js"));
+
+var _ListContext = _interopRequireDefault(__webpack_require__(/*! ../List/ListContext */ "./node_modules/@material-ui/core/List/ListContext.js"));
+
+var styles = function styles(theme) {
+  return {
+    /* Styles applied to the root element. */
+    root: {
+      flex: '1 1 auto',
+      minWidth: 0,
+      padding: '0 16px',
+      '&:first-child': {
+        paddingLeft: 0
+      }
+    },
+
+    /* Styles applied to the root element if `inset={true}`. */
+    inset: {
+      '&:first-child': {
+        paddingLeft: 56
+      }
+    },
+
+    /* Styles applied to the root element if `context.dense` is `true`. */
+    dense: {
+      fontSize: theme.typography.pxToRem(13)
+    },
+
+    /* Styles applied to the primary `Typography` component. */
+    primary: {
+      '&$textDense': {
+        fontSize: 'inherit'
+      }
+    },
+
+    /* Styles applied to the secondary `Typography` component. */
+    secondary: {
+      '&$textDense': {
+        fontSize: 'inherit'
+      }
+    },
+
+    /* Styles applied to the `Typography` components if `context.dense` is `true`. */
+    textDense: {}
+  };
+};
+
+exports.styles = styles;
+
+function ListItemText(props) {
+  var children = props.children,
+      classes = props.classes,
+      classNameProp = props.className,
+      disableTypography = props.disableTypography,
+      inset = props.inset,
+      primaryProp = props.primary,
+      primaryTypographyProps = props.primaryTypographyProps,
+      secondaryProp = props.secondary,
+      secondaryTypographyProps = props.secondaryTypographyProps,
+      theme = props.theme,
+      other = (0, _objectWithoutProperties2.default)(props, ["children", "classes", "className", "disableTypography", "inset", "primary", "primaryTypographyProps", "secondary", "secondaryTypographyProps", "theme"]);
+  return _react.default.createElement(_ListContext.default.Consumer, null, function (_ref) {
+    var _classNames3;
+
+    var dense = _ref.dense;
+    var primary = primaryProp != null ? primaryProp : children;
+
+    if (primary != null && primary.type !== _Typography.default && !disableTypography) {
+      primary = _react.default.createElement(_Typography.default, (0, _extends2.default)({
+        variant: theme.typography.useNextVariants ? 'body1' : 'subheading',
+        className: (0, _classnames.default)(classes.primary, (0, _defineProperty2.default)({}, classes.textDense, dense)),
+        component: "span"
+      }, primaryTypographyProps), primary);
+    }
+
+    var secondary = secondaryProp;
+
+    if (secondary != null && secondary.type !== _Typography.default && !disableTypography) {
+      secondary = _react.default.createElement(_Typography.default, (0, _extends2.default)({
+        className: (0, _classnames.default)(classes.secondary, (0, _defineProperty2.default)({}, classes.textDense, dense)),
+        color: "textSecondary"
+      }, secondaryTypographyProps), secondary);
+    }
+
+    return _react.default.createElement("div", (0, _extends2.default)({
+      className: (0, _classnames.default)(classes.root, (_classNames3 = {}, (0, _defineProperty2.default)(_classNames3, classes.dense, dense), (0, _defineProperty2.default)(_classNames3, classes.inset, inset), _classNames3), classNameProp)
+    }, other), primary, secondary);
+  });
+}
+
+ true ? ListItemText.propTypes = {
+  /**
+   * Alias for the `primary` property.
+   */
+  children: _propTypes.default.node,
+
+  /**
+   * Override or extend the styles applied to the component.
+   * See [CSS API](#css-api) below for more details.
+   */
+  classes: _propTypes.default.object.isRequired,
+
+  /**
+   * @ignore
+   */
+  className: _propTypes.default.string,
+
+  /**
+   * If `true`, the children won't be wrapped by a Typography component.
+   * This can be useful to render an alternative Typography variant by wrapping
+   * the `children` (or `primary`) text, and optional `secondary` text
+   * with the Typography component.
+   */
+  disableTypography: _propTypes.default.bool,
+
+  /**
+   * If `true`, the children will be indented.
+   * This should be used if there is no left avatar or left icon.
+   */
+  inset: _propTypes.default.bool,
+
+  /**
+   * The main content element.
+   */
+  primary: _propTypes.default.node,
+
+  /**
+   * These props will be forwarded to the primary typography component
+   * (as long as disableTypography is not `true`).
+   */
+  primaryTypographyProps: _propTypes.default.object,
+
+  /**
+   * The secondary content element.
+   */
+  secondary: _propTypes.default.node,
+
+  /**
+   * These props will be forwarded to the secondary typography component
+   * (as long as disableTypography is not `true`).
+   */
+  secondaryTypographyProps: _propTypes.default.object,
+
+  /**
+   * @ignore
+   */
+  theme: _propTypes.default.object.isRequired
+} : undefined;
+ListItemText.defaultProps = {
+  disableTypography: false,
+  inset: false
+};
+
+var _default = (0, _withStyles.default)(styles, {
+  name: 'MuiListItemText',
+  withTheme: true
+})(ListItemText);
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/ListItemText/index.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/@material-ui/core/ListItemText/index.js ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "default", {
+  enumerable: true,
+  get: function get() {
+    return _ListItemText.default;
+  }
+});
+
+var _ListItemText = _interopRequireDefault(__webpack_require__(/*! ./ListItemText */ "./node_modules/@material-ui/core/ListItemText/ListItemText.js"));
 
 /***/ }),
 
@@ -12471,6 +13141,401 @@ var _Toolbar = _interopRequireDefault(__webpack_require__(/*! ./Toolbar */ "./no
 
 /***/ }),
 
+/***/ "./node_modules/@material-ui/core/Typography/Typography.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/@material-ui/core/Typography/Typography.js ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = exports.styles = void 0;
+
+var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
+
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
+
+var _objectWithoutProperties2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/objectWithoutProperties.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
+
+var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
+
+var _utils = __webpack_require__(/*! @material-ui/utils */ "./node_modules/@material-ui/utils/index.es.js");
+
+var _withStyles = _interopRequireDefault(__webpack_require__(/*! ../styles/withStyles */ "./node_modules/@material-ui/core/styles/withStyles.js"));
+
+var _helpers = __webpack_require__(/*! ../utils/helpers */ "./node_modules/@material-ui/core/utils/helpers.js");
+
+var styles = function styles(theme) {
+  return {
+    /* Styles applied to the root element. */
+    root: {
+      display: 'block',
+      margin: 0
+    },
+
+    /* Styles applied to the root element if `variant="display4"`. */
+    display4: theme.typography.display4,
+
+    /* Styles applied to the root element if `variant="display3"`. */
+    display3: theme.typography.display3,
+
+    /* Styles applied to the root element if `variant="display2"`. */
+    display2: theme.typography.display2,
+
+    /* Styles applied to the root element if `variant="display1"`. */
+    display1: theme.typography.display1,
+
+    /* Styles applied to the root element if `variant="headline"`. */
+    headline: theme.typography.headline,
+
+    /* Styles applied to the root element if `variant="title"`. */
+    title: theme.typography.title,
+
+    /* Styles applied to the root element if `variant="subheading"`. */
+    subheading: theme.typography.subheading,
+
+    /* Styles applied to the root element if `variant="body2"`. */
+    body2: theme.typography.body2,
+
+    /* Styles applied to the root element if `variant="body1"`. */
+    body1: theme.typography.body1,
+
+    /* Styles applied to the root element if `variant="caption"`. */
+    caption: theme.typography.caption,
+
+    /* Styles applied to the root element if `variant="button"`. */
+    button: theme.typography.button,
+
+    /* Styles applied to the root element if `variant="h1"`. */
+    h1: theme.typography.h1,
+
+    /* Styles applied to the root element if `variant="h2"`. */
+    h2: theme.typography.h2,
+
+    /* Styles applied to the root element if `variant="h3"`. */
+    h3: theme.typography.h3,
+
+    /* Styles applied to the root element if `variant="h4"`. */
+    h4: theme.typography.h4,
+
+    /* Styles applied to the root element if `variant="h5"`. */
+    h5: theme.typography.h5,
+
+    /* Styles applied to the root element if `variant="h6"`. */
+    h6: theme.typography.h6,
+
+    /* Styles applied to the root element if `variant="subtitle1"`. */
+    subtitle1: theme.typography.subtitle1,
+
+    /* Styles applied to the root element if `variant="subtitle2"`. */
+    subtitle2: theme.typography.subtitle2,
+
+    /* Styles applied to the root element if `variant="overline"`. */
+    overline: theme.typography.overline,
+
+    /* Styles applied to the root element if `variant="srOnly"`. Only accessible to screen readers. */
+    srOnly: {
+      position: 'absolute',
+      height: 1,
+      width: 1,
+      overflow: 'hidden'
+    },
+
+    /* Styles applied to the root element if `align="left"`. */
+    alignLeft: {
+      textAlign: 'left'
+    },
+
+    /* Styles applied to the root element if `align="center"`. */
+    alignCenter: {
+      textAlign: 'center'
+    },
+
+    /* Styles applied to the root element if `align="right"`. */
+    alignRight: {
+      textAlign: 'right'
+    },
+
+    /* Styles applied to the root element if `align="justify"`. */
+    alignJustify: {
+      textAlign: 'justify'
+    },
+
+    /* Styles applied to the root element if `align="nowrap"`. */
+    noWrap: {
+      overflow: 'hidden',
+      textOverflow: 'ellipsis',
+      whiteSpace: 'nowrap'
+    },
+
+    /* Styles applied to the root element if `gutterBottom={true}`. */
+    gutterBottom: {
+      marginBottom: '0.35em'
+    },
+
+    /* Styles applied to the root element if `paragraph={true}`. */
+    paragraph: {
+      marginBottom: 16
+    },
+
+    /* Styles applied to the root element if `color="inherit"`. */
+    colorInherit: {
+      color: 'inherit'
+    },
+
+    /* Styles applied to the root element if `color="primary"`. */
+    colorPrimary: {
+      color: theme.palette.primary.main
+    },
+
+    /* Styles applied to the root element if `color="secondary"`. */
+    colorSecondary: {
+      color: theme.palette.secondary.main
+    },
+
+    /* Styles applied to the root element if `color="textPrimary"`. */
+    colorTextPrimary: {
+      color: theme.palette.text.primary
+    },
+
+    /* Styles applied to the root element if `color="textSecondary"`. */
+    colorTextSecondary: {
+      color: theme.palette.text.secondary
+    },
+
+    /* Styles applied to the root element if `color="error"`. */
+    colorError: {
+      color: theme.palette.error.main
+    },
+
+    /* Styles applied to the root element if `inline={true}`. */
+    inline: {
+      display: 'inline'
+    }
+  };
+};
+
+exports.styles = styles;
+var nextVariants = {
+  display4: 'h1',
+  display3: 'h2',
+  display2: 'h3',
+  display1: 'h4',
+  headline: 'h5',
+  title: 'h6',
+  subheading: 'subtitle1'
+};
+
+function getVariant(theme, variantProp) {
+  var typography = theme.typography;
+  var variant = variantProp;
+
+  if (!variant) {
+    variant = typography.useNextVariants ? 'body2' : 'body1';
+  } // complete v2 switch
+
+
+  if (typography.useNextVariants) {
+    variant = nextVariants[variant] || variant;
+  }
+
+  return variant;
+}
+
+var defaultHeadlineMapping = {
+  h1: 'h1',
+  h2: 'h2',
+  h3: 'h3',
+  h4: 'h4',
+  h5: 'h5',
+  h6: 'h6',
+  subtitle1: 'h6',
+  subtitle2: 'h6',
+  body1: 'p',
+  body2: 'p',
+  // deprecated
+  display4: 'h1',
+  display3: 'h1',
+  display2: 'h1',
+  display1: 'h1',
+  headline: 'h1',
+  title: 'h2',
+  subheading: 'h3'
+};
+
+function Typography(props) {
+  var _classNames;
+
+  var align = props.align,
+      classes = props.classes,
+      classNameProp = props.className,
+      color = props.color,
+      componentProp = props.component,
+      gutterBottom = props.gutterBottom,
+      headlineMapping = props.headlineMapping,
+      inline = props.inline,
+      internalDeprecatedVariant = props.internalDeprecatedVariant,
+      noWrap = props.noWrap,
+      paragraph = props.paragraph,
+      theme = props.theme,
+      variantProp = props.variant,
+      other = (0, _objectWithoutProperties2.default)(props, ["align", "classes", "className", "color", "component", "gutterBottom", "headlineMapping", "inline", "internalDeprecatedVariant", "noWrap", "paragraph", "theme", "variant"]);
+  var variant = getVariant(theme, variantProp);
+  var className = (0, _classnames.default)(classes.root, (_classNames = {}, (0, _defineProperty2.default)(_classNames, classes[variant], variant !== 'inherit'), (0, _defineProperty2.default)(_classNames, classes["color".concat((0, _helpers.capitalize)(color))], color !== 'default'), (0, _defineProperty2.default)(_classNames, classes.noWrap, noWrap), (0, _defineProperty2.default)(_classNames, classes.gutterBottom, gutterBottom), (0, _defineProperty2.default)(_classNames, classes.paragraph, paragraph), (0, _defineProperty2.default)(_classNames, classes["align".concat((0, _helpers.capitalize)(align))], align !== 'inherit'), (0, _defineProperty2.default)(_classNames, classes.inline, inline), _classNames), classNameProp);
+  var Component = componentProp || (paragraph ? 'p' : headlineMapping[variant] || defaultHeadlineMapping[variant]) || 'span';
+  return _react.default.createElement(Component, (0, _extends2.default)({
+    className: className
+  }, other));
+}
+
+ true ? Typography.propTypes = {
+  /**
+   * Set the text-align on the component.
+   */
+  align: _propTypes.default.oneOf(['inherit', 'left', 'center', 'right', 'justify']),
+
+  /**
+   * The content of the component.
+   */
+  children: _propTypes.default.node,
+
+  /**
+   * Override or extend the styles applied to the component.
+   * See [CSS API](#css-api) below for more details.
+   */
+  classes: _propTypes.default.object.isRequired,
+
+  /**
+   * @ignore
+   */
+  className: _propTypes.default.string,
+
+  /**
+   * The color of the component. It supports those theme colors that make sense for this component.
+   */
+  color: _propTypes.default.oneOf(['default', 'error', 'inherit', 'primary', 'secondary', 'textPrimary', 'textSecondary']),
+
+  /**
+   * The component used for the root node.
+   * Either a string to use a DOM element or a component.
+   * By default, it maps the variant to a good default headline component.
+   */
+  component: _utils.componentPropType,
+
+  /**
+   * If `true`, the text will have a bottom margin.
+   */
+  gutterBottom: _propTypes.default.bool,
+
+  /**
+   * We are empirically mapping the variant property to a range of different DOM element types.
+   * For instance, subtitle1 to `<h6>`.
+   * If you wish to change that mapping, you can provide your own.
+   * Alternatively, you can use the `component` property.
+   * The default mapping is the following:
+   */
+  headlineMapping: _propTypes.default.object,
+
+  /**
+   *  Controls whether the Typography is inline or not.
+   */
+  inline: _propTypes.default.bool,
+
+  /**
+   * A deprecated variant is used from an internal component. Users don't need
+   * a deprecation warning here if they switched to the v2 theme. They already
+   * get the mapping that will be applied in the next major release.
+   *
+   * @internal
+   */
+  internalDeprecatedVariant: _propTypes.default.bool,
+
+  /**
+   * If `true`, the text will not wrap, but instead will truncate with an ellipsis.
+   */
+  noWrap: _propTypes.default.bool,
+
+  /**
+   * If `true`, the text will have a bottom margin.
+   */
+  paragraph: _propTypes.default.bool,
+
+  /**
+   * @ignore
+   */
+  theme: _propTypes.default.object.isRequired,
+
+  /**
+   * Applies the theme typography styles.
+   * Use `body1` as the default value with the legacy implementation and `body2` with the new one.
+   */
+  variant: (0, _utils.chainPropTypes)(_propTypes.default.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'subtitle1', 'subtitle2', 'body1', 'body2', 'caption', 'button', 'overline', 'srOnly', 'inherit', // deprecated
+  'display4', 'display3', 'display2', 'display1', 'headline', 'title', 'subheading']), function (props) {
+    var deprecatedVariants = ['display4', 'display3', 'display2', 'display1', 'headline', 'title', 'subheading'];
+
+    if (props.theme.typography.useNextVariants && !props.internalDeprecatedVariant && deprecatedVariants.indexOf(props.variant) !== -1) {
+      return new Error('Material-UI: you are using a deprecated typography variant: ' + "`".concat(props.variant, "` that will be removed in the next major release.\n") + 'Please read the migration guide under https://material-ui.com/style/typography#migration-to-typography-v2.');
+    }
+
+    return null;
+  })
+} : undefined;
+Typography.defaultProps = {
+  align: 'inherit',
+  color: 'default',
+  gutterBottom: false,
+  headlineMapping: defaultHeadlineMapping,
+  inline: false,
+  noWrap: false,
+  paragraph: false
+};
+
+var _default = (0, _withStyles.default)(styles, {
+  name: 'MuiTypography',
+  withTheme: true
+})(Typography);
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/Typography/index.js":
+/*!************************************************************!*\
+  !*** ./node_modules/@material-ui/core/Typography/index.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "default", {
+  enumerable: true,
+  get: function get() {
+    return _Typography.default;
+  }
+});
+
+var _Typography = _interopRequireDefault(__webpack_require__(/*! ./Typography */ "./node_modules/@material-ui/core/Typography/Typography.js"));
+
+/***/ }),
+
 /***/ "./node_modules/@material-ui/core/colors/common.js":
 /*!*********************************************************!*\
   !*** ./node_modules/@material-ui/core/colors/common.js ***!
@@ -12634,6 +13699,337 @@ exports.default = _default;
 
 /***/ }),
 
+/***/ "./node_modules/@material-ui/core/internal/SwitchBase.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/@material-ui/core/internal/SwitchBase.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = exports.styles = void 0;
+
+var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
+
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
+
+var _objectWithoutProperties2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/objectWithoutProperties.js"));
+
+var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js"));
+
+var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js"));
+
+var _possibleConstructorReturn2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js"));
+
+var _getPrototypeOf2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js"));
+
+var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
+
+var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
+
+var _withFormControlContext = _interopRequireDefault(__webpack_require__(/*! ../FormControl/withFormControlContext */ "./node_modules/@material-ui/core/FormControl/withFormControlContext.js"));
+
+var _withStyles = _interopRequireDefault(__webpack_require__(/*! ../styles/withStyles */ "./node_modules/@material-ui/core/styles/withStyles.js"));
+
+var _IconButton = _interopRequireDefault(__webpack_require__(/*! ../IconButton */ "./node_modules/@material-ui/core/IconButton/index.js"));
+
+// @inheritedComponent IconButton
+var styles = {
+  root: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    transition: 'none',
+    '&:hover': {
+      // Disable the hover effect for the IconButton.
+      backgroundColor: 'transparent'
+    }
+  },
+  checked: {},
+  disabled: {},
+  input: {
+    cursor: 'inherit',
+    position: 'absolute',
+    opacity: 0,
+    width: '100%',
+    height: '100%',
+    top: 0,
+    left: 0,
+    margin: 0,
+    padding: 0
+  }
+};
+/**
+ * @ignore - internal component.
+ */
+
+exports.styles = styles;
+
+var SwitchBase =
+/*#__PURE__*/
+function (_React$Component) {
+  (0, _inherits2.default)(SwitchBase, _React$Component);
+
+  function SwitchBase(props) {
+    var _this;
+
+    (0, _classCallCheck2.default)(this, SwitchBase);
+    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(SwitchBase).call(this));
+
+    _this.handleFocus = function (event) {
+      if (_this.props.onFocus) {
+        _this.props.onFocus(event);
+      }
+
+      var muiFormControl = _this.props.muiFormControl;
+
+      if (muiFormControl && muiFormControl.onFocus) {
+        muiFormControl.onFocus(event);
+      }
+    };
+
+    _this.handleBlur = function (event) {
+      if (_this.props.onBlur) {
+        _this.props.onBlur(event);
+      }
+
+      var muiFormControl = _this.props.muiFormControl;
+
+      if (muiFormControl && muiFormControl.onBlur) {
+        muiFormControl.onBlur(event);
+      }
+    };
+
+    _this.handleInputChange = function (event) {
+      var checked = event.target.checked;
+
+      if (!_this.isControlled) {
+        _this.setState({
+          checked: checked
+        });
+      }
+
+      if (_this.props.onChange) {
+        _this.props.onChange(event, checked);
+      }
+    };
+
+    _this.isControlled = props.checked != null;
+    _this.state = {};
+
+    if (!_this.isControlled) {
+      // not controlled, use internal state
+      _this.state.checked = props.defaultChecked !== undefined ? props.defaultChecked : false;
+    }
+
+    return _this;
+  }
+
+  (0, _createClass2.default)(SwitchBase, [{
+    key: "render",
+    value: function render() {
+      var _classNames;
+
+      var _this$props = this.props,
+          autoFocus = _this$props.autoFocus,
+          checkedProp = _this$props.checked,
+          checkedIcon = _this$props.checkedIcon,
+          classes = _this$props.classes,
+          classNameProp = _this$props.className,
+          defaultChecked = _this$props.defaultChecked,
+          disabledProp = _this$props.disabled,
+          icon = _this$props.icon,
+          id = _this$props.id,
+          inputProps = _this$props.inputProps,
+          inputRef = _this$props.inputRef,
+          muiFormControl = _this$props.muiFormControl,
+          name = _this$props.name,
+          onBlur = _this$props.onBlur,
+          onChange = _this$props.onChange,
+          onFocus = _this$props.onFocus,
+          readOnly = _this$props.readOnly,
+          required = _this$props.required,
+          tabIndex = _this$props.tabIndex,
+          type = _this$props.type,
+          value = _this$props.value,
+          other = (0, _objectWithoutProperties2.default)(_this$props, ["autoFocus", "checked", "checkedIcon", "classes", "className", "defaultChecked", "disabled", "icon", "id", "inputProps", "inputRef", "muiFormControl", "name", "onBlur", "onChange", "onFocus", "readOnly", "required", "tabIndex", "type", "value"]);
+      var disabled = disabledProp;
+
+      if (muiFormControl) {
+        if (typeof disabled === 'undefined') {
+          disabled = muiFormControl.disabled;
+        }
+      }
+
+      var checked = this.isControlled ? checkedProp : this.state.checked;
+      var hasLabelFor = type === 'checkbox' || type === 'radio';
+      return _react.default.createElement(_IconButton.default, (0, _extends2.default)({
+        component: "span",
+        className: (0, _classnames.default)(classes.root, (_classNames = {}, (0, _defineProperty2.default)(_classNames, classes.checked, checked), (0, _defineProperty2.default)(_classNames, classes.disabled, disabled), _classNames), classNameProp),
+        disabled: disabled,
+        tabIndex: null,
+        role: undefined,
+        onFocus: this.handleFocus,
+        onBlur: this.handleBlur
+      }, other), checked ? checkedIcon : icon, _react.default.createElement("input", (0, _extends2.default)({
+        autoFocus: autoFocus,
+        checked: checkedProp,
+        defaultChecked: defaultChecked,
+        className: classes.input,
+        disabled: disabled,
+        id: hasLabelFor && id,
+        name: name,
+        onChange: this.handleInputChange,
+        readOnly: readOnly,
+        ref: inputRef,
+        required: required,
+        tabIndex: tabIndex,
+        type: type,
+        value: value
+      }, inputProps)));
+    }
+  }]);
+  return SwitchBase;
+}(_react.default.Component); // NB: If changed, please update Checkbox, Switch and Radio
+// so that the API documentation is updated.
+
+
+ true ? SwitchBase.propTypes = {
+  /**
+   * If `true`, the input will be focused during the first mount.
+   */
+  autoFocus: _propTypes.default.bool,
+
+  /**
+   * If `true`, the component is checked.
+   */
+  checked: _propTypes.default.oneOfType([_propTypes.default.bool, _propTypes.default.string]),
+
+  /**
+   * The icon to display when the component is checked.
+   */
+  checkedIcon: _propTypes.default.node.isRequired,
+
+  /**
+   * Override or extend the styles applied to the component.
+   * See [CSS API](#css-api) below for more details.
+   */
+  classes: _propTypes.default.object.isRequired,
+
+  /**
+   * @ignore
+   */
+  className: _propTypes.default.string,
+
+  /**
+   * @ignore
+   */
+  defaultChecked: _propTypes.default.bool,
+
+  /**
+   * If `true`, the switch will be disabled.
+   */
+  disabled: _propTypes.default.bool,
+
+  /**
+   * If `true`, the ripple effect will be disabled.
+   */
+  disableRipple: _propTypes.default.bool,
+
+  /**
+   * The icon to display when the component is unchecked.
+   */
+  icon: _propTypes.default.node.isRequired,
+
+  /**
+   * The id of the `input` element.
+   */
+  id: _propTypes.default.string,
+
+  /**
+   * Attributes applied to the `input` element.
+   */
+  inputProps: _propTypes.default.object,
+
+  /**
+   * Use that property to pass a ref callback to the native input component.
+   */
+  inputRef: _propTypes.default.oneOfType([_propTypes.default.func, _propTypes.default.object]),
+
+  /**
+   * @ignore
+   */
+  muiFormControl: _propTypes.default.object,
+
+  /*
+   * @ignore
+   */
+  name: _propTypes.default.string,
+
+  /**
+   * @ignore
+   */
+  onBlur: _propTypes.default.func,
+
+  /**
+   * Callback fired when the state is changed.
+   *
+   * @param {object} event The event source of the callback.
+   * You can pull out the new value by accessing `event.target.checked`.
+   * @param {boolean} checked The `checked` value of the switch
+   */
+  onChange: _propTypes.default.func,
+
+  /**
+   * @ignore
+   */
+  onFocus: _propTypes.default.func,
+
+  /**
+   * It prevents the user from changing the value of the field
+   * (not from interacting with the field).
+   */
+  readOnly: _propTypes.default.bool,
+
+  /**
+   * If `true`, the input will be required.
+   */
+  required: _propTypes.default.bool,
+
+  /**
+   * @ignore
+   */
+  tabIndex: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string]),
+
+  /**
+   * The input component property `type`.
+   */
+  type: _propTypes.default.string.isRequired,
+
+  /**
+   * The value of the component.
+   */
+  value: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.number, _propTypes.default.bool])
+} : undefined;
+
+var _default = (0, _withStyles.default)(styles, {
+  name: 'MuiPrivateSwitchBase'
+})((0, _withFormControlContext.default)(SwitchBase));
+
+exports.default = _default;
+
+/***/ }),
+
 /***/ "./node_modules/@material-ui/core/internal/svg-icons/ArrowDropDown.js":
 /*!****************************************************************************!*\
   !*** ./node_modules/@material-ui/core/internal/svg-icons/ArrowDropDown.js ***!
@@ -12671,6 +14067,129 @@ var ArrowDropDown = function ArrowDropDown(props) {
 ArrowDropDown = (0, _pure.default)(ArrowDropDown);
 ArrowDropDown.muiName = 'SvgIcon';
 var _default = ArrowDropDown;
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/internal/svg-icons/CheckBox.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@material-ui/core/internal/svg-icons/CheckBox.js ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _pure = _interopRequireDefault(__webpack_require__(/*! recompose/pure */ "./node_modules/recompose/pure.js"));
+
+var _SvgIcon = _interopRequireDefault(__webpack_require__(/*! ../../SvgIcon */ "./node_modules/@material-ui/core/SvgIcon/index.js"));
+
+var _ref = _react.default.createElement("path", {
+  d: "M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+});
+
+/**
+ * @ignore - internal component.
+ */
+var CheckBox = function CheckBox(props) {
+  return _react.default.createElement(_SvgIcon.default, props, _ref);
+};
+
+CheckBox = (0, _pure.default)(CheckBox);
+CheckBox.muiName = 'SvgIcon';
+var _default = CheckBox;
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/internal/svg-icons/CheckBoxOutlineBlank.js":
+/*!***********************************************************************************!*\
+  !*** ./node_modules/@material-ui/core/internal/svg-icons/CheckBoxOutlineBlank.js ***!
+  \***********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _pure = _interopRequireDefault(__webpack_require__(/*! recompose/pure */ "./node_modules/recompose/pure.js"));
+
+var _SvgIcon = _interopRequireDefault(__webpack_require__(/*! ../../SvgIcon */ "./node_modules/@material-ui/core/SvgIcon/index.js"));
+
+var _ref = _react.default.createElement("path", {
+  d: "M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+});
+
+/**
+ * @ignore - internal component.
+ */
+var CheckBoxOutlineBlank = function CheckBoxOutlineBlank(props) {
+  return _react.default.createElement(_SvgIcon.default, props, _ref);
+};
+
+CheckBoxOutlineBlank = (0, _pure.default)(CheckBoxOutlineBlank);
+CheckBoxOutlineBlank.muiName = 'SvgIcon';
+var _default = CheckBoxOutlineBlank;
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/internal/svg-icons/IndeterminateCheckBox.js":
+/*!************************************************************************************!*\
+  !*** ./node_modules/@material-ui/core/internal/svg-icons/IndeterminateCheckBox.js ***!
+  \************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _pure = _interopRequireDefault(__webpack_require__(/*! recompose/pure */ "./node_modules/recompose/pure.js"));
+
+var _SvgIcon = _interopRequireDefault(__webpack_require__(/*! ../../SvgIcon */ "./node_modules/@material-ui/core/SvgIcon/index.js"));
+
+var _ref = _react.default.createElement("path", {
+  d: "M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10H7v-2h10v2z"
+});
+
+/**
+ * @ignore - internal component.
+ */
+var IndeterminateCheckBox = function IndeterminateCheckBox(props) {
+  return _react.default.createElement(_SvgIcon.default, props, _ref);
+};
+
+IndeterminateCheckBox = (0, _pure.default)(IndeterminateCheckBox);
+IndeterminateCheckBox.muiName = 'SvgIcon';
+var _default = IndeterminateCheckBox;
 exports.default = _default;
 
 /***/ }),
@@ -15467,6 +16986,38 @@ function setRef(ref, value) {
     ref.current = value;
   }
 }
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/icons/Directions.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/@material-ui/icons/Directions.js ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@material-ui/icons/utils/createSvgIcon.js"));
+
+var _default = (0, _createSvgIcon.default)(_react.default.createElement(_react.default.Fragment, null, _react.default.createElement("path", {
+  d: "M21.71 11.29l-9-9a.9959.9959 0 0 0-1.41 0l-9 9c-.39.39-.39 1.02 0 1.41l9 9c.39.39 1.02.39 1.41 0l9-9c.39-.38.39-1.01 0-1.41zM14 14.5V12h-4v3H8v-4c0-.55.45-1 1-1h5V7.5l3.5 3.5-3.5 3.5z"
+}), _react.default.createElement("path", {
+  fill: "none",
+  d: "M0 0h24v24H0z"
+})), 'Directions');
+
+exports.default = _default;
 
 /***/ }),
 
@@ -21926,7 +23477,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".footer {\r\n    position: fixed;\r\n   left: 0;\r\n   bottom: 0;\r\n   width: 100%;\r\n    background: #333333;\r\n    height:56px;\r\n}\r\n\r\n.footer_nav {\r\n    display: flex;\r\n    height:100%;\r\n    align-items: center;\r\n    padding: 0 1rem;\r\n}\r\n\r\n.footer_nav_items ul{\r\n    list-style: none;\r\n    margin:0;\r\n    padding: 0;\r\n    display:flex;\r\n\r\n}\r\n\r\n.footer_nav_items li{\r\n    padding: 0 0.5rem;\r\n\r\n}\r\n\r\n.footer_logo {\r\n    margin-left:1rem;\r\n\r\n}\r\n\r\n.footer_logo a {\r\n    color: white;\r\n    text-decoration: none;\r\n    font-size: 1.5rem;\r\n\r\n}\r\n\r\n.footer_spacer {\r\n    flex: 1;\r\n}\r\n\r\n.footer_nav_items a{\r\n    color: white;\r\n    text-decoration: none;\r\n\r\n}\r\n\r\n.footer_nav_items a:hover,\r\n.footer_nav_items a:active{\r\n    color: #999999;\r\n}\r\n\r\n\r\n\r\n\r\n", ""]);
+exports.push([module.i, ".footer {\n    position: fixed;\n   left: 0;\n   bottom: 0;\n   width: 100%;\n    background: #333333;\n    height:56px;\n}\n\n.footer_nav {\n    display: flex;\n    height:100%;\n    align-items: center;\n    padding: 0 1rem;\n}\n\n.footer_nav_items ul{\n    list-style: none;\n    margin:0;\n    padding: 0;\n    display:flex;\n\n}\n\n.footer_nav_items li{\n    padding: 0 0.5rem;\n\n}\n\n.footer_logo {\n    margin-left:1rem;\n\n}\n\n.footer_logo a {\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n\n}\n\n.footer_spacer {\n    flex: 1;\n}\n\n.footer_nav_items a{\n    color: white;\n    text-decoration: none;\n\n}\n\n.footer_nav_items a:hover,\n.footer_nav_items a:active{\n    color: #999999;\n}\n\n\n\n\n", ""]);
 
 // exports
 
@@ -21945,7 +23496,26 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".HeaderWrapper {\r\n    display: flex;\r\n    min-height: 100vh;\r\n    flex-direction: column;\r\n    height: 45px;\r\n  }\r\n\r\n  .HolyGrail-body {\r\n    display: flex;\r\n    flex: 1;\r\n  }\r\n\r\n  .carousel-inner {\r\n      height: 300px;\r\n  }\r\n\r\n  /* PHONE */\r\n.phonesWrapper {\r\n   padding: 30px;\r\n}\r\n", ""]);
+exports.push([module.i, ".HeaderWrapper {\n    display: flex;\n    min-height: 100vh;\n    flex-direction: column;\n    height: 45px;\n  }\n\n  .HolyGrail-body {\n    display: flex;\n    flex: 1;\n  }\n\n  .carousel-inner {\n      height: 300px;\n  }\n\n  /* PHONE */\n.phonesWrapper {\n   padding: 30px;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Pages/ProductInfoPage/ProductInfoPage.css":
+/*!***********************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/Pages/ProductInfoPage/ProductInfoPage.css ***!
+  \***********************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".img-fluid {\n    max-height: 440px;\n}\n\nbody{\n\n    font-size: 100%;\n}\n\n\n/* Phone Ordering */\n\n.center {\n    margin: auto;\n    width: 95%;\n    border: 3px solid green;\n    padding: 10px;\n  }\n\n\n.padded{\n    padding:10px;\n}\n\n.ProductInfoText {\n\n\n}\n\n.ProductInfoText h3 {\ncolor: #353535;\nfont-size:3rem\n}\n\n.ProductInfoText h6 {\n    color: #7c1515;\n    font-size: 2rem;\n    }\n\n.smallText {\n    font-size: 11px;\n\n}\n\n.delivery-time-box{\n    border:0px;\n    border-color:#7c1515;\n    margin-top: 15px;\n    margin-left: -5px;\n}\n.delivery-time-box h6{\n    color:#999999;\n    text-transform: uppercase;\n}\n.delivery-time-box p{\ncolor: #333333;\n}\n\n\n/* Product Tabs */\n\n.tabsBox {\n    display: block;\n    position: relative;\n    padding: 1em 2em 15em;\n    border-width: 0px;\n    border-style: none;\n    border-color: rgb(216, 216, 216);\n    -o-border-image: initial;\n       border-image: initial;\n    margin: 1.5rem 0px 0px;\n    width:100%;\n\n}\n\n.tabContent {\n    padding-top:1.5rem;\n\n}\n", ""]);
 
 // exports
 
@@ -21964,7 +23534,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "html {\r\n    height:100%;\r\n}\r\n\r\nbody {\r\n    margin:0;\r\n    padding:0;\r\n    height: 100%;\r\n    font-size: 100%;\r\n}\r\n\r\n  h1 {\r\n    font-size: 2rem;\r\n    /* 2x body copy size = 32px */\r\n    line-height: 1.25;\r\n    /* 45px / 36px */\r\n  }\r\n\r\n  h2 {\r\n    font-size: 1.625rem;\r\n    /* 1.625x body copy size = 26px */\r\n    line-height: 1.15384615;\r\n    /* 30px / 26px */\r\n  }\r\n\r\n  h3 {\r\n    font-size: 1.375rem;\r\n    /* 1.375x body copy size = 22px */\r\n    line-height: 1.13636364;\r\n    /* 25px / 22px */\r\n  }\r\n\r\n  h4 {\r\n    font-size: 1.125rem;\r\n    /* 1.125x body copy size = 18px */\r\n    line-height: 1.11111111;\r\n  }\r\n\r\n  /* Body Content */\r\n\r\n  #page {\r\n    font-size: 1rem;\r\n    /* equivalent to 16px */\r\n    line-height: 1.25;\r\n    /* equivalent to 20px */\r\n  }\r\n\r\n\r\n  .jumbotron h3 {\r\n    font-size: 3rem;\r\n  }\r\n\r\n\r\n\r\n\r\n\r\n\r\n  @media (min-width: 43.75em) {\r\n    #page {\r\n      font-size: 1rem;\r\n      /* equivalent to 16px */\r\n      line-height: 1.375;\r\n      /* equivalent to 22px */\r\n    }\r\n  }\r\n\r\n\r\n/* MEDIA Q*/\r\n\r\n@media (min-width: 43.75em) {\r\n    h1 {\r\n      font-size: 2.5rem;\r\n      /* 2.5x body copy size = 40px */\r\n      line-height: 1.125;\r\n    }\r\n\r\n    h2 {\r\n        font-size: 2rem;\r\n        /* 2x body copy size = 32px */\r\n        line-height: 1.25;\r\n      }\r\n\r\n      h3 {\r\n        font-size: 1.5rem;\r\n        /* 1.5x body copy size = 24px */\r\n        line-height: 1.25;\r\n      }\r\n\r\n      h4 {\r\n        line-height: 1.22222222;\r\n        /* (22px / 18px */\r\n      }\r\n  }\r\n\r\n  @media (min-width: 56.25em) {\r\n    h1 {\r\n      font-size: 3rem;\r\n      /* 3x body copy size = 48px */\r\n      line-height: 1.05;\r\n      /* keep to a multiple of the 20px line height\r\n      and something more appropriate for display headings */\r\n    }\r\n\r\n    h2 {\r\n        font-size: 2.25rem;\r\n        /* 2.25x body copy size = 36px */\r\n        line-height: 1.25;\r\n      }\r\n\r\n      h3 {\r\n        font-size: 1.75rem;\r\n        /* 1.75x body copy size = 28px */\r\n        line-height: 1.25;\r\n      }\r\n\r\n      h4 {\r\n        line-height: 1.10;\r\n        /* (22px / 18px */\r\n      }\r\n  }\r\n\r\n", ""]);
+exports.push([module.i, "html {\n    height:100%;\n}\n\nbody {\n    margin:0;\n    padding:0;\n    height: 100%;\n    font-size: 100%;\n}\n\n  h1 {\n    font-size: 2rem;\n    /* 2x body copy size = 32px */\n    line-height: 1.25;\n    /* 45px / 36px */\n  }\n\n  h2 {\n    font-size: 1.625rem;\n    /* 1.625x body copy size = 26px */\n    line-height: 1.15384615;\n    /* 30px / 26px */\n  }\n\n  h3 {\n    font-size: 1.375rem;\n    /* 1.375x body copy size = 22px */\n    line-height: 1.13636364;\n    /* 25px / 22px */\n  }\n\n  h4 {\n    font-size: 1.125rem;\n    /* 1.125x body copy size = 18px */\n    line-height: 1.11111111;\n  }\n\n  /* Body Content */\n\n  #page {\n    font-size: 1rem;\n    /* equivalent to 16px */\n    line-height: 1.25;\n    /* equivalent to 20px */\n  }\n\n\n  .jumbotron h3 {\n    font-size: 3rem;\n  }\n\n\n\n\n\n\n  @media (min-width: 43.75em) {\n    #page {\n      font-size: 1rem;\n      /* equivalent to 16px */\n      line-height: 1.375;\n      /* equivalent to 22px */\n    }\n  }\n\n\n/* MEDIA Q*/\n\n@media (min-width: 43.75em) {\n    h1 {\n      font-size: 2.5rem;\n      /* 2.5x body copy size = 40px */\n      line-height: 1.125;\n    }\n\n    h2 {\n        font-size: 2rem;\n        /* 2x body copy size = 32px */\n        line-height: 1.25;\n      }\n\n      h3 {\n        font-size: 1.5rem;\n        /* 1.5x body copy size = 24px */\n        line-height: 1.25;\n      }\n\n      h4 {\n        line-height: 1.22222222;\n        /* (22px / 18px */\n      }\n  }\n\n  @media (min-width: 56.25em) {\n    h1 {\n      font-size: 3rem;\n      /* 3x body copy size = 48px */\n      line-height: 1.05;\n      /* keep to a multiple of the 20px line height\n      and something more appropriate for display headings */\n    }\n\n    h2 {\n        font-size: 2.25rem;\n        /* 2.25x body copy size = 36px */\n        line-height: 1.25;\n      }\n\n      h3 {\n        font-size: 1.75rem;\n        /* 1.75x body copy size = 28px */\n        line-height: 1.25;\n      }\n\n      h4 {\n        line-height: 1.10;\n        /* (22px / 18px */\n      }\n  }\n\n", ""]);
 
 // exports
 
@@ -21983,7 +23553,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\r\n.toggle-button {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-around;\r\n    height: 25px;\r\n    width: 36px;\r\n    background: transparent;\r\n    border: none;\r\n    cursor:pointer;\r\n    padding: 0;\r\n    box-sizing: border-box;\r\n}\r\n\r\n.toggle-button:focus {\r\n    outline: none;\r\n}\r\n\r\n.toggle-button_line{\r\n    width: 30px;\r\n    height: 2px;\r\n    background: white;\r\n}\r\n", ""]);
+exports.push([module.i, "\n.toggle-button {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n    height: 25px;\n    width: 36px;\n    background: transparent;\n    border: none;\n    cursor:pointer;\n    padding: 0;\n    box-sizing: border-box;\n}\n\n.toggle-button:focus {\n    outline: none;\n}\n\n.toggle-button_line{\n    width: 30px;\n    height: 2px;\n    background: white;\n}\n", ""]);
 
 // exports
 
@@ -22002,7 +23572,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".toolbar {\r\n    position: fixed;\r\n    top: 0;\r\n    left:0;\r\n    width: 100%;\r\n    background: #333333;\r\n    height:56px;\r\n    z-index: 200;\r\n}\r\n\r\n.toolbar_nav {\r\n    display: flex;\r\n    height:100%;\r\n    align-items: center;\r\n    padding: 0 1rem;\r\n}\r\n\r\n.toolbar_nav_items ul{\r\n    list-style: none;\r\n    margin:0;\r\n    padding: 0;\r\n    display:flex;\r\n\r\n}\r\n\r\n.toolbar_nav_items li{\r\n    padding: 0 0.5rem;\r\n\r\n}\r\n\r\n.toolbar_logo {\r\n    margin-left:1rem;\r\n\r\n}\r\n\r\n.toolbar_logo a {\r\n    color: white;\r\n    text-decoration: none;\r\n    font-size: 1.5rem;\r\n\r\n}\r\n\r\n.spacer {\r\n    flex: 1;\r\n}\r\n\r\n.toolbar_nav_items a{\r\n    color: white;\r\n    text-decoration: none;\r\n\r\n}\r\n\r\n.toolbar_nav_items a:hover,\r\n.toolbar_nav_items a:active{\r\n    color: #999999;\r\n}\r\n\r\n\r\n\r\n\r\n", ""]);
+exports.push([module.i, ".toolbar {\n    position: fixed;\n    top: 0;\n    left:0;\n    width: 100%;\n    background: #333333;\n    height:56px;\n    z-index: 200;\n}\n\n.toolbar_nav {\n    display: flex;\n    height:100%;\n    align-items: center;\n    padding: 0 1rem;\n}\n\n.toolbar_nav_items ul{\n    list-style: none;\n    margin:0;\n    padding: 0;\n    display:flex;\n\n}\n\n.toolbar_nav_items li{\n    padding: 0 0.5rem;\n\n}\n\n.toolbar_logo {\n    margin-left:1rem;\n\n}\n\n.toolbar_logo a {\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n\n}\n\n.spacer {\n    flex: 1;\n}\n\n.toolbar_nav_items a{\n    color: white;\n    text-decoration: none;\n\n}\n\n.toolbar_nav_items a:hover,\n.toolbar_nav_items a:active{\n    color: #999999;\n}\n\n\n\n\n", ""]);
 
 // exports
 
@@ -61006,6 +62576,211 @@ module.exports = ReactPropTypesSecret;
 
 /***/ }),
 
+/***/ "./node_modules/react-bootstrap/Image.js":
+/*!***********************************************!*\
+  !*** ./node_modules/react-bootstrap/Image.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+exports.__esModule = true;
+exports.default = void 0;
+
+var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
+
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js"));
+
+var _inheritsLoose2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inheritsLoose */ "./node_modules/@babel/runtime/helpers/inheritsLoose.js"));
+
+var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _ThemeProvider = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/ThemeProvider.js");
+
+var Image =
+/*#__PURE__*/
+function (_React$Component) {
+  (0, _inheritsLoose2.default)(Image, _React$Component);
+
+  function Image() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = Image.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        bsPrefix = _this$props.bsPrefix,
+        className = _this$props.className,
+        fluid = _this$props.fluid,
+        rounded = _this$props.rounded,
+        roundedCircle = _this$props.roundedCircle,
+        thumbnail = _this$props.thumbnail,
+        props = (0, _objectWithoutPropertiesLoose2.default)(_this$props, ["bsPrefix", "className", "fluid", "rounded", "roundedCircle", "thumbnail"]);
+    var classes = (0, _classnames.default)(fluid && bsPrefix + "-fluid", rounded && "rounded", roundedCircle && "rounded-circle", thumbnail && bsPrefix + "-thumbnail");
+    return _react.default.createElement("img", (0, _extends2.default)({}, props, {
+      className: (0, _classnames.default)(className, classes)
+    }));
+  };
+
+  return Image;
+}(_react.default.Component);
+
+Image.defaultProps = {
+  fluid: false,
+  rounded: false,
+  roundedCircle: false,
+  thumbnail: false
+};
+
+var _default = (0, _ThemeProvider.createBootstrapComponent)(Image, 'img');
+
+exports.default = _default;
+module.exports = exports["default"];
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/ThemeProvider.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/react-bootstrap/ThemeProvider.js ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+exports.__esModule = true;
+exports.createBootstrapComponent = createBootstrapComponent;
+exports.default = exports.ThemeConsumer = void 0;
+
+var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
+
+var _inheritsLoose2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inheritsLoose */ "./node_modules/@babel/runtime/helpers/inheritsLoose.js"));
+
+var _forwardRef = _interopRequireDefault(__webpack_require__(/*! react-context-toolbox/forwardRef */ "./node_modules/react-context-toolbox/forwardRef.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _React$createContext = _react.default.createContext(new Map()),
+    Provider = _React$createContext.Provider,
+    Consumer = _React$createContext.Consumer;
+
+exports.ThemeConsumer = Consumer;
+
+var ThemeProvider =
+/*#__PURE__*/
+function (_React$Component) {
+  (0, _inheritsLoose2.default)(ThemeProvider, _React$Component);
+
+  function ThemeProvider() {
+    var _this;
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _React$Component.call.apply(_React$Component, [this].concat(args)) || this;
+    _this.prefixes = new Map();
+    Object.keys(_this.props.prefixes).forEach(function (key) {
+      _this.prefixes.set(key, _this.props.prefixes[key]);
+    });
+    return _this;
+  }
+
+  var _proto = ThemeProvider.prototype;
+
+  _proto.render = function render() {
+    return _react.default.createElement(Provider, {
+      value: this.prefixes
+    }, this.props.children);
+  };
+
+  return ThemeProvider;
+}(_react.default.Component);
+
+function createBootstrapComponent(Component, opts) {
+  if (typeof opts === 'string') opts = {
+    prefix: opts
+  };
+  var isClassy = Component.prototype && Component.prototype.isReactComponent; // If it's a functional component make sure we don't break it with a ref
+
+  var _opts = opts,
+      prefix = _opts.prefix,
+      _opts$forwardRefAs = _opts.forwardRefAs,
+      forwardRefAs = _opts$forwardRefAs === void 0 ? isClassy ? 'ref' : 'innerRef' : _opts$forwardRefAs;
+  return (0, _forwardRef.default)(function (_ref, ref) {
+    var props = (0, _extends2.default)({}, _ref);
+    props[forwardRefAs] = ref;
+    return _react.default.createElement(Consumer, null, function (prefixes) {
+      return _react.default.createElement(Component, (0, _extends2.default)({}, props, {
+        bsPrefix: props.bsPrefix || prefixes.get(prefix) || prefix
+      }));
+    });
+  }, {
+    displayName: "Bootstrap(" + (Component.displayName || Component.name) + ")"
+  });
+}
+
+var _default = ThemeProvider;
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/react-context-toolbox/forwardRef.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/react-context-toolbox/forwardRef.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.default = forwardRef;
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function forwardRef(renderFn, _ref) {
+  var displayName = _ref.displayName,
+      propTypes = _ref.propTypes,
+      defaultProps = _ref.defaultProps,
+      _ref$allowFallback = _ref.allowFallback,
+      allowFallback = _ref$allowFallback === void 0 ? false : _ref$allowFallback;
+
+  var render = function render(props, ref) {
+    return renderFn(props, ref);
+  };
+
+  Object.assign(render, {
+    displayName: displayName
+  });
+  if (_react.default.forwardRef || !allowFallback) return Object.assign(_react.default.forwardRef(render), {
+    propTypes: propTypes,
+    defaultProps: defaultProps
+  });
+  return Object.assign(function (props) {
+    return render(props, null);
+  }, {
+    displayName: displayName,
+    propTypes: propTypes,
+    defaultProps: defaultProps
+  });
+}
+
+/***/ }),
+
 /***/ "./node_modules/react-dom/cjs/react-dom.development.js":
 /*!*************************************************************!*\
   !*** ./node_modules/react-dom/cjs/react-dom.development.js ***!
@@ -99630,7 +101405,7 @@ function load() {
 
   // If debug isn't set in LS, and we're in Electron, try to load $DEBUG
   if (!r && typeof process !== 'undefined' && 'env' in process) {
-    r = Object({"MIX_PUSHER_APP_CLUSTER":"mt1","MIX_PUSHER_APP_KEY":"","NODE_ENV":"development"}).DEBUG;
+    r = Object({"MIX_PUSHER_APP_KEY":"","MIX_PUSHER_APP_CLUSTER":"mt1","NODE_ENV":"development"}).DEBUG;
   }
 
   return r;
@@ -100051,6 +101826,86 @@ if (token) {
 
 /***/ }),
 
+/***/ "./resources/js/components/CatchErr/ErrorBoundary.js":
+/*!***********************************************************!*\
+  !*** ./resources/js/components/CatchErr/ErrorBoundary.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+var ErrorBoundary =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(ErrorBoundary, _React$Component);
+
+  function ErrorBoundary(props) {
+    var _this;
+
+    _classCallCheck(this, ErrorBoundary);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(ErrorBoundary).call(this, props));
+    _this.state = {
+      error: null,
+      errorInfo: null
+    };
+    return _this;
+  }
+
+  _createClass(ErrorBoundary, [{
+    key: "componentDidCatch",
+    value: function componentDidCatch(error, errorInfo) {
+      this.setState({
+        error: error,
+        errorInfo: errorInfo
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      if (this.state.errorInfo) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Something went wrong"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("details", {
+          style: {
+            whiteSpace: 'pre-wrap'
+          }
+        }, this.state.error && this.state.error.toString(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), this.state.errorInfo.componentStack));
+      } // Render children if there's no error
+
+
+      return this.props.children;
+    }
+  }]);
+
+  return ErrorBoundary;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (ErrorBoundary);
+
+/***/ }),
+
 /***/ "./resources/js/components/Footer/Footer.css":
 /*!***************************************************!*\
   !*** ./resources/js/components/Footer/Footer.css ***!
@@ -100174,62 +102029,6 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (About);
-
-/***/ }),
-
-/***/ "./resources/js/components/Pages/Celulares/celulares.js":
-/*!**************************************************************!*\
-  !*** ./resources/js/components/Pages/Celulares/celulares.js ***!
-  \**************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-var Celulares =
-/*#__PURE__*/
-function (_Component) {
-  _inherits(Celulares, _Component);
-
-  function Celulares() {
-    _classCallCheck(this, Celulares);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(Celulares).apply(this, arguments));
-  }
-
-  _createClass(Celulares, [{
-    key: "render",
-    value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "This is an example of the Celulares page in the router. Modify as needed.")));
-    }
-  }]);
-
-  return Celulares;
-}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
-
-/* harmony default export */ __webpack_exports__["default"] = (Celulares);
 
 /***/ }),
 
@@ -100528,6 +102327,392 @@ function (_React$Component) {
 
 /***/ }),
 
+/***/ "./resources/js/components/Pages/ProductInfoPage/PhoneImage.js":
+/*!*********************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage/PhoneImage.js ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_bootstrap_Image__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-bootstrap/Image */ "./node_modules/react-bootstrap/Image.js");
+/* harmony import */ var react_bootstrap_Image__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap_Image__WEBPACK_IMPORTED_MODULE_1__);
+ // Layout imports
+
+
+
+function PhoneImage(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Image__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    src: "https://www.boostmobile.com/content/dam/boostmobile/en/products/phones/apple/iphone-6/space-gray/device-front.png.transform/pdpCarousel/image.jpg",
+    fluid: true
+  }));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (PhoneImage);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage/PhoneOrdering.js":
+/*!************************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage/PhoneOrdering.js ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var _ProductInfoPage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ProductInfoPage */ "./resources/js/components/Pages/ProductInfoPage/ProductInfoPage.js");
+
+
+ // Layout imports
+
+function PhoneOrdering(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "ProductInfoText"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "iPhone"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "$35")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Form"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["FormGroup"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Label"], {
+    for: "exampleSelect",
+    className: "mr-sm-3"
+  }, "Select Your Phone's Carrier:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Input"], {
+    type: "select",
+    name: "select",
+    id: "exampleSelect",
+    className: "mr-sm-3"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Att"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Sprint"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Verizon"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["FormGroup"], {
+    className: "mb-2 mr-sm-12 mb-sm-0"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Label"], {
+    for: "imei",
+    className: "mr-sm-3"
+  }, "Enter Your Phone's IMEI Number:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Input"], {
+    type: "text",
+    name: "ime",
+    id: "ime-field",
+    placeholder: "Enter 15 digit number here",
+    className: "mr-sm-3"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "smallText"
+  }, "Dial *#06# or Options, Status, IMEI Should be a 15-digit number")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Button"], {
+    color: "primary",
+    size: "lg",
+    block: true
+  }, "Ordena Ahora")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "delivery-time-box"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "ESTIMATED DELIVERY TIME:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "5-15 BUSINESS DAYS")))));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (PhoneOrdering);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage/PhonePlacement.js":
+/*!*************************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage/PhonePlacement.js ***!
+  \*************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var _PhoneImage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PhoneImage */ "./resources/js/components/Pages/ProductInfoPage/PhoneImage.js");
+/* harmony import */ var _PhoneOrdering__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./PhoneOrdering */ "./resources/js/components/Pages/ProductInfoPage/PhoneOrdering.js");
+/* harmony import */ var _CatchErr_ErrorBoundary__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../CatchErr/ErrorBoundary */ "./resources/js/components/CatchErr/ErrorBoundary.js");
+ // Layout imports
+
+
+
+
+
+
+function PhonePlacement(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+    md: "4"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PhoneImage__WEBPACK_IMPORTED_MODULE_2__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+    md: "8"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CatchErr_ErrorBoundary__WEBPACK_IMPORTED_MODULE_4__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PhoneOrdering__WEBPACK_IMPORTED_MODULE_3__["default"], null)))));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (PhonePlacement);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage/ProductInfoHeader.js":
+/*!****************************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage/ProductInfoHeader.js ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../main.css */ "./resources/js/components/Pages/main.css");
+/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_main_css__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+var ProductInfoHeader = function ProductInfoHeader(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Jumbotron"], {
+    fluid: true,
+    style: {
+      backgroundColor: '',
+      color: ''
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], {
+    fluid: true
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "display-3"
+  }, "DESBLOQUEA TU CEL"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "lead"
+  }, "Vamos, Busca tu celular para desbloquearlo hoy. Liberate!"))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (ProductInfoHeader);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage/ProductInfoPage.css":
+/*!***************************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage/ProductInfoPage.css ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader??ref--6-1!../../../../../node_modules/postcss-loader/src??ref--6-2!./ProductInfoPage.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Pages/ProductInfoPage/ProductInfoPage.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage/ProductInfoPage.js":
+/*!**************************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage/ProductInfoPage.js ***!
+  \**************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _ProductInfoPage_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ProductInfoPage.css */ "./resources/js/components/Pages/ProductInfoPage/ProductInfoPage.css");
+/* harmony import */ var _ProductInfoPage_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_ProductInfoPage_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _ProductInfoHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ProductInfoHeader */ "./resources/js/components/Pages/ProductInfoPage/ProductInfoHeader.js");
+/* harmony import */ var _WrapperA__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./WrapperA */ "./resources/js/components/Pages/ProductInfoPage/WrapperA.js");
+/* harmony import */ var _WrapperB__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./WrapperB */ "./resources/js/components/Pages/ProductInfoPage/WrapperB.js");
+/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../main.css */ "./resources/js/components/Pages/main.css");
+/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_main_css__WEBPACK_IMPORTED_MODULE_5__);
+
+ // Component imports
+
+
+
+
+
+
+function ProductInfoPage(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProductInfoHeader__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WrapperA__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WrapperB__WEBPACK_IMPORTED_MODULE_4__["default"], null));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (ProductInfoPage);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage/ProductTabs.js":
+/*!**********************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage/ProductTabs.js ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ProductTabs; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _ProductInfoPage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ProductInfoPage */ "./resources/js/components/Pages/ProductInfoPage/ProductInfoPage.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+
+
+
+
+
+var ProductTabs =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(ProductTabs, _React$Component);
+
+  function ProductTabs(props) {
+    var _this;
+
+    _classCallCheck(this, ProductTabs);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(ProductTabs).call(this, props));
+    _this.toggle = _this.toggle.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.state = {
+      activeTab: '1'
+    };
+    return _this;
+  }
+
+  _createClass(ProductTabs, [{
+    key: "toggle",
+    value: function toggle(tab) {
+      if (this.state.activeTab !== tab) {
+        this.setState({
+          activeTab: tab
+        });
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "tabsBox"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Nav"], {
+        tabs: true
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+        className: classnames__WEBPACK_IMPORTED_MODULE_2___default()({
+          active: this.state.activeTab === '1'
+        }),
+        onClick: function onClick() {
+          _this2.toggle('1');
+        }
+      }, "Instructions")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+        className: classnames__WEBPACK_IMPORTED_MODULE_2___default()({
+          active: this.state.activeTab === '2'
+        }),
+        onClick: function onClick() {
+          _this2.toggle('2');
+        }
+      }, "Information"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["TabContent"], {
+        activeTab: this.state.activeTab
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["TabPane"], {
+        tabId: "1"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+        sm: "12"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "tabContent"
+      }, "THIS IS HOW TO UNLOCK YOUR APPLE IPHONE 8 FROM ANY GSM NETWORKS SUCH AS AT&T, T-MOBILE, VODAFONE,SPRINT,VERIZON AND MANY MORE.\u2028\u2028Your Apple device is simple to unlock! Simply connect your Apple iPhone to your computer and turn on iTunes after we have processed your order. Follow the instructions on iTunes and this will unlock your cell phone to be used with any GSM network such as Rogers, Bell, Vodafone, and others! Once you place your order for your Apple iPhone Network Unlock, we will have your IMEI Number processed and email you as soon as it is completed. Once unlocked, your Apple iPhone 8 will be factory unlocked for another GSM Network.")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["TabPane"], {
+        tabId: "2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+        sm: "12"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "tabContent"
+      }, "Other content for Tab 2"))))));
+    }
+  }]);
+
+  return ProductTabs;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage/WrapperA.js":
+/*!*******************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage/WrapperA.js ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var _PhonePlacement__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PhonePlacement */ "./resources/js/components/Pages/ProductInfoPage/PhonePlacement.js");
+ // Layout imports
+
+
+
+
+function WrapperA(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PhonePlacement__WEBPACK_IMPORTED_MODULE_2__["default"], null)));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (WrapperA);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage/WrapperB.js":
+/*!*******************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage/WrapperB.js ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var _ProductTabs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ProductTabs */ "./resources/js/components/Pages/ProductInfoPage/ProductTabs.js");
+ // Layout imports
+
+
+
+
+function WrapperB(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+    className: ".col-sm-12 .col-md-7 .offset-md-2"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProductTabs__WEBPACK_IMPORTED_MODULE_2__["default"], null))));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (WrapperB);
+
+/***/ }),
+
 /***/ "./resources/js/components/Pages/SearchProductPage/PhoneResults/PhoneResults.js":
 /*!**************************************************************************************!*\
   !*** ./resources/js/components/Pages/SearchProductPage/PhoneResults/PhoneResults.js ***!
@@ -100710,7 +102895,7 @@ function (_React$Component) {
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "state", {
       top: false,
-      left: false,
+      left: true,
       bottom: false,
       right: false
     });
@@ -100740,10 +102925,10 @@ function (_React$Component) {
         onClose: this.toggleDrawer('left', false),
         onOpen: this.toggleDrawer('left', true)
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        tabIndex: 0,
-        role: "button",
-        onClick: this.toggleDrawer('left', false),
-        onKeyDown: this.toggleDrawer('left', false)
+        tabIndex: 0 // role="button"
+        // onClick={this.toggleDrawer('left', false)}
+        // onKeyDown={this.toggleDrawer('left', false)}
+
       }, sideList)));
     }
   }]);
@@ -101038,15 +103223,178 @@ function SearchProductPage(props) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _ScrollBarBox_ScrollBarBox__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../ScrollBarBox/ScrollBarBox */ "./resources/js/components/ScrollBarBox/ScrollBarBox.js");
+/* harmony import */ var _BrandScrollBar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BrandScrollBar */ "./resources/js/components/Pages/SearchProductPage/SearchWrapper/BrandBox/BrandScrollBar.js");
 
 
 
 function BrandBox(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "BrandBox"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ScrollBarBox_ScrollBarBox__WEBPACK_IMPORTED_MODULE_1__["default"], null));
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Marca de Tel\xE9fono"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_BrandScrollBar__WEBPACK_IMPORTED_MODULE_1__["default"], null));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (BrandBox);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/SearchProductPage/SearchWrapper/BrandBox/BrandScrollBar.js":
+/*!**************************************************************************************************!*\
+  !*** ./resources/js/components/Pages/SearchProductPage/SearchWrapper/BrandBox/BrandScrollBar.js ***!
+  \**************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/styles/index.js");
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _material_ui_core_List__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/List */ "./node_modules/@material-ui/core/List/index.js");
+/* harmony import */ var _material_ui_core_List__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_List__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _material_ui_core_ListItem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/ListItem */ "./node_modules/@material-ui/core/ListItem/index.js");
+/* harmony import */ var _material_ui_core_ListItem__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_ListItem__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _material_ui_core_ListItemText__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/ListItemText */ "./node_modules/@material-ui/core/ListItemText/index.js");
+/* harmony import */ var _material_ui_core_ListItemText__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_ListItemText__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/Checkbox */ "./node_modules/@material-ui/core/Checkbox/index.js");
+/* harmony import */ var _material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_6__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+
+
+
+var styles = function styles(theme) {
+  return {
+    root: {
+      width: '100%',
+      maxWidth: 360,
+      backgroundColor: theme.palette.background.paper
+    }
+  };
+};
+
+var BrandScrollBar =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(BrandScrollBar, _React$Component);
+
+  function BrandScrollBar() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    _classCallCheck(this, BrandScrollBar);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(BrandScrollBar)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "state", {
+      checked: [0]
+    });
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "handleToggle", function (value) {
+      return function () {
+        var checked = _this.state.checked;
+        var currentIndex = checked.indexOf(value);
+
+        var newChecked = _toConsumableArray(checked);
+
+        if (currentIndex === -1) {
+          newChecked.push(value);
+        } else {
+          newChecked.splice(currentIndex, 1);
+        }
+
+        _this.setState({
+          checked: newChecked
+        });
+      };
+    });
+
+    return _this;
+  }
+
+  _createClass(BrandScrollBar, [{
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      var classes = this.props.classes;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_List__WEBPACK_IMPORTED_MODULE_3___default.a, {
+        className: classes.root,
+        style: {
+          maxHeight: 200,
+          overflow: 'auto'
+        }
+      }, [0, 1, 2, 3].map(function (value) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_ListItem__WEBPACK_IMPORTED_MODULE_4___default.a, {
+          key: value,
+          role: undefined,
+          dense: true,
+          button: true,
+          onClick: _this2.handleToggle(value)
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_6___default.a, {
+          checked: _this2.state.checked.indexOf(value) !== -1,
+          tabIndex: -1,
+          disableRipple: true
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_ListItemText__WEBPACK_IMPORTED_MODULE_5___default.a, {
+          primary: "Line item ".concat(value + 1)
+        }));
+      }));
+    }
+  }]);
+
+  return BrandScrollBar;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+BrandScrollBar.propTypes = {
+  classes: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object.isRequired
+};
+/* harmony default export */ __webpack_exports__["default"] = (Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["withStyles"])(styles)(BrandScrollBar)); // import React from "react";
+// // import Checkbox from './Checkbox'
+// function BrandScrollBar(props) {
+//     return (
+//         <div>
+//                 <h4>BrandScrollBar</h4>
+//                 {/* <Checkbox/> */}
+//         </div>
+//     );
+// }
+// export default BrandScrollBar;
 
 /***/ }),
 
@@ -101061,15 +103409,169 @@ function BrandBox(props) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _ScrollBarBox_ScrollBarBox__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../ScrollBarBox/ScrollBarBox */ "./resources/js/components/ScrollBarBox/ScrollBarBox.js");
+/* harmony import */ var _CarriersScrollBar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CarriersScrollBar */ "./resources/js/components/Pages/SearchProductPage/SearchWrapper/CarriersBox/CarriersScrollBar.js");
+ // import ScrollBarBox from '../../../../ScrollBarBox/ScrollBarBox'
 
 
 
 function CarriersBox(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "CarriersBox"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ScrollBarBox_ScrollBarBox__WEBPACK_IMPORTED_MODULE_1__["default"], null));
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Compa\xF1ia De Servicio"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CarriersScrollBar__WEBPACK_IMPORTED_MODULE_1__["default"], null));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (CarriersBox);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/SearchProductPage/SearchWrapper/CarriersBox/CarriersScrollBar.js":
+/*!********************************************************************************************************!*\
+  !*** ./resources/js/components/Pages/SearchProductPage/SearchWrapper/CarriersBox/CarriersScrollBar.js ***!
+  \********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/styles/index.js");
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _material_ui_core_List__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/List */ "./node_modules/@material-ui/core/List/index.js");
+/* harmony import */ var _material_ui_core_List__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_List__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _material_ui_core_ListItem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/ListItem */ "./node_modules/@material-ui/core/ListItem/index.js");
+/* harmony import */ var _material_ui_core_ListItem__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_ListItem__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _material_ui_core_ListItemText__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/ListItemText */ "./node_modules/@material-ui/core/ListItemText/index.js");
+/* harmony import */ var _material_ui_core_ListItemText__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_ListItemText__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/Checkbox */ "./node_modules/@material-ui/core/Checkbox/index.js");
+/* harmony import */ var _material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_6__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+
+
+
+var styles = function styles(theme) {
+  return {
+    root: {
+      width: '100%',
+      maxWidth: 360,
+      backgroundColor: theme.palette.background.paper
+    }
+  };
+};
+
+var CarriersScrollBar =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(CarriersScrollBar, _React$Component);
+
+  function CarriersScrollBar() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    _classCallCheck(this, CarriersScrollBar);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(CarriersScrollBar)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "state", {
+      checked: [0]
+    });
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "handleToggle", function (value) {
+      return function () {
+        var checked = _this.state.checked;
+        var currentIndex = checked.indexOf(value);
+
+        var newChecked = _toConsumableArray(checked);
+
+        if (currentIndex === -1) {
+          newChecked.push(value);
+        } else {
+          newChecked.splice(currentIndex, 1);
+        }
+
+        _this.setState({
+          checked: newChecked
+        });
+      };
+    });
+
+    return _this;
+  }
+
+  _createClass(CarriersScrollBar, [{
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      var classes = this.props.classes;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_List__WEBPACK_IMPORTED_MODULE_3___default.a, {
+        className: classes.root,
+        style: {
+          maxHeight: 200,
+          overflow: 'auto'
+        }
+      }, [0, 1, 2, 3].map(function (value) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_ListItem__WEBPACK_IMPORTED_MODULE_4___default.a, {
+          key: value,
+          role: undefined,
+          dense: true,
+          button: true,
+          onClick: _this2.handleToggle(value)
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_6___default.a, {
+          checked: _this2.state.checked.indexOf(value) !== -1,
+          tabIndex: -1,
+          disableRipple: true
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_ListItemText__WEBPACK_IMPORTED_MODULE_5___default.a, {
+          primary: "Line item ".concat(value + 1)
+        }));
+      }));
+    }
+  }]);
+
+  return CarriersScrollBar;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+CarriersScrollBar.propTypes = {
+  classes: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object.isRequired
+};
+/* harmony default export */ __webpack_exports__["default"] = (Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["withStyles"])(styles)(CarriersScrollBar));
 
 /***/ }),
 
@@ -101089,7 +103591,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function CountryBox(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SearchDropDown_SearchDropDown__WEBPACK_IMPORTED_MODULE_1__["default"], null));
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Pa\xEDs Comprado"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SearchDropDown_SearchDropDown__WEBPACK_IMPORTED_MODULE_1__["default"], null));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (CountryBox);
@@ -101107,13 +103609,73 @@ function CountryBox(props) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/styles/index.js");
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/Paper */ "./node_modules/@material-ui/core/Paper/index.js");
+/* harmony import */ var _material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _material_ui_core_InputBase__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/InputBase */ "./node_modules/@material-ui/core/InputBase/index.js");
+/* harmony import */ var _material_ui_core_InputBase__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_InputBase__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _material_ui_core_Divider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/Divider */ "./node_modules/@material-ui/core/Divider/index.js");
+/* harmony import */ var _material_ui_core_Divider__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Divider__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/IconButton */ "./node_modules/@material-ui/core/IconButton/index.js");
+/* harmony import */ var _material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _material_ui_icons_Menu__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/icons/Menu */ "./node_modules/@material-ui/icons/Menu.js");
+/* harmony import */ var _material_ui_icons_Menu__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Menu__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _material_ui_icons_Search__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/icons/Search */ "./node_modules/@material-ui/icons/Search.js");
+/* harmony import */ var _material_ui_icons_Search__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Search__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _material_ui_icons_Directions__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/icons/Directions */ "./node_modules/@material-ui/icons/Directions.js");
+/* harmony import */ var _material_ui_icons_Directions__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Directions__WEBPACK_IMPORTED_MODULE_9__);
 
+
+
+
+
+
+
+
+
+
+var styles = {
+  root: {
+    padding: '2px 4px',
+    display: 'flex',
+    alignItems: 'center',
+    width: 400
+  },
+  input: {
+    marginLeft: 8,
+    flex: 1
+  },
+  iconButton: {
+    padding: 10
+  },
+  divider: {
+    width: 1,
+    height: 28,
+    margin: 4
+  }
+};
 
 function SearchBox(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "SearchBox"));
+  var classes = props.classes;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    className: classes.root,
+    elevation: 1
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_InputBase__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    className: classes.input,
+    placeholder: "Search Phone"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_6___default.a, {
+    className: classes.iconButton,
+    "aria-label": "Search"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_Search__WEBPACK_IMPORTED_MODULE_8___default.a, null)));
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (SearchBox);
+SearchBox.propTypes = {
+  classes: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object.isRequired
+};
+/* harmony default export */ __webpack_exports__["default"] = (Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["withStyles"])(styles)(SearchBox));
 
 /***/ }),
 
@@ -101243,10 +103805,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var history_createBrowserHistory__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(history_createBrowserHistory__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _Toolbar_Toolbar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Toolbar/Toolbar */ "./resources/js/components/Toolbar/Toolbar.js");
 /* harmony import */ var _Pages_HomePage_HomePage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Pages/HomePage/HomePage */ "./resources/js/components/Pages/HomePage/HomePage.js");
-/* harmony import */ var _Pages_Celulares_celulares__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Pages/Celulares/celulares */ "./resources/js/components/Pages/Celulares/celulares.js");
-/* harmony import */ var _Pages_About_about__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Pages/About/about */ "./resources/js/components/Pages/About/about.js");
-/* harmony import */ var _Pages_Contact_contact__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Pages/Contact/contact */ "./resources/js/components/Pages/Contact/contact.js");
-/* harmony import */ var _Pages_SearchProductPage_SearchProductPage__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Pages/SearchProductPage/SearchProductPage */ "./resources/js/components/Pages/SearchProductPage/SearchProductPage.js");
+/* harmony import */ var _Pages_SearchProductPage_SearchProductPage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Pages/SearchProductPage/SearchProductPage */ "./resources/js/components/Pages/SearchProductPage/SearchProductPage.js");
+/* harmony import */ var _Pages_ProductInfoPage_ProductInfoPage__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Pages/ProductInfoPage/ProductInfoPage */ "./resources/js/components/Pages/ProductInfoPage/ProductInfoPage.js");
+/* harmony import */ var _Pages_About_about__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Pages/About/about */ "./resources/js/components/Pages/About/about.js");
+/* harmony import */ var _Pages_Contact_contact__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Pages/Contact/contact */ "./resources/js/components/Pages/Contact/contact.js");
 
 
  //public pages
@@ -101273,64 +103835,20 @@ var Routes = function Routes() {
     component: _Pages_HomePage_HomePage__WEBPACK_IMPORTED_MODULE_4__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/celulares",
-    component: _Pages_Celulares_celulares__WEBPACK_IMPORTED_MODULE_5__["default"]
+    component: _Pages_SearchProductPage_SearchProductPage__WEBPACK_IMPORTED_MODULE_5__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    path: "/ProductInfoPage",
+    component: _Pages_ProductInfoPage_ProductInfoPage__WEBPACK_IMPORTED_MODULE_6__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/about",
-    component: _Pages_About_about__WEBPACK_IMPORTED_MODULE_6__["default"]
+    component: _Pages_About_about__WEBPACK_IMPORTED_MODULE_7__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/contact",
-    component: _Pages_Contact_contact__WEBPACK_IMPORTED_MODULE_7__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-    path: "/search",
-    component: _Pages_SearchProductPage_SearchProductPage__WEBPACK_IMPORTED_MODULE_8__["default"]
+    component: _Pages_Contact_contact__WEBPACK_IMPORTED_MODULE_8__["default"]
   })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Routes);
-
-/***/ }),
-
-/***/ "./resources/js/components/ScrollBarBox/Checkbox.js":
-/*!**********************************************************!*\
-  !*** ./resources/js/components/ScrollBarBox/Checkbox.js ***!
-  \**********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-
-function Checkbox(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Checkbox"));
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (Checkbox);
-
-/***/ }),
-
-/***/ "./resources/js/components/ScrollBarBox/ScrollBarBox.js":
-/*!**************************************************************!*\
-  !*** ./resources/js/components/ScrollBarBox/ScrollBarBox.js ***!
-  \**************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Checkbox__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Checkbox */ "./resources/js/components/ScrollBarBox/Checkbox.js");
-
-
-
-function ScrollBarBox(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "ScrollBarBox"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Checkbox__WEBPACK_IMPORTED_MODULE_1__["default"], null));
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (ScrollBarBox);
 
 /***/ }),
 
@@ -101349,16 +103867,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/styles/index.js");
 /* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _material_ui_core_Input__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/Input */ "./node_modules/@material-ui/core/Input/index.js");
-/* harmony import */ var _material_ui_core_Input__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Input__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _material_ui_core_InputLabel__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/InputLabel */ "./node_modules/@material-ui/core/InputLabel/index.js");
-/* harmony import */ var _material_ui_core_InputLabel__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_InputLabel__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/MenuItem */ "./node_modules/@material-ui/core/MenuItem/index.js");
-/* harmony import */ var _material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _material_ui_core_FormControl__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/FormControl */ "./node_modules/@material-ui/core/FormControl/index.js");
-/* harmony import */ var _material_ui_core_FormControl__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_FormControl__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _material_ui_core_Select__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core/Select */ "./node_modules/@material-ui/core/Select/index.js");
-/* harmony import */ var _material_ui_core_Select__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Select__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _material_ui_core_InputLabel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/InputLabel */ "./node_modules/@material-ui/core/InputLabel/index.js");
+/* harmony import */ var _material_ui_core_InputLabel__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_InputLabel__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _material_ui_core_FormHelperText__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/FormHelperText */ "./node_modules/@material-ui/core/FormHelperText/index.js");
+/* harmony import */ var _material_ui_core_FormHelperText__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_FormHelperText__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _material_ui_core_FormControl__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/FormControl */ "./node_modules/@material-ui/core/FormControl/index.js");
+/* harmony import */ var _material_ui_core_FormControl__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_FormControl__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _material_ui_core_Select__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/Select */ "./node_modules/@material-ui/core/Select/index.js");
+/* harmony import */ var _material_ui_core_Select__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Select__WEBPACK_IMPORTED_MODULE_6__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -101387,7 +103903,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-
 var styles = function styles(theme) {
   return {
     root: {
@@ -101396,39 +103911,13 @@ var styles = function styles(theme) {
     },
     formControl: {
       margin: theme.spacing.unit,
-      minWidth: 120,
-      maxWidth: 300
+      minWidth: 120
     },
-    chips: {
-      display: 'flex',
-      flexWrap: 'wrap'
-    },
-    chip: {
-      margin: theme.spacing.unit / 4
-    },
-    noLabel: {
-      marginTop: theme.spacing.unit * 3
+    selectEmpty: {
+      marginTop: theme.spacing.unit * 2
     }
   };
 };
-
-var ITEM_HEIGHT = 48;
-var ITEM_PADDING_TOP = 8;
-var MenuProps = {
-  PaperProps: {
-    style: {
-      maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-      width: 250
-    }
-  }
-};
-var names = ['Oliver Hansen', 'Van Henry', 'April Tucker', 'Ralph Hubbard', 'Omar Alexander', 'Carlos Abbott', 'Miriam Wagner', 'Bradley Wilkerson', 'Virginia Andrews', 'Kelly Snyder'];
-
-function getStyles(name, that) {
-  return {
-    fontWeight: that.state.name.indexOf(name) === -1 ? that.props.theme.typography.fontWeightRegular : that.props.theme.typography.fontWeightMedium
-  };
-}
 
 var SearchDropDown =
 /*#__PURE__*/
@@ -101449,28 +103938,15 @@ function (_React$Component) {
     _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(SearchDropDown)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "state", {
-      name: []
+      age: '',
+      name: 'hai',
+      labelWidth: 0
     });
 
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "handleChange", function (event) {
-      _this.setState({
-        name: event.target.value
-      });
-    });
-
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "handleChangeMultiple", function (event) {
-      var options = event.target.options;
-      var value = [];
-
-      for (var i = 0, l = options.length; i < l; i += 1) {
-        if (options[i].selected) {
-          value.push(options[i].value);
-        }
-      }
-
-      _this.setState({
-        name: value
-      });
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "handleChange", function (name) {
+      return function (event) {
+        _this.setState(_defineProperty({}, name, event.target.value));
+      };
     });
 
     return _this;
@@ -101479,30 +103955,31 @@ function (_React$Component) {
   _createClass(SearchDropDown, [{
     key: "render",
     value: function render() {
-      var _this2 = this;
-
       var classes = this.props.classes;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: classes.root
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_FormControl__WEBPACK_IMPORTED_MODULE_6___default.a, {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_FormControl__WEBPACK_IMPORTED_MODULE_5___default.a, {
+        required: true,
         className: classes.formControl
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_InputLabel__WEBPACK_IMPORTED_MODULE_4___default.a, {
-        htmlFor: "select-multiple"
-      }, "Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Select__WEBPACK_IMPORTED_MODULE_7___default.a, {
-        multiple: true,
-        value: this.state.name,
-        onChange: this.handleChange,
-        input: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Input__WEBPACK_IMPORTED_MODULE_3___default.a, {
-          id: "select-multiple"
-        }),
-        MenuProps: MenuProps
-      }, names.map(function (name) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_5___default.a, {
-          key: name,
-          value: name,
-          style: getStyles(name, _this2)
-        }, name);
-      }))));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_InputLabel__WEBPACK_IMPORTED_MODULE_3___default.a, {
+        htmlFor: "age-native-required"
+      }, "Requerido"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Select__WEBPACK_IMPORTED_MODULE_6___default.a, {
+        native: true,
+        value: this.state.age,
+        onChange: this.handleChange('age'),
+        name: "age",
+        inputProps: {
+          id: 'age-native-required'
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: ""
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: 10
+      }, "US"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: 20
+      }, "Mexico"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: 30
+      }, "Costa Rica")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_FormHelperText__WEBPACK_IMPORTED_MODULE_4___default.a, null, "En que pa\xEDs comprastes el tel\xE9fono?")));
     }
   }]);
 
@@ -101512,9 +103989,7 @@ function (_React$Component) {
 SearchDropDown.propTypes = {
   classes: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object.isRequired
 };
-/* harmony default export */ __webpack_exports__["default"] = (Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["withStyles"])(styles, {
-  withTheme: true
-})(SearchDropDown));
+/* harmony default export */ __webpack_exports__["default"] = (Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["withStyles"])(styles)(SearchDropDown));
 
 /***/ }),
 
@@ -101621,7 +104096,7 @@ if(false) {}
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
 /* harmony import */ var _SideDrawer_DrawerToggleButton__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../SideDrawer/DrawerToggleButton */ "./resources/js/components/SideDrawer/DrawerToggleButton.js");
 /* harmony import */ var _Toolbar_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Toolbar.css */ "./resources/js/components/Toolbar/Toolbar.css");
 /* harmony import */ var _Toolbar_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_Toolbar_css__WEBPACK_IMPORTED_MODULE_3__);
@@ -101637,21 +104112,21 @@ var Toolbar = function Toolbar(props) {
     className: "toolbar_nav"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SideDrawer_DrawerToggleButton__WEBPACK_IMPORTED_MODULE_2__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "toolbar_logo"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
     to: "/"
   }, "DESBLOQUEA TU CELULAR")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "spacer"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "toolbar_nav_items"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
     to: "/"
-  }, "HOME")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  }, "HOME")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
     to: "/celulares"
-  }, "CELULARES")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  }, "CELULARES")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
     to: "/about"
-  }, "ABOUT")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  }, "ABOUT")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
     to: "/contact"
-  }, "CONTACT")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  }, "CONTACT")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
     to: "/search"
   }, "Search"))))));
 };
@@ -101678,8 +104153,8 @@ var Toolbar = function Toolbar(props) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! F:\Jonatan\code\homework\finalProject\finalproject\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! F:\Jonatan\code\homework\finalProject\finalproject\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/raulbonano/Desktop/ucf_bootcamp/04-group_projects/project-03/FINAL-PROJECT/finalproject/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/raulbonano/Desktop/ucf_bootcamp/04-group_projects/project-03/FINAL-PROJECT/finalproject/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

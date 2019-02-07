@@ -7,8 +7,6 @@ import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 
-
-
 import SearchBox from '../SearchWrapper/SearchBox/SearchBox';
 import CountryBox from '../SearchWrapper/CountryBox/CountryBox';
 import CarriersBox from '../SearchWrapper/CarriersBox/CarriersBox';
@@ -26,7 +24,7 @@ const styles = {
 class SortBar extends React.Component {
     state = {
         top: false,
-        left: false,
+        left: true,
         bottom: false,
         right: false,
     };
@@ -86,9 +84,9 @@ class SortBar extends React.Component {
                 >
                     <div
                         tabIndex={0}
-                        role="button"
-                        onClick={this.toggleDrawer('left', false)}
-                        onKeyDown={this.toggleDrawer('left', false)}
+                        // role="button"
+                        // onClick={this.toggleDrawer('left', false)}
+                        // onKeyDown={this.toggleDrawer('left', false)}
                     >
 
                         {sideList}
