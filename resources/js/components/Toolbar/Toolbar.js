@@ -28,6 +28,9 @@ const Toolbar = props => (
                     <li>
                         <Link to="/contact">CONTACT</Link>
                     </li>
+                    <li>
+                        <Link to="/search">Search</Link>
+                    </li>
                 </ul>
             </div>
         </nav>

@@ -9,6 +9,7 @@ import Home from "../Pages/HomePage/HomePage";
 import Celulares from "../Pages/Celulares/celulares";
 import About from "../Pages/About/about";
 import Contact from "../Pages/Contact/contact";
+import SearchProductPage from "../Pages/SearchProductPage/SearchProductPage";
 // import Account from "./pageComponents/Account";
 
 //auth pages
@@ -28,6 +29,7 @@ const Routes = () => {
                 <Route path="/celulares" component={Celulares} />
                 <Route path="/about" component={About} />
                 <Route path="/contact" component={Contact} />
+                <Route path="/search" component={SearchProductPage} />
             </div>
             {/* <Route path="/Account" component={requireAuth(Account)} /> */}
         </Router>

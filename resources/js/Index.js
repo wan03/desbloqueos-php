@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import React, { Component } from "react";
-import ReactDOM from "react-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 // import Footer from './components/Footer/Footer'
 import Toolbar from "./components/Toolbar/Toolbar";
