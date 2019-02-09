@@ -6,10 +6,11 @@ import createBrowserHistory from "history/createBrowserHistory";
 
 import Toolbar from "../Toolbar/Toolbar";
 import Home from "../Pages/HomePage/HomePage";
-import Celulares from "../Pages/Celulares/celulares";
+import Celulares from "../Pages/SearchProductPage/SearchProductPage";
+import ProductInfoPage from "../Pages/ProductInfoPage/ProductInfoPage";
 import About from "../Pages/About/about";
 import Contact from "../Pages/Contact/contact";
-import SearchProductPage from "../Pages/SearchProductPage/SearchProductPage";
+
 // import Account from "./pageComponents/Account";
 
 //auth pages
@@ -27,9 +28,9 @@ const Routes = () => {
                 <Toolbar />
                 <Route exact path="/" component={Home} />
                 <Route path="/celulares" component={Celulares} />
+                <Route path="/ProductInfoPage" component={ProductInfoPage} />
                 <Route path="/about" component={About} />
                 <Route path="/contact" component={Contact} />
-                <Route path="/search" component={SearchProductPage} />
             </div>
             {/* <Route path="/Account" component={requireAuth(Account)} /> */}
         </Router>

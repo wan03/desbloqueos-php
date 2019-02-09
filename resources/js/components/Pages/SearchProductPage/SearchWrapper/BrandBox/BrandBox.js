@@ -1,14 +1,14 @@
 import React from "react";
 
 
-import ScrollBarBox from '../../../../ScrollBarBox/ScrollBarBox'
+import BrandScrollBar from './BrandScrollBar'
 
 
 function BrandBox(props) {
     return (
         <div>
-                <h3>BrandBox</h3>
-                <ScrollBarBox/>
+                <h4>Marca de Teléfono</h4>
+                <BrandScrollBar/>
         </div>
     );
 }
