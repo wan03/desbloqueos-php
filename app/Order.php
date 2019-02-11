@@ -13,8 +13,5 @@ class Order extends Model
     {
         return $this->belongsTo('App\User');
     }
-    public function charge()
-    {
-        return $this->hasOne('App\Charge');
-    }
+
 }

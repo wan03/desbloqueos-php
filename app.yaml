@@ -1,0 +1,24 @@
+runtime: php
+env: flex
+
+runtime_config:
+    document_root: public
+
+# Ensure we skip ".env", which is only for local development
+skip_files:
+    - .env
+
+env_variables:
+    # Put production environment variables here.
+    APP_LOG: errorlog
+    APP_KEY: base64:omLMe1t/NkiLWueySdo+LBkyVWi+X+uDJey/WEVFRf8=
+    STORAGE_DIR: /tmp
+    CACHE_DRIVER: database
+    SESSION_DRIVER: database
+    DB_HOST: localhost
+    DB_DATABASE: finalprojectdb
+    DB_USERNAME: root
+    DB_PASSWORD: xJ8h82@d
+    DB_SOCKET: "/cloudsql/final-project-231420:us-east1:finalprojectdb"
+beta_settings:
+    cloud_sql_instances: "final-project-231420:us-east1:finalprojectdb"
