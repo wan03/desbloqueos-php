@@ -10,6 +10,8 @@ import Celulares from "../Pages/SearchProductPage/SearchProductPage";
 import ProductInfoPage from "../Pages/ProductInfoPage/ProductInfoPage";
 import About from "../Pages/About/about";
 import Contact from "../Pages/Contact/contact";
+import FeaturedPhones from "../Pages/HomePage/FeaturedPhones";
+import PhoneImage from "../Pages/ProductInfoPage/PhoneImage";
 
 // import Account from "./pageComponents/Account";
 
@@ -31,6 +33,9 @@ const Routes = () => {
                 <Route path="/ProductInfoPage" component={ProductInfoPage} />
                 <Route path="/about" component={About} />
                 <Route path="/contact" component={Contact} />
+                <Route path="/FeaturedPhones" component={FeaturedPhones} />
+                <Route path="/PhoneImage" component={PhoneImage} />
+
             </div>
             {/* <Route path="/Account" component={requireAuth(Account)} /> */}
         </Router>

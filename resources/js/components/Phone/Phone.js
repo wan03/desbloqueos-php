@@ -1,19 +1,15 @@
 import React from 'react';
-
+import { Link } from "react-router-dom";
 import { Card, Button, CardImg, CardTitle, CardText, CardDeck,
     CardSubtitle, CardBody } from 'reactstrap';
-
-
-
 
 function Phone(props){
     return(
         <Card>
-        <CardImg top width="100%" src={props.img} alt="Card image cap" />
+        <CardImg  src={props.img} alt={props.name} />
         <CardBody>
           <CardTitle>{props.name}</CardTitle>
-          <p>{props.price}</p>
-          <Button>Button</Button>
+          <Link to={`/ProductInfoPage?id=${props.phoneId}`}>Go to product</Link>
         </CardBody>
       </Card>
     )

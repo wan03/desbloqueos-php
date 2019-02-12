@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 import "./ProductInfoPage.css"
 
@@ -9,14 +9,40 @@ import WrapperB from './WrapperB';
 
 import './../main.css';
 
-function ProductInfoPage(props) {
-    return (
-        <div >
-            <ProductInfoHeader />
-            <WrapperA />
-            <WrapperB />
-        </div >
-    );
+class ProductInfoPage extends React.Component {
+
+    state = {
+        phones: {},
+        iem: "",
+        userCarrier: ""
+    };
+
+
+    componentDidMount() {
+        axios.get('/api/mobiles' + this.props.match.params.id).then(response => {
+            this.setState({
+                phones: response.data.data
+            });
+            //   console.log(response)
+        }).catch(errors => {
+            console.log(errors);
+
+        })
+    }
+
+
+
+
+    render() {
+        console.log('props: ', this.props)
+        return (
+            <div >
+                <ProductInfoHeader />
+                <WrapperA />
+                <WrapperB />
+            </div >
+        );
+    }
 }
 
 export default ProductInfoPage;

@@ -42,7 +42,7 @@ class NetworkController extends Controller
             $temp = simplexml_load_string($XML);
             $json = json_encode($temp);
             $Networks = json_decode($json, true);
-            // return $Networks;
+            //return $Networks;
             foreach ($Networks['Country'] as $country) {
                 $Country = Country::firstorCreate(['countryID' => $country['ID'], 'countryName' => $country['Name']]);
                 // $Country->countryID = $country['ID'];

@@ -85,11 +85,11 @@ function SortBar(props) {
 
                     <SearchMenu />
                     <SortDropdown />
-
                     <div className={classes.grow} />
                     <div className={classes.search}>
                         <div className={classes.searchIcon}>
                             <SearchIcon />
+
                         </div>
                         <InputBase
                             placeholder="Search…"
