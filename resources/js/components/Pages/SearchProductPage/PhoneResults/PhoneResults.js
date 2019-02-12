@@ -12,7 +12,7 @@ function PhoneResults(props) {
         <div>
             <Container>
                 <Row>
-                <SortBar />
+                    <SortBar />
                 </Row>
                 <Row>
                     <PhoneResultsWrapper />

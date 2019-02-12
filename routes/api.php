@@ -28,3 +28,4 @@ Route::get('/mobiles', 'MobileController@index');
 Route::get('/tools/create', 'ToolController@create');
 Route::get('/tools/all', 'ToolController@all');
 Route::get('/tools', 'ToolController@index');
+

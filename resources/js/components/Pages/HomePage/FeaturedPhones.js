@@ -1,45 +1,74 @@
 import React from 'react';
+import axios from 'axios';
+import {BrowserRouter as Router, Link, Route} from 'react-router-dom';
 
 import Phone from '../../Phone/Phone'
-import { Card, Button, CardImg, CardTitle, CardText, CardDeck,
-    CardSubtitle, CardBody } from 'reactstrap';
-    var phones = [
-        {
-            name: "iphone",
-            price: 200,
-            img: "https://www.sprint.com/content/dam/sprint/commerce/devices/apple/apple_iphone_6s_plus/gray/new/devicenb_650x900.png/jcr:content/renditions/cq5dam.thumbnail.290.370.png"
-        },
-        {
-            name: "andriod",
-            price: 200,
-            img: "https://www.sprint.com/content/dam/sprint/commerce/devices/apple/apple_iphone_6s_plus/silver/new/devicenb_650x900.png/jcr:content/renditions/cq5dam.thumbnail.290.370.png"
-        },
-        {
-            name: "google",
-            price: 200,
-            img: "https://www.sprint.com/content/dam/sprint/commerce/devices/apple/apple_iphone_6s_plus/rose_gold/new/devicenb_650x900.png/jcr:content/renditions/cq5dam.thumbnail.290.370.png"
-        },
-        {
-            name: "att",
-            price: 200,
-            img: "https://www.sprint.com/content/dam/sprint/commerce/devices/apple/apple_iphone_6s_plus/gold/new/devicenb_650x900.png/jcr:content/renditions/cq5dam.thumbnail.290.370.png"
+import {
+    Card, Button, CardImg, CardTitle, CardText, CardDeck,
+    CardSubtitle, CardBody, CardColumns
+} from 'reactstrap';
+
+
+//var displayThree = phones.slice(0,3);
+
+//  value = axios.get('/api/mobiles');
+//data[0].mobiles[0].mobileName
+class FeaturedPhones extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            phones: []
+        };
+      }
+      componentDidMount () {
+        axios.get('/api/mobiles').then(response => {
+          this.setState({
+            phones: response.data.data
+          });
+          console.log(response)
+        }).catch(errors => {
+            console.log(errors);
+        })
+      }
+
+    //   loadPhone = () => {
+    //     axios.get('/api/mobiles').then(response =>
+    //         this.setState({ phones: response.data.data, name: "", img: "" })
+    //       )
+    //       .catch(err => console.log(err));
+    //   };
+    //   }
+
+
+      // Map over this.state.mobiles and render a mobiles component for each phone object
+      render() {
+        // const { phones } = this.state
+        return (
+          <div className="phonesWrapper">
+          <CardColumns>
+            <CardDeck/>
+             {this.state.phones.map((phone, i) => {
+               if( i < 3 ) {
+                 return(
+                  <Phone
+
+                  // img={phone.id}
+                  name={phone.mobiles[0].mobileName}
+                  img={phone.mobiles[0].mobilePhoto}
+                  key={phone.id}
+                  phoneId={phone.id}
+                />
+                 )
+               }
+
+             })
         }
+        <CardDeck/>
+        </CardColumns>
+          </div>
+        );
+      }
+    }
 
-    ]
 
-   const FeaturedPhones = (props) => {
-     return (
-         <div className="phonesWrapper">
-       <CardDeck>
-            {
-                phones.map(e => {
-                    return <Phone  img={e.img} name={e.name} price={e.price}/>
-                })
-            }
-
-       </CardDeck>
-       </div>
-     );
-   };
-
-   export default FeaturedPhones;
+  export default FeaturedPhones;

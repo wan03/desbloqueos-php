@@ -1,9 +1,39 @@
+
+
+/* HEADER */
 .HeaderWrapper {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    height: 45px;
+        position: relative;
+        padding: 0.2em 0em 0em;
+        margin: 0.5rem 0 0;
   }
+
+  .carousel {
+    position: relative;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 15;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-left: 0;
+    margin-right: 15%;
+    margin-left: 15%;
+    list-style: none;
+}
+
+
 
   .HolyGrail-body {
     display: flex;
@@ -18,3 +48,5 @@
 .phonesWrapper {
    padding: 30px;
 }
+
+

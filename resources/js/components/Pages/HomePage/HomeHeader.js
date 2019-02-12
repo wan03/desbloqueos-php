@@ -24,7 +24,7 @@ const items = [
   }
 ];
 
-const HomeHeader = () => <UncontrolledCarousel style={{height: 200+ "px"}} items={items} />;
+const HomeHeader = () => <UncontrolledCarousel items={items} />;
 
 export default HomeHeader;
 
