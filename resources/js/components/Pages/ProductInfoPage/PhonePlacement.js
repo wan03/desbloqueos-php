@@ -4,7 +4,6 @@ import React from "react";
 import { Container, Row, Col } from 'reactstrap';
 import PhoneImage from './PhoneImage';
 import PhoneOrdering from './PhoneOrdering';
-import ErrorBoundary from '../../CatchErr/ErrorBoundary'
 
 function PhonePlacement(props) {
     return (
@@ -16,9 +15,9 @@ function PhonePlacement(props) {
                     <PhoneImage/>
                     </Col>
                     <Col md="8">
-                    <ErrorBoundary>
+
                     <PhoneOrdering />
-                    </ErrorBoundary>
+
                     </Col>
 
                     </Row>

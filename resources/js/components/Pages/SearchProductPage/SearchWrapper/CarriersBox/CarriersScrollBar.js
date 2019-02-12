@@ -3,11 +3,8 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import ListItemText from '@material-ui/core/ListItemText';
 import Checkbox from '@material-ui/core/Checkbox';
-import IconButton from '@material-ui/core/IconButton';
-import CommentIcon from '@material-ui/icons/Comment';
 
 const styles = theme => ({
   root: {
@@ -17,7 +14,7 @@ const styles = theme => ({
   },
 });
 
-class ScrollBarBox extends React.Component {
+class CarriersScrollBar extends React.Component {
   state = {
     checked: [0],
   };
@@ -51,11 +48,7 @@ class ScrollBarBox extends React.Component {
               disableRipple
             />
             <ListItemText primary={`Line item ${value + 1}`} />
-            <ListItemSecondaryAction>
-              <IconButton aria-label="Comments">
-                <CommentIcon />
-              </IconButton>
-            </ListItemSecondaryAction>
+
           </ListItem>
         ))}
       </List>
@@ -63,42 +56,8 @@ class ScrollBarBox extends React.Component {
   }
 }
 
-ScrollBarBox.propTypes = {
+CarriersScrollBar.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(ScrollBarBox);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import React from "react";
-
-// // import Checkbox from './Checkbox'
-
-// function ScrollBarBox(props) {
-//     return (
-//         <div>
-//                 <h4>ScrollBarBox</h4>
-//                 {/* <Checkbox/> */}
-
-
-//         </div>
-//     );
-// }
-
-
-// export default ScrollBarBox;
+export default withStyles(styles)(CarriersScrollBar);

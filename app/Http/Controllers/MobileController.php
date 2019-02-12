@@ -21,6 +21,7 @@ class MobileController extends Controller
     {
         //
         return BrandResource::collection(Brand::paginate());
+
     }
 
     /**
