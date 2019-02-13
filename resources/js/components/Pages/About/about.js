@@ -9,7 +9,6 @@ class About extends Component {
                         This is an example of the about page in the router.
                         Modify as needed.
                     </h2>
-                    <Stripe />
                 </div>
             </div>
         );
