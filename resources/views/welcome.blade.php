@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="{{asset('css/app.css')}}" rel="stylesheet" type="text/css">
         <meta name="csrf-token" content="{{ csrf_token() }}">
+        <script src="https://js.stripe.com/v3/"></script>
         <title>Desbloquea Tu Celular</title>
 
         <!-- Fonts -->
@@ -32,7 +33,6 @@
 
             <div id="app"></div>
         <script src="{{asset('js/app.js')}}" ></script>
-        <script src="https://js.stripe.com/v3/"></script>
         </div>
     </body>
 </html>

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-console.log(process.env.REACT_APP_STRIPE_PUBLIC + "here");
+import Stripe from "../../Stripe/Stripe";
 class About extends Component {
     render() {
         return (
@@ -9,6 +9,7 @@ class About extends Component {
                         This is an example of the about page in the router.
                         Modify as needed.
                     </h2>
+                    <Stripe />
                 </div>
             </div>
         );
