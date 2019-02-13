@@ -9,7 +9,7 @@ function Phone(props){
         <CardImg  src={props.img} alt={props.name} />
         <CardBody>
           <CardTitle>{props.name}</CardTitle>
-          <Link to={`/ProductInfoPage?id=${props.phoneId}`}>Go to product</Link>
+          <Link to={`/ProductInfoPage_id=${props.phoneId}`}>Go to product</Link>
         </CardBody>
       </Card>
     )
