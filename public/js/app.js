@@ -23477,7 +23477,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "\n\n/* HEADER */\n.HeaderWrapper {\n        position: relative;\n        padding: 0.2em 0em 0em;\n        margin: 0.5rem 0 0;\n  }\n\n  .carousel {\n    position: relative;\n}\n\n*,\n*::before,\n*::after {\n  box-sizing: border-box;\n}\n\n.carousel-indicators {\n    position: absolute;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    z-index: 15;\n    display: flex;\n    justify-content: center;\n    padding-left: 0;\n    margin-right: 15%;\n    margin-left: 15%;\n    list-style: none;\n}\n\n\n\n  .HolyGrail-body {\n    display: flex;\n    flex: 1;\n  }\n\n  .carousel-inner {\n      height: 300px;\n  }\n\n  /* PHONE */\n.phonesWrapper {\n   padding: 30px;\n}\n\n\n", ""]);
+exports.push([module.i, "\r\n\r\n/* HEADER */\r\n.HeaderWrapper {\r\n        position: relative;\r\n        padding: 0.2em 0em 0em;\r\n        margin: 0.5rem 0 0;\r\n  }\r\n\r\n  .carousel {\r\n    position: relative;\r\n}\r\n\r\n*,\r\n*::before,\r\n*::after {\r\n  box-sizing: border-box;\r\n}\r\n\r\n.carousel-indicators {\r\n    position: absolute;\r\n    right: 0;\r\n    bottom: 0;\r\n    left: 0;\r\n    z-index: 15;\r\n    display: flex;\r\n    justify-content: center;\r\n    padding-left: 0;\r\n    margin-right: 15%;\r\n    margin-left: 15%;\r\n    list-style: none;\r\n}\r\n\r\n\r\n\r\n  .HolyGrail-body {\r\n    display: flex;\r\n    flex: 1;\r\n  }\r\n\r\n  .carousel-inner {\r\n      height: 300px;\r\n  }\r\n\r\n  /* PHONE */\r\n.phonesWrapper {\r\n   padding: 30px;\r\n}\r\n\r\n\r\n", ""]);
 
 // exports
 
@@ -23496,7 +23496,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".img-fluid {\n    max-height: 440px;\n}\n\nbody{\n\n    font-size: 100%;\n}\n\n\n/* Phone Ordering */\n\n.center {\n    margin: auto;\n    width: 95%;\n    border: 3px solid green;\n    padding: 10px;\n  }\n\n\n.padded{\n    padding:10px;\n}\n\n.ProductInfoText {\n\n\n}\n\n.ProductInfoText h3 {\ncolor: #353535;\nfont-size:3rem\n}\n\n.ProductInfoText h6 {\n    color: #7c1515;\n    font-size: 2rem;\n    }\n\n.smallText {\n    font-size: 11px;\n\n}\n\n.delivery-time-box{\n    border:0px;\n    border-color:#7c1515;\n    margin-top: 15px;\n    margin-left: -5px;\n}\n.delivery-time-box h6{\n    color:#999999;\n    text-transform: uppercase;\n}\n.delivery-time-box p{\ncolor: #333333;\n}\n\n\n/* Product Tabs */\n\n.tabsBox {\n    display: block;\n    position: relative;\n    padding: 1em 2em 15em;\n    border-width: 0px;\n    border-style: none;\n    border-color: rgb(216, 216, 216);\n    -o-border-image: initial;\n       border-image: initial;\n    margin: 1.5rem 0px 0px;\n    width:100%;\n\n}\n\n.tabContent {\n    padding-top:1.5rem;\n\n}\n", ""]);
+exports.push([module.i, ".img-fluid {\r\n    max-height: 440px;\r\n}\r\n\r\nbody{\r\n\r\n    font-size: 100%;\r\n}\r\n\r\n\r\n/* Phone Ordering */\r\n\r\n.center {\r\n    margin: auto;\r\n    width: 95%;\r\n    border: 3px solid green;\r\n    padding: 10px;\r\n  }\r\n\r\n\r\n.padded{\r\n    padding:10px;\r\n}\r\n\r\n.ProductInfoText {\r\n\r\n\r\n}\r\n\r\n.ProductInfoText h3 {\r\ncolor: #353535;\r\nfont-size:3rem\r\n}\r\n\r\n.ProductInfoText h6 {\r\n    color: #7c1515;\r\n    font-size: 2rem;\r\n    }\r\n\r\n.smallText {\r\n    font-size: 11px;\r\n\r\n}\r\n\r\n.delivery-time-box{\r\n    border:0px;\r\n    border-color:#7c1515;\r\n    margin-top: 15px;\r\n    margin-left: -5px;\r\n}\r\n.delivery-time-box h6{\r\n    color:#999999;\r\n    text-transform: uppercase;\r\n}\r\n.delivery-time-box p{\r\ncolor: #333333;\r\n}\r\n\r\n\r\n/* Product Tabs */\r\n\r\n.tabsBox {\r\n    display: block;\r\n    position: relative;\r\n    padding: 1em 2em 15em;\r\n    border-width: 0px;\r\n    border-style: none;\r\n    border-color: rgb(216, 216, 216);\r\n    -o-border-image: initial;\r\n       border-image: initial;\r\n    margin: 1.5rem 0px 0px;\r\n    width:100%;\r\n\r\n}\r\n\r\n.tabContent {\r\n    padding-top:1.5rem;\r\n\r\n}\r\n", ""]);
 
 // exports
 
@@ -23515,7 +23515,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "html {\n    height:100%;\n}\n\nbody {\n    margin:0;\n    padding:0;\n    height: 100%;\n    font-size: 100%;\n}\n\n  h1 {\n    font-size: 2rem;\n    /* 2x body copy size = 32px */\n    line-height: 1.25;\n    /* 45px / 36px */\n  }\n\n  h2 {\n    font-size: 1.625rem;\n    /* 1.625x body copy size = 26px */\n    line-height: 1.15384615;\n    /* 30px / 26px */\n  }\n\n  h3 {\n    font-size: 1.375rem;\n    /* 1.375x body copy size = 22px */\n    line-height: 1.13636364;\n    /* 25px / 22px */\n  }\n\n  h4 {\n    font-size: 1.125rem;\n    /* 1.125x body copy size = 18px */\n    line-height: 1.11111111;\n  }\n\n  /* Body Content */\n\n  #page {\n    font-size: 1rem;\n    /* equivalent to 16px */\n    line-height: 1.25;\n    /* equivalent to 20px */\n  }\n\n\n  .jumbotron h3 {\n    font-size: 3rem;\n  }\n\n\n\n\n\n\n  @media (min-width: 43.75em) {\n    #page {\n      font-size: 1rem;\n      /* equivalent to 16px */\n      line-height: 1.375;\n      /* equivalent to 22px */\n    }\n  }\n\n\n/* MEDIA Q*/\n\n@media (min-width: 43.75em) {\n    h1 {\n      font-size: 2.5rem;\n      /* 2.5x body copy size = 40px */\n      line-height: 1.125;\n    }\n\n    h2 {\n        font-size: 2rem;\n        /* 2x body copy size = 32px */\n        line-height: 1.25;\n      }\n\n      h3 {\n        font-size: 1.5rem;\n        /* 1.5x body copy size = 24px */\n        line-height: 1.25;\n      }\n\n      h4 {\n        line-height: 1.22222222;\n        /* (22px / 18px */\n      }\n  }\n\n  @media (min-width: 56.25em) {\n    h1 {\n      font-size: 3rem;\n      /* 3x body copy size = 48px */\n      line-height: 1.05;\n      /* keep to a multiple of the 20px line height\n      and something more appropriate for display headings */\n    }\n\n    h2 {\n        font-size: 2.25rem;\n        /* 2.25x body copy size = 36px */\n        line-height: 1.25;\n      }\n\n      h3 {\n        font-size: 1.75rem;\n        /* 1.75x body copy size = 28px */\n        line-height: 1.25;\n      }\n\n      h4 {\n        line-height: 1.10;\n        /* (22px / 18px */\n      }\n  }\n\n", ""]);
+exports.push([module.i, "html {\r\n    height:100%;\r\n}\r\n\r\nbody {\r\n    margin:0;\r\n    padding:0;\r\n    height: 100%;\r\n    font-size: 100%;\r\n}\r\n\r\n  h1 {\r\n    font-size: 2rem;\r\n    /* 2x body copy size = 32px */\r\n    line-height: 1.25;\r\n    /* 45px / 36px */\r\n  }\r\n\r\n  h2 {\r\n    font-size: 1.625rem;\r\n    /* 1.625x body copy size = 26px */\r\n    line-height: 1.15384615;\r\n    /* 30px / 26px */\r\n  }\r\n\r\n  h3 {\r\n    font-size: 1.375rem;\r\n    /* 1.375x body copy size = 22px */\r\n    line-height: 1.13636364;\r\n    /* 25px / 22px */\r\n  }\r\n\r\n  h4 {\r\n    font-size: 1.125rem;\r\n    /* 1.125x body copy size = 18px */\r\n    line-height: 1.11111111;\r\n  }\r\n\r\n  /* Body Content */\r\n\r\n  #page {\r\n    font-size: 1rem;\r\n    /* equivalent to 16px */\r\n    line-height: 1.25;\r\n    /* equivalent to 20px */\r\n  }\r\n\r\n\r\n  .jumbotron h3 {\r\n    font-size: 3rem;\r\n  }\r\n\r\n\r\n\r\n\r\n\r\n\r\n  @media (min-width: 43.75em) {\r\n    #page {\r\n      font-size: 1rem;\r\n      /* equivalent to 16px */\r\n      line-height: 1.375;\r\n      /* equivalent to 22px */\r\n    }\r\n  }\r\n\r\n\r\n/* MEDIA Q*/\r\n\r\n@media (min-width: 43.75em) {\r\n    h1 {\r\n      font-size: 2.5rem;\r\n      /* 2.5x body copy size = 40px */\r\n      line-height: 1.125;\r\n    }\r\n\r\n    h2 {\r\n        font-size: 2rem;\r\n        /* 2x body copy size = 32px */\r\n        line-height: 1.25;\r\n      }\r\n\r\n      h3 {\r\n        font-size: 1.5rem;\r\n        /* 1.5x body copy size = 24px */\r\n        line-height: 1.25;\r\n      }\r\n\r\n      h4 {\r\n        line-height: 1.22222222;\r\n        /* (22px / 18px */\r\n      }\r\n  }\r\n\r\n  @media (min-width: 56.25em) {\r\n    h1 {\r\n      font-size: 3rem;\r\n      /* 3x body copy size = 48px */\r\n      line-height: 1.05;\r\n      /* keep to a multiple of the 20px line height\r\n      and something more appropriate for display headings */\r\n    }\r\n\r\n    h2 {\r\n        font-size: 2.25rem;\r\n        /* 2.25x body copy size = 36px */\r\n        line-height: 1.25;\r\n      }\r\n\r\n      h3 {\r\n        font-size: 1.75rem;\r\n        /* 1.75x body copy size = 28px */\r\n        line-height: 1.25;\r\n      }\r\n\r\n      h4 {\r\n        line-height: 1.10;\r\n        /* (22px / 18px */\r\n      }\r\n  }\r\n\r\n", ""]);
 
 // exports
 
@@ -23534,7 +23534,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.toggle-button {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n    height: 25px;\n    width: 36px;\n    background: transparent;\n    border: none;\n    cursor:pointer;\n    padding: 0;\n    box-sizing: border-box;\n}\n\n.toggle-button:focus {\n    outline: none;\n}\n\n.toggle-button_line{\n    width: 30px;\n    height: 2px;\n    background: white;\n}\n", ""]);
+exports.push([module.i, "\r\n.toggle-button {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-around;\r\n    height: 25px;\r\n    width: 36px;\r\n    background: transparent;\r\n    border: none;\r\n    cursor:pointer;\r\n    padding: 0;\r\n    box-sizing: border-box;\r\n}\r\n\r\n.toggle-button:focus {\r\n    outline: none;\r\n}\r\n\r\n.toggle-button_line{\r\n    width: 30px;\r\n    height: 2px;\r\n    background: white;\r\n}\r\n", ""]);
 
 // exports
 
@@ -23553,7 +23553,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".toolbar {\n    position: fixed;\n    top: 0;\n    left:0;\n    width: 100%;\n    background: #333333;\n    height:56px;\n    z-index: 200;\n}\n\n.toolbar_nav {\n    display: flex;\n    height:100%;\n    align-items: center;\n    padding: 0 1rem;\n}\n\n.toolbar_nav_items ul{\n    list-style: none;\n    margin:0;\n    padding: 0;\n    display:flex;\n\n}\n\n.toolbar_nav_items li{\n    padding: 0 0.5rem;\n\n}\n\n.toolbar_logo {\n    margin-left:1rem;\n\n}\n\n.toolbar_logo a {\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n\n}\n\n.spacer {\n    flex: 1;\n}\n\n.toolbar_nav_items a{\n    color: white;\n    text-decoration: none;\n\n}\n\n.toolbar_nav_items a:hover,\n.toolbar_nav_items a:active{\n    color: #999999;\n}\n\n\n\n\n", ""]);
+exports.push([module.i, ".toolbar {\r\n    position: fixed;\r\n    top: 0;\r\n    left:0;\r\n    width: 100%;\r\n    background: #333333;\r\n    height:56px;\r\n    z-index: 200;\r\n}\r\n\r\n.toolbar_nav {\r\n    display: flex;\r\n    height:100%;\r\n    align-items: center;\r\n    padding: 0 1rem;\r\n}\r\n\r\n.toolbar_nav_items ul{\r\n    list-style: none;\r\n    margin:0;\r\n    padding: 0;\r\n    display:flex;\r\n\r\n}\r\n\r\n.toolbar_nav_items li{\r\n    padding: 0 0.5rem;\r\n\r\n}\r\n\r\n.toolbar_logo {\r\n    margin-left:1rem;\r\n\r\n}\r\n\r\n.toolbar_logo a {\r\n    color: white;\r\n    text-decoration: none;\r\n    font-size: 1.5rem;\r\n\r\n}\r\n\r\n.spacer {\r\n    flex: 1;\r\n}\r\n\r\n.toolbar_nav_items a{\r\n    color: white;\r\n    text-decoration: none;\r\n\r\n}\r\n\r\n.toolbar_nav_items a:hover,\r\n.toolbar_nav_items a:active{\r\n    color: #999999;\r\n}\r\n\r\n\r\n\r\n\r\n", ""]);
 
 // exports
 
@@ -101386,7 +101386,7 @@ function load() {
 
   // If debug isn't set in LS, and we're in Electron, try to load $DEBUG
   if (!r && typeof process !== 'undefined' && 'env' in process) {
-    r = Object({"MIX_PUSHER_APP_KEY":"","MIX_PUSHER_APP_CLUSTER":"mt1","NODE_ENV":"development"}).DEBUG;
+    r = Object({"MIX_PUSHER_APP_CLUSTER":"mt1","MIX_PUSHER_APP_KEY":"","NODE_ENV":"development"}).DEBUG;
   }
 
   return r;
@@ -101835,6 +101835,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 
+console.log(Object({"MIX_PUSHER_APP_CLUSTER":"mt1","MIX_PUSHER_APP_KEY":"","NODE_ENV":"development"}).REACT_APP_STRIPE_PUBLIC + "here");
 
 var About =
 /*#__PURE__*/
@@ -101850,7 +101851,9 @@ function (_Component) {
   _createClass(About, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "This is an example of the about page in the router. Modify as needed.")));
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+        "data-st": Object({"MIX_PUSHER_APP_CLUSTER":"mt1","MIX_PUSHER_APP_KEY":"","NODE_ENV":"development"}).REACT_APP_STRIPE_PUBLIC
+      }, "This is an example of the about page in the router. Modify as needed.")));
     }
   }]);
 
@@ -104117,8 +104120,8 @@ var Toolbar = function Toolbar(props) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/raulbonano/Desktop/ucf_bootcamp/04-group_projects/project-03/FINAL-PROJECT/finalproject/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/raulbonano/Desktop/ucf_bootcamp/04-group_projects/project-03/FINAL-PROJECT/finalproject/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! F:\Jonatan\code\homework\finalProject\finalproject\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! F:\Jonatan\code\homework\finalProject\finalproject\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
