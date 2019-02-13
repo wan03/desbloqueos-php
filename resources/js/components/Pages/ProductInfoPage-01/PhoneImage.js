@@ -6,8 +6,8 @@ import Image from 'react-bootstrap/Image'
 
 function PhoneImage(props) {
     return (
-        <div>
-            <Image src={'https://www.unlockbase.com/sdata/images/models/acer-betouch-e110-phone-unlock-code.png'} alt={'beTouch E110'} fluid />
+        <div className="productInfo">
+            <Image src={'https://www.unlockbase.com/sdata/images/models/acer-betouch-e140-phone-unlock-code.png'} alt={'beTouch E140'} fluid />
         </div>
 
     );

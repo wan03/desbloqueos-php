@@ -62,6 +62,9 @@ color: #333333;
     padding-top:1.5rem;
 }
 
+.productInfo img{
+width:85%;
+}
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {

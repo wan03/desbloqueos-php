@@ -4560,6 +4560,451 @@ var _FormLabel = _interopRequireDefault(__webpack_require__(/*! ./FormLabel */ "
 
 /***/ }),
 
+/***/ "./node_modules/@material-ui/core/Grid/Grid.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/@material-ui/core/Grid/Grid.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = exports.styles = void 0;
+
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
+
+var _objectWithoutProperties2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/objectWithoutProperties.js"));
+
+var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
+
+var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
+
+var _utils = __webpack_require__(/*! @material-ui/utils */ "./node_modules/@material-ui/utils/index.es.js");
+
+var _withStyles = _interopRequireDefault(__webpack_require__(/*! ../styles/withStyles */ "./node_modules/@material-ui/core/styles/withStyles.js"));
+
+var _createBreakpoints = __webpack_require__(/*! ../styles/createBreakpoints */ "./node_modules/@material-ui/core/styles/createBreakpoints.js");
+
+var _requirePropFactory = _interopRequireDefault(__webpack_require__(/*! ../utils/requirePropFactory */ "./node_modules/@material-ui/core/utils/requirePropFactory.js"));
+
+// A grid component using the following libs as inspiration.
+//
+// For the implementation:
+// - http://v4-alpha.getbootstrap.com/layout/flexbox-grid/
+// - https://github.com/kristoferjoseph/flexboxgrid/blob/master/src/css/flexboxgrid.css
+// - https://github.com/roylee0704/react-flexbox-grid
+// - https://material.angularjs.org/latest/layout/introduction
+//
+// Follow this flexbox Guide to better understand the underlying model:
+// - https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+var GUTTERS = [0, 8, 16, 24, 32, 40];
+var GRID_SIZES = ['auto', true, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+
+function generateGrid(globalStyles, theme, breakpoint) {
+  var styles = {};
+  GRID_SIZES.forEach(function (size) {
+    var key = "grid-".concat(breakpoint, "-").concat(size);
+
+    if (size === true) {
+      // For the auto layouting
+      styles[key] = {
+        flexBasis: 0,
+        flexGrow: 1,
+        maxWidth: '100%'
+      };
+      return;
+    }
+
+    if (size === 'auto') {
+      styles[key] = {
+        flexBasis: 'auto',
+        flexGrow: 0,
+        maxWidth: 'none'
+      };
+      return;
+    } // Keep 7 significant numbers.
+
+
+    var width = "".concat(Math.round(size / 12 * 10e7) / 10e5, "%"); // Close to the bootstrap implementation:
+    // https://github.com/twbs/bootstrap/blob/8fccaa2439e97ec72a4b7dc42ccc1f649790adb0/scss/mixins/_grid.scss#L41
+
+    styles[key] = {
+      flexBasis: width,
+      flexGrow: 0,
+      maxWidth: width
+    };
+  }); // No need for a media query for the first size.
+
+  if (breakpoint === 'xs') {
+    (0, _extends2.default)(globalStyles, styles);
+  } else {
+    globalStyles[theme.breakpoints.up(breakpoint)] = styles;
+  }
+}
+
+function generateGutter(theme, breakpoint) {
+  var styles = {};
+  GUTTERS.forEach(function (spacing, index) {
+    if (index === 0) {
+      // Skip the default style.
+      return;
+    }
+
+    styles["spacing-".concat(breakpoint, "-").concat(spacing)] = {
+      margin: -spacing / 2,
+      width: "calc(100% + ".concat(spacing, "px)"),
+      '& > $item': {
+        padding: spacing / 2
+      }
+    };
+  });
+  return styles;
+} // Default CSS values
+// flex: '0 1 auto',
+// flexDirection: 'row',
+// alignItems: 'flex-start',
+// flexWrap: 'nowrap',
+// justifyContent: 'flex-start',
+
+
+var styles = function styles(theme) {
+  return (0, _extends2.default)({
+    /* Styles applied to the root element if `container={true}`. */
+    container: {
+      boxSizing: 'border-box',
+      display: 'flex',
+      flexWrap: 'wrap',
+      width: '100%'
+    },
+
+    /* Styles applied to the root element if `item={true}`. */
+    item: {
+      boxSizing: 'border-box',
+      margin: '0' // For instance, it's useful when used with a `figure` element.
+
+    },
+
+    /* Styles applied to the root element if `zeroMinWidth={true}`. */
+    zeroMinWidth: {
+      minWidth: 0
+    },
+
+    /* Styles applied to the root element if `direction="column"`. */
+    'direction-xs-column': {
+      flexDirection: 'column'
+    },
+
+    /* Styles applied to the root element if `direction="column-reverse"`. */
+    'direction-xs-column-reverse': {
+      flexDirection: 'column-reverse'
+    },
+
+    /* Styles applied to the root element if `direction="rwo-reverse"`. */
+    'direction-xs-row-reverse': {
+      flexDirection: 'row-reverse'
+    },
+
+    /* Styles applied to the root element if `wrap="nowrap"`. */
+    'wrap-xs-nowrap': {
+      flexWrap: 'nowrap'
+    },
+
+    /* Styles applied to the root element if `wrap="reverse"`. */
+    'wrap-xs-wrap-reverse': {
+      flexWrap: 'wrap-reverse'
+    },
+
+    /* Styles applied to the root element if `alignItems="center"`. */
+    'align-items-xs-center': {
+      alignItems: 'center'
+    },
+
+    /* Styles applied to the root element if `alignItems="flex-start"`. */
+    'align-items-xs-flex-start': {
+      alignItems: 'flex-start'
+    },
+
+    /* Styles applied to the root element if `alignItems="flex-end"`. */
+    'align-items-xs-flex-end': {
+      alignItems: 'flex-end'
+    },
+
+    /* Styles applied to the root element if `alignItems="baseline"`. */
+    'align-items-xs-baseline': {
+      alignItems: 'baseline'
+    },
+
+    /* Styles applied to the root element if `alignContent="center"`. */
+    'align-content-xs-center': {
+      alignContent: 'center'
+    },
+
+    /* Styles applied to the root element if `alignContent="flex-start"`. */
+    'align-content-xs-flex-start': {
+      alignContent: 'flex-start'
+    },
+
+    /* Styles applied to the root element if `alignContent="flex-end"`. */
+    'align-content-xs-flex-end': {
+      alignContent: 'flex-end'
+    },
+
+    /* Styles applied to the root element if `alignContent="space-between"`. */
+    'align-content-xs-space-between': {
+      alignContent: 'space-between'
+    },
+
+    /* Styles applied to the root element if `alignContent="space-around"`. */
+    'align-content-xs-space-around': {
+      alignContent: 'space-around'
+    },
+
+    /* Styles applied to the root element if `justify="center"`. */
+    'justify-xs-center': {
+      justifyContent: 'center'
+    },
+
+    /* Styles applied to the root element if `justify="flex-end"`. */
+    'justify-xs-flex-end': {
+      justifyContent: 'flex-end'
+    },
+
+    /* Styles applied to the root element if `justify="space-between"`. */
+    'justify-xs-space-between': {
+      justifyContent: 'space-between'
+    },
+
+    /* Styles applied to the root element if `justify="space-around"`. */
+    'justify-xs-space-around': {
+      justifyContent: 'space-around'
+    },
+
+    /* Styles applied to the root element if `justify="space-evenly"`. */
+    'justify-xs-space-evenly': {
+      justifyContent: 'space-evenly'
+    }
+  }, generateGutter(theme, 'xs'), _createBreakpoints.keys.reduce(function (accumulator, key) {
+    // Use side effect over immutability for better performance.
+    generateGrid(accumulator, theme, key);
+    return accumulator;
+  }, {}));
+};
+
+exports.styles = styles;
+
+function Grid(props) {
+  var _classNames;
+
+  var alignContent = props.alignContent,
+      alignItems = props.alignItems,
+      classes = props.classes,
+      classNameProp = props.className,
+      Component = props.component,
+      container = props.container,
+      direction = props.direction,
+      item = props.item,
+      justify = props.justify,
+      lg = props.lg,
+      md = props.md,
+      sm = props.sm,
+      spacing = props.spacing,
+      wrap = props.wrap,
+      xl = props.xl,
+      xs = props.xs,
+      zeroMinWidth = props.zeroMinWidth,
+      other = (0, _objectWithoutProperties2.default)(props, ["alignContent", "alignItems", "classes", "className", "component", "container", "direction", "item", "justify", "lg", "md", "sm", "spacing", "wrap", "xl", "xs", "zeroMinWidth"]);
+  var className = (0, _classnames.default)((_classNames = {}, (0, _defineProperty2.default)(_classNames, classes.container, container), (0, _defineProperty2.default)(_classNames, classes.item, item), (0, _defineProperty2.default)(_classNames, classes.zeroMinWidth, zeroMinWidth), (0, _defineProperty2.default)(_classNames, classes["spacing-xs-".concat(String(spacing))], container && spacing !== 0), (0, _defineProperty2.default)(_classNames, classes["direction-xs-".concat(String(direction))], direction !== Grid.defaultProps.direction), (0, _defineProperty2.default)(_classNames, classes["wrap-xs-".concat(String(wrap))], wrap !== Grid.defaultProps.wrap), (0, _defineProperty2.default)(_classNames, classes["align-items-xs-".concat(String(alignItems))], alignItems !== Grid.defaultProps.alignItems), (0, _defineProperty2.default)(_classNames, classes["align-content-xs-".concat(String(alignContent))], alignContent !== Grid.defaultProps.alignContent), (0, _defineProperty2.default)(_classNames, classes["justify-xs-".concat(String(justify))], justify !== Grid.defaultProps.justify), (0, _defineProperty2.default)(_classNames, classes["grid-xs-".concat(String(xs))], xs !== false), (0, _defineProperty2.default)(_classNames, classes["grid-sm-".concat(String(sm))], sm !== false), (0, _defineProperty2.default)(_classNames, classes["grid-md-".concat(String(md))], md !== false), (0, _defineProperty2.default)(_classNames, classes["grid-lg-".concat(String(lg))], lg !== false), (0, _defineProperty2.default)(_classNames, classes["grid-xl-".concat(String(xl))], xl !== false), _classNames), classNameProp);
+  return _react.default.createElement(Component, (0, _extends2.default)({
+    className: className
+  }, other));
+}
+
+ true ? Grid.propTypes = {
+  /**
+   * Defines the `align-content` style property.
+   * It's applied for all screen sizes.
+   */
+  alignContent: _propTypes.default.oneOf(['stretch', 'center', 'flex-start', 'flex-end', 'space-between', 'space-around']),
+
+  /**
+   * Defines the `align-items` style property.
+   * It's applied for all screen sizes.
+   */
+  alignItems: _propTypes.default.oneOf(['flex-start', 'center', 'flex-end', 'stretch', 'baseline']),
+
+  /**
+   * The content of the component.
+   */
+  children: _propTypes.default.node,
+
+  /**
+   * Override or extend the styles applied to the component.
+   * See [CSS API](#css-api) below for more details.
+   */
+  classes: _propTypes.default.object.isRequired,
+
+  /**
+   * @ignore
+   */
+  className: _propTypes.default.string,
+
+  /**
+   * The component used for the root node.
+   * Either a string to use a DOM element or a component.
+   */
+  component: _utils.componentPropType,
+
+  /**
+   * If `true`, the component will have the flex *container* behavior.
+   * You should be wrapping *items* with a *container*.
+   */
+  container: _propTypes.default.bool,
+
+  /**
+   * Defines the `flex-direction` style property.
+   * It is applied for all screen sizes.
+   */
+  direction: _propTypes.default.oneOf(['row', 'row-reverse', 'column', 'column-reverse']),
+
+  /**
+   * If `true`, the component will have the flex *item* behavior.
+   * You should be wrapping *items* with a *container*.
+   */
+  item: _propTypes.default.bool,
+
+  /**
+   * Defines the `justify-content` style property.
+   * It is applied for all screen sizes.
+   */
+  justify: _propTypes.default.oneOf(['flex-start', 'center', 'flex-end', 'space-between', 'space-around', 'space-evenly']),
+
+  /**
+   * Defines the number of grids the component is going to use.
+   * It's applied for the `lg` breakpoint and wider screens if not overridden.
+   */
+  lg: _propTypes.default.oneOf([false, 'auto', true, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]),
+
+  /**
+   * Defines the number of grids the component is going to use.
+   * It's applied for the `md` breakpoint and wider screens if not overridden.
+   */
+  md: _propTypes.default.oneOf([false, 'auto', true, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]),
+
+  /**
+   * Defines the number of grids the component is going to use.
+   * It's applied for the `sm` breakpoint and wider screens if not overridden.
+   */
+  sm: _propTypes.default.oneOf([false, 'auto', true, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]),
+
+  /**
+   * Defines the space between the type `item` component.
+   * It can only be used on a type `container` component.
+   */
+  spacing: _propTypes.default.oneOf(GUTTERS),
+
+  /**
+   * Defines the `flex-wrap` style property.
+   * It's applied for all screen sizes.
+   */
+  wrap: _propTypes.default.oneOf(['nowrap', 'wrap', 'wrap-reverse']),
+
+  /**
+   * Defines the number of grids the component is going to use.
+   * It's applied for the `xl` breakpoint and wider screens.
+   */
+  xl: _propTypes.default.oneOf([false, 'auto', true, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]),
+
+  /**
+   * Defines the number of grids the component is going to use.
+   * It's applied for all the screen sizes with the lowest priority.
+   */
+  xs: _propTypes.default.oneOf([false, 'auto', true, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]),
+
+  /**
+   * If `true`, it sets `min-width: 0` on the item.
+   * Refer to the limitations section of the documentation to better understand the use case.
+   */
+  zeroMinWidth: _propTypes.default.bool
+} : undefined;
+Grid.defaultProps = {
+  alignContent: 'stretch',
+  alignItems: 'stretch',
+  component: 'div',
+  container: false,
+  direction: 'row',
+  item: false,
+  justify: 'flex-start',
+  lg: false,
+  md: false,
+  sm: false,
+  spacing: 0,
+  wrap: 'wrap',
+  xl: false,
+  xs: false,
+  zeroMinWidth: false
+};
+var StyledGrid = (0, _withStyles.default)(styles, {
+  name: 'MuiGrid'
+})(Grid);
+
+if (true) {
+  var requireProp = (0, _requirePropFactory.default)('Grid');
+  StyledGrid.propTypes = (0, _extends2.default)({}, StyledGrid.propTypes, {
+    alignContent: requireProp('container'),
+    alignItems: requireProp('container'),
+    direction: requireProp('container'),
+    justify: requireProp('container'),
+    lg: requireProp('item'),
+    md: requireProp('item'),
+    sm: requireProp('item'),
+    spacing: requireProp('container'),
+    wrap: requireProp('container'),
+    xs: requireProp('item'),
+    zeroMinWidth: requireProp('zeroMinWidth')
+  });
+}
+
+var _default = StyledGrid;
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/Grid/index.js":
+/*!******************************************************!*\
+  !*** ./node_modules/@material-ui/core/Grid/index.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "default", {
+  enumerable: true,
+  get: function get() {
+    return _Grid.default;
+  }
+});
+
+var _Grid = _interopRequireDefault(__webpack_require__(/*! ./Grid */ "./node_modules/@material-ui/core/Grid/Grid.js"));
+
+/***/ }),
+
 /***/ "./node_modules/@material-ui/core/Grow/Grow.js":
 /*!*****************************************************!*\
   !*** ./node_modules/@material-ui/core/Grow/Grow.js ***!
@@ -17519,6 +17964,45 @@ function setRef(ref, value) {
 
 /***/ }),
 
+/***/ "./node_modules/@material-ui/core/utils/requirePropFactory.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@material-ui/core/utils/requirePropFactory.js ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+function requirePropFactory(componentNameInError) {
+  /* istanbul ignore if */
+  if (false) {}
+
+  var requireProp = function requireProp(requiredProp) {
+    return function (props, propName, componentName, location, propFullName) {
+      var propFullNameSafe = propFullName || propName;
+
+      if (typeof props[propName] !== 'undefined' && !props[requiredProp]) {
+        return new Error("The property `".concat(propFullNameSafe, "` of ") + "`".concat(componentNameInError, "` must be used on `").concat(requiredProp, "`."));
+      }
+
+      return null;
+    };
+  };
+
+  return requireProp;
+}
+
+var _default = requirePropFactory;
+exports.default = _default;
+
+/***/ }),
+
 /***/ "./node_modules/@material-ui/core/withWidth/index.js":
 /*!***********************************************************!*\
   !*** ./node_modules/@material-ui/core/withWidth/index.js ***!
@@ -24302,7 +24786,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".img-fluid {\n    max-height: 440px;\n}\nbody{\n    font-size: 100%;\n}\n\n\n/* Phone Ordering */\n\n.center {\n    margin: auto;\n    width: 95%;\n    border: 3px solid green;\n    padding: 10px;\n  }\n.padded{\n    padding:10px;\n}\n.ProductInfoText {\n}\n.ProductInfoText h3 {\ncolor: #353535;\nfont-size:3rem\n}\n.ProductInfoText h6 {\n    color: #7c1515;\n    font-size: 2rem;\n}\n.smallText {\n    font-size: 11px;\n}\n.delivery-time-box{\n    border:0px;\n    border-color:#7c1515;\n    margin-top: 15px;\n    margin-left: -5px;\n}\n.delivery-time-box h6{\n    color:#999999;\n    text-transform: uppercase;\n}\n.delivery-time-box p{\ncolor: #333333;\n}\n\n\n/* Product Tabs */\n\n.tabsBox {\n    display: block;\n    position: relative;\n    padding: 1em 2em 15em;\n    border-width: 0px;\n    border-style: none;\n    border-color: rgb(216, 216, 216);\n    -o-border-image: initial;\n       border-image: initial;\n    margin: 1.5rem 0px 0px;\n    width:100%;\n}\n.tabContent {\n    padding-top:1.5rem;\n}\n\n\n/* Small devices (landscape phones, 576px and up) */\n@media (min-width: 576px) {\n\n\n\n\n }\n", ""]);
+exports.push([module.i, ".img-fluid {\n    max-height: 440px;\n}\nbody{\n    font-size: 100%;\n}\n\n\n/* Phone Ordering */\n\n.center {\n    margin: auto;\n    width: 95%;\n    border: 3px solid green;\n    padding: 10px;\n  }\n.padded{\n    padding:10px;\n}\n.ProductInfoText {\n}\n.ProductInfoText h3 {\ncolor: #353535;\nfont-size:3rem\n}\n.ProductInfoText h6 {\n    color: #7c1515;\n    font-size: 2rem;\n}\n.smallText {\n    font-size: 11px;\n}\n.delivery-time-box{\n    border:0px;\n    border-color:#7c1515;\n    margin-top: 15px;\n    margin-left: -5px;\n}\n.delivery-time-box h6{\n    color:#999999;\n    text-transform: uppercase;\n}\n.delivery-time-box p{\ncolor: #333333;\n}\n\n\n/* Product Tabs */\n\n.tabsBox {\n    display: block;\n    position: relative;\n    padding: 1em 2em 15em;\n    border-width: 0px;\n    border-style: none;\n    border-color: rgb(216, 216, 216);\n    -o-border-image: initial;\n       border-image: initial;\n    margin: 1.5rem 0px 0px;\n    width:100%;\n}\n.tabContent {\n    padding-top:1.5rem;\n}\n\n.productInfo img{\nwidth:85%;\n}\n\n/* Small devices (landscape phones, 576px and up) */\n@media (min-width: 576px) {\n\n\n\n\n }\n", ""]);
 
 // exports
 
@@ -24321,7 +24805,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".img-fluid {\n    max-height: 440px;\n}\nbody{\n    font-size: 100%;\n}\n\n\n/* Phone Ordering */\n\n.center {\n    margin: auto;\n    width: 95%;\n    border: 3px solid green;\n    padding: 10px;\n  }\n.padded{\n    padding:10px;\n}\n.ProductInfoText {\n}\n.ProductInfoText h3 {\ncolor: #353535;\nfont-size:3rem\n}\n.ProductInfoText h6 {\n    color: #7c1515;\n    font-size: 2rem;\n}\n.smallText {\n    font-size: 11px;\n}\n.delivery-time-box{\n    border:0px;\n    border-color:#7c1515;\n    margin-top: 15px;\n    margin-left: -5px;\n}\n.delivery-time-box h6{\n    color:#999999;\n    text-transform: uppercase;\n}\n.delivery-time-box p{\ncolor: #333333;\n}\n\n\n/* Product Tabs */\n\n.tabsBox {\n    display: block;\n    position: relative;\n    padding: 1em 2em 15em;\n    border-width: 0px;\n    border-style: none;\n    border-color: rgb(216, 216, 216);\n    -o-border-image: initial;\n       border-image: initial;\n    margin: 1.5rem 0px 0px;\n    width:100%;\n}\n.tabContent {\n    padding-top:1.5rem;\n}\n\n\n/* Small devices (landscape phones, 576px and up) */\n@media (min-width: 576px) {\n\n\n\n\n }\n", ""]);
+exports.push([module.i, ".img-fluid {\n    max-height: 440px;\n}\nbody{\n    font-size: 100%;\n}\n\n\n/* Phone Ordering */\n\n.center {\n    margin: auto;\n    width: 95%;\n    border: 3px solid green;\n    padding: 10px;\n  }\n.padded{\n    padding:10px;\n}\n.ProductInfoText {\n}\n.ProductInfoText h3 {\ncolor: #353535;\nfont-size:3rem\n}\n.ProductInfoText h6 {\n    color: #7c1515;\n    font-size: 2rem;\n}\n.smallText {\n    font-size: 11px;\n}\n.delivery-time-box{\n    border:0px;\n    border-color:#7c1515;\n    margin-top: 15px;\n    margin-left: -5px;\n}\n.delivery-time-box h6{\n    color:#999999;\n    text-transform: uppercase;\n}\n.delivery-time-box p{\ncolor: #333333;\n}\n\n\n/* Product Tabs */\n\n.tabsBox {\n    display: block;\n    position: relative;\n    padding: 1em 2em 15em;\n    border-width: 0px;\n    border-style: none;\n    border-color: rgb(216, 216, 216);\n    -o-border-image: initial;\n       border-image: initial;\n    margin: 1.5rem 0px 0px;\n    width:100%;\n}\n.tabContent {\n    padding-top:1.5rem;\n}\n\n.productInfo img{\n    width:85%;\n    }\n\n/* Small devices (landscape phones, 576px and up) */\n@media (min-width: 576px) {\n\n\n\n\n }\n", ""]);
 
 // exports
 
@@ -24340,7 +24824,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".img-fluid {\n    max-height: 440px;\n}\nbody{\n    font-size: 100%;\n}\n\n\n/* Phone Ordering */\n\n.center {\n    margin: auto;\n    width: 95%;\n    border: 3px solid green;\n    padding: 10px;\n  }\n.padded{\n    padding:10px;\n}\n.ProductInfoText {\n}\n.ProductInfoText h3 {\ncolor: #353535;\nfont-size:3rem\n}\n.ProductInfoText h6 {\n    color: #7c1515;\n    font-size: 2rem;\n}\n.smallText {\n    font-size: 11px;\n}\n.delivery-time-box{\n    border:0px;\n    border-color:#7c1515;\n    margin-top: 15px;\n    margin-left: -5px;\n}\n.delivery-time-box h6{\n    color:#999999;\n    text-transform: uppercase;\n}\n.delivery-time-box p{\ncolor: #333333;\n}\n\n\n/* Product Tabs */\n\n.tabsBox {\n    display: block;\n    position: relative;\n    padding: 1em 2em 15em;\n    border-width: 0px;\n    border-style: none;\n    border-color: rgb(216, 216, 216);\n    -o-border-image: initial;\n       border-image: initial;\n    margin: 1.5rem 0px 0px;\n    width:100%;\n}\n.tabContent {\n    padding-top:1.5rem;\n}\n\n\n/* Small devices (landscape phones, 576px and up) */\n@media (min-width: 576px) {\n\n\n\n\n }\n", ""]);
+exports.push([module.i, ".img-fluid {\n    max-height: 440px;\n}\nbody{\n    font-size: 100%;\n}\n\n\n/* Phone Ordering */\n\n.center {\n    margin: auto;\n    width: 95%;\n    border: 3px solid green;\n    padding: 10px;\n  }\n.padded{\n    padding:10px;\n}\n.ProductInfoText {\n}\n.ProductInfoText h3 {\ncolor: #353535;\nfont-size:3rem\n}\n.ProductInfoText h6 {\n    color: #7c1515;\n    font-size: 2rem;\n}\n.smallText {\n    font-size: 11px;\n}\n.delivery-time-box{\n    border:0px;\n    border-color:#7c1515;\n    margin-top: 15px;\n    margin-left: -5px;\n}\n.delivery-time-box h6{\n    color:#999999;\n    text-transform: uppercase;\n}\n.delivery-time-box p{\ncolor: #333333;\n}\n\n\n/* Product Tabs */\n\n.tabsBox {\n    display: block;\n    position: relative;\n    padding: 1em 2em 15em;\n    border-width: 0px;\n    border-style: none;\n    border-color: rgb(216, 216, 216);\n    -o-border-image: initial;\n       border-image: initial;\n    margin: 1.5rem 0px 0px;\n    width:100%;\n}\n.tabContent {\n    padding-top:1.5rem;\n}\n\n.productInfo img{\n    width:85%;\n    }\n\n/* Small devices (landscape phones, 576px and up) */\n@media (min-width: 576px) {\n\n\n\n\n }\n", ""]);
 
 // exports
 
@@ -24359,7 +24843,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".img-fluid {\n    max-height: 440px;\n}\nbody{\n    font-size: 100%;\n}\n\n\n/* Phone Ordering */\n\n.center {\n    margin: auto;\n    width: 95%;\n    border: 3px solid green;\n    padding: 10px;\n  }\n.padded{\n    padding:10px;\n}\n.ProductInfoText {\n}\n.ProductInfoText h3 {\ncolor: #353535;\nfont-size:3rem\n}\n.ProductInfoText h6 {\n    color: #7c1515;\n    font-size: 2rem;\n}\n.smallText {\n    font-size: 11px;\n}\n.delivery-time-box{\n    border:0px;\n    border-color:#7c1515;\n    margin-top: 15px;\n    margin-left: -5px;\n}\n.delivery-time-box h6{\n    color:#999999;\n    text-transform: uppercase;\n}\n.delivery-time-box p{\ncolor: #333333;\n}\n\n\n/* Product Tabs */\n\n.tabsBox {\n    display: block;\n    position: relative;\n    padding: 1em 2em 15em;\n    border-width: 0px;\n    border-style: none;\n    border-color: rgb(216, 216, 216);\n    -o-border-image: initial;\n       border-image: initial;\n    margin: 1.5rem 0px 0px;\n    width:100%;\n}\n.tabContent {\n    padding-top:1.5rem;\n}\n\n\n/* Small devices (landscape phones, 576px and up) */\n@media (min-width: 576px) {\n\n\n\n\n }\n", ""]);
+exports.push([module.i, ".img-fluid {\n    max-height: 440px;\n}\nbody{\n    font-size: 100%;\n}\n\n\n/* Phone Ordering */\n\n.center {\n    margin: auto;\n    width: 95%;\n    border: 3px solid green;\n    padding: 10px;\n  }\n.padded{\n    padding:10px;\n}\n.ProductInfoText {\n}\n.ProductInfoText h3 {\ncolor: #353535;\nfont-size:3rem\n}\n.ProductInfoText h6 {\n    color: #7c1515;\n    font-size: 2rem;\n}\n.smallText {\n    font-size: 11px;\n}\n.delivery-time-box{\n    border:0px;\n    border-color:#7c1515;\n    margin-top: 15px;\n    margin-left: -5px;\n}\n.delivery-time-box h6{\n    color:#999999;\n    text-transform: uppercase;\n}\n.delivery-time-box p{\ncolor: #333333;\n}\n\n\n/* Product Tabs */\n\n.tabsBox {\n    display: block;\n    position: relative;\n    padding: 1em 2em 15em;\n    border-width: 0px;\n    border-style: none;\n    border-color: rgb(216, 216, 216);\n    -o-border-image: initial;\n       border-image: initial;\n    margin: 1.5rem 0px 0px;\n    width:100%;\n}\n.tabContent {\n    padding-top:1.5rem;\n}\n\n.productInfo img{\n    width:85%;\n    }\n\n/* Small devices (landscape phones, 576px and up) */\n@media (min-width: 576px) {\n\n\n\n\n }\n", ""]);
 
 // exports
 
@@ -24378,7 +24862,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".img-fluid {\n    max-height: 440px;\n}\nbody{\n    font-size: 100%;\n}\n\n\n/* Phone Ordering */\n\n.center {\n    margin: auto;\n    width: 95%;\n    border: 3px solid green;\n    padding: 10px;\n  }\n.padded{\n    padding:10px;\n}\n.ProductInfoText {\n}\n.ProductInfoText h3 {\ncolor: #353535;\nfont-size:3rem\n}\n.ProductInfoText h6 {\n    color: #7c1515;\n    font-size: 2rem;\n}\n.smallText {\n    font-size: 11px;\n}\n.delivery-time-box{\n    border:0px;\n    border-color:#7c1515;\n    margin-top: 15px;\n    margin-left: -5px;\n}\n.delivery-time-box h6{\n    color:#999999;\n    text-transform: uppercase;\n}\n.delivery-time-box p{\ncolor: #333333;\n}\n\n\n/* Product Tabs */\n\n.tabsBox {\n    display: block;\n    position: relative;\n    padding: 1em 2em 15em;\n    border-width: 0px;\n    border-style: none;\n    border-color: rgb(216, 216, 216);\n    -o-border-image: initial;\n       border-image: initial;\n    margin: 1.5rem 0px 0px;\n    width:100%;\n}\n.tabContent {\n    padding-top:1.5rem;\n}\n\n\n/* Small devices (landscape phones, 576px and up) */\n@media (min-width: 576px) {\n\n\n\n\n }\n", ""]);
+exports.push([module.i, ".img-fluid {\n    max-height: 440px;\n}\nbody{\n    font-size: 100%;\n}\n\n\n/* Phone Ordering */\n\n.center {\n    margin: auto;\n    width: 95%;\n    border: 3px solid green;\n    padding: 10px;\n  }\n.padded{\n    padding:10px;\n}\n.ProductInfoText {\n}\n.ProductInfoText h3 {\ncolor: #353535;\nfont-size:3rem\n}\n.ProductInfoText h6 {\n    color: #7c1515;\n    font-size: 2rem;\n}\n.smallText {\n    font-size: 11px;\n}\n.delivery-time-box{\n    border:0px;\n    border-color:#7c1515;\n    margin-top: 15px;\n    margin-left: -5px;\n}\n.delivery-time-box h6{\n    color:#999999;\n    text-transform: uppercase;\n}\n.delivery-time-box p{\ncolor: #333333;\n}\n\n\n/* Product Tabs */\n\n.tabsBox {\n    display: block;\n    position: relative;\n    padding: 1em 2em 15em;\n    border-width: 0px;\n    border-style: none;\n    border-color: rgb(216, 216, 216);\n    -o-border-image: initial;\n       border-image: initial;\n    margin: 1.5rem 0px 0px;\n    width:100%;\n}\n.tabContent {\n    padding-top:1.5rem;\n}\n\n.productInfo img{\n    width:85%;\n    }\n\n/* Small devices (landscape phones, 576px and up) */\n@media (min-width: 576px) {\n\n\n\n\n }\n", ""]);
 
 // exports
 
@@ -102764,10 +103248,10 @@ function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/components/Pages/Contact/contact.js":
-/*!**********************************************************!*\
-  !*** ./resources/js/components/Pages/Contact/contact.js ***!
-  \**********************************************************/
+/***/ "./resources/js/components/Pages/Contact/ContactHeader.js":
+/*!****************************************************************!*\
+  !*** ./resources/js/components/Pages/Contact/ContactHeader.js ***!
+  \****************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -102775,6 +103259,46 @@ function (_Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../main.css */ "./resources/js/components/Pages/main.css");
+/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_main_css__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+var ProductInfoHeader = function ProductInfoHeader(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Jumbotron"], {
+    fluid: true,
+    style: {
+      backgroundColor: '',
+      color: ''
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], {
+    fluid: true
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "display-3"
+  }, "Tienes Preguntas?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "lead"
+  }, "Contactanos hoy sobre cualquier pregunta que tengas. "))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (ProductInfoHeader);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/Contact/ContactPage.js":
+/*!**************************************************************!*\
+  !*** ./resources/js/components/Pages/Contact/ContactPage.js ***!
+  \**************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _ContactHeader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ContactHeader */ "./resources/js/components/Pages/Contact/ContactHeader.js");
+/* harmony import */ var _WrapperA__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./WrapperA */ "./resources/js/components/Pages/Contact/WrapperA.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -102793,30 +103317,106 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+ // Component imports
 
 
-var Contact =
+
+
+var ContactPage =
 /*#__PURE__*/
-function (_Component) {
-  _inherits(Contact, _Component);
+function (_React$Component) {
+  _inherits(ContactPage, _React$Component);
 
-  function Contact() {
-    _classCallCheck(this, Contact);
+  function ContactPage() {
+    _classCallCheck(this, ContactPage);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Contact).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(ContactPage).apply(this, arguments));
   }
 
-  _createClass(Contact, [{
+  _createClass(ContactPage, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "This is an example of the contact page in the router. Modify as needed.")));
+      console.log('props: ', this.props);
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ContactHeader__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WrapperA__WEBPACK_IMPORTED_MODULE_2__["default"], null));
     }
   }]);
 
-  return Contact;
-}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+  return ContactPage;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-/* harmony default export */ __webpack_exports__["default"] = (Contact);
+/* harmony default export */ __webpack_exports__["default"] = (ContactPage);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/Contact/WrapperA.js":
+/*!***********************************************************!*\
+  !*** ./resources/js/components/Pages/Contact/WrapperA.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/styles/index.js");
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/Paper */ "./node_modules/@material-ui/core/Paper/index.js");
+/* harmony import */ var _material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/Grid */ "./node_modules/@material-ui/core/Grid/index.js");
+/* harmony import */ var _material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
+
+
+
+var styles = function styles(theme) {
+  return {
+    root: {
+      flexGrow: 1
+    },
+    paper: {
+      padding: theme.spacing.unit * 2,
+      textAlign: 'center',
+      color: theme.palette.text.secondary
+    }
+  };
+};
+
+function wrapperA(props) {
+  var classes = props.classes;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: classes.root
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    container: true,
+    spacing: 24
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    item: true,
+    xs: 12
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    className: classes.paper
+  }, "Contact Page")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    item: true,
+    xs: 12,
+    sm: 6
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    className: classes.paper
+  }, "Contact Form")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    item: true,
+    xs: 12,
+    sm: 6
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    className: classes.paper
+  }, "Contact Info"))));
+}
+
+wrapperA.propTypes = {
+  classes: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object.isRequired
+};
+/* harmony default export */ __webpack_exports__["default"] = (Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["withStyles"])(styles)(wrapperA));
 
 /***/ }),
 
@@ -103138,9 +103738,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function PhoneImage(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Image__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    src: 'https://www.unlockbase.com/sdata/images/models/acer-betouch-e110-phone-unlock-code.png',
-    alt: 'beTouch E110',
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "productInfo"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Image__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    src: 'https://www.unlockbase.com/sdata/images/models/acer-betouch-e140-phone-unlock-code.png',
+    alt: 'beTouch E140',
     fluid: true
   }));
 }
@@ -103169,7 +103771,7 @@ __webpack_require__.r(__webpack_exports__);
 function PhoneOrdering(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "ProductInfoText"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "beTouch E110")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Form"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["FormGroup"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Label"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "beTouch E110"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "$24")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Form"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["FormGroup"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Label"], {
     for: "exampleSelect",
     className: "mr-sm-3"
   }, "Select Your Phone's Carrier:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Input"], {
@@ -103502,7 +104104,7 @@ function (_React$Component) {
         sm: "12"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "tabContent"
-      }, "THIS IS HOW TO UNLOCK YOUR APPLE IPHONE 8 FROM ANY GSM NETWORKS SUCH AS AT&T, T-MOBILE, VODAFONE,SPRINT,VERIZON AND MANY MORE.\u2028\u2028Your Apple device is simple to unlock! Simply connect your Apple iPhone to your computer and turn on iTunes after we have processed your order. Follow the instructions on iTunes and this will unlock your cell phone to be used with any GSM network such as Rogers, Bell, Vodafone, and others! Once you place your order for your Apple iPhone Network Unlock, we will have your IMEI Number processed and email you as soon as it is completed. Once unlocked, your Apple iPhone 8 will be factory unlocked for another GSM Network.")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["TabPane"], {
+      }, "THIS IS HOW TO UNLOCK YOUR PHONE FROM ANY GSM NETWORKS SUCH AS AT&T, T-MOBILE, VODAFONE,SPRINT,VERIZON AND MANY MORE.\u2028\u2028Your Apple device is simple to unlock! Simply connect your Apple iPhone to your computer and turn on iTunes after we have processed your order. Follow the instructions on iTunes and this will unlock your cell phone to be used with any GSM network such as Rogers, Bell, Vodafone, and others! Once you place your order for your Apple iPhone Network Unlock, we will have your IMEI Number processed and email you as soon as it is completed. Once unlocked, your phone will be factory unlocked for another GSM Network.")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["TabPane"], {
         tabId: "2"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
         sm: "12"
@@ -103591,9 +104193,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function PhoneImage(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Image__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    src: 'https://www.unlockbase.com/sdata/images/models/aeg-9050-phone-unlock-code.png',
-    alt: '9050',
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "productInfo"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Image__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    src: 'https://www.unlockbase.com/sdata/images/models/aeg-9080-phone-unlock-code.png',
+    alt: '9080',
     fluid: true
   }));
 }
@@ -103622,7 +104226,7 @@ __webpack_require__.r(__webpack_exports__);
 function PhoneOrdering(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "ProductInfoText"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "9080")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Form"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["FormGroup"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Label"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "9080"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "$28")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Form"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["FormGroup"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Label"], {
     for: "exampleSelect",
     className: "mr-sm-3"
   }, "Select Your Phone's Carrier:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Input"], {
@@ -103955,7 +104559,7 @@ function (_React$Component) {
         sm: "12"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "tabContent"
-      }, "THIS IS HOW TO UNLOCK YOUR APPLE IPHONE 8 FROM ANY GSM NETWORKS SUCH AS AT&T, T-MOBILE, VODAFONE,SPRINT,VERIZON AND MANY MORE.\u2028\u2028Your Apple device is simple to unlock! Simply connect your Apple iPhone to your computer and turn on iTunes after we have processed your order. Follow the instructions on iTunes and this will unlock your cell phone to be used with any GSM network such as Rogers, Bell, Vodafone, and others! Once you place your order for your Apple iPhone Network Unlock, we will have your IMEI Number processed and email you as soon as it is completed. Once unlocked, your Apple iPhone 8 will be factory unlocked for another GSM Network.")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["TabPane"], {
+      }, "THIS IS HOW TO UNLOCK YOUR PHONE FROM ANY GSM NETWORKS SUCH AS AT&T, T-MOBILE, VODAFONE,SPRINT,VERIZON AND MANY MORE.\u2028\u2028Your Apple device is simple to unlock! Simply connect your Apple iPhone to your computer and turn on iTunes after we have processed your order. Follow the instructions on iTunes and this will unlock your cell phone to be used with any GSM network such as Rogers, Bell, Vodafone, and others! Once you place your order for your Apple iPhone Network Unlock, we will have your IMEI Number processed and email you as soon as it is completed. Once unlocked, your phone will be factory unlocked for another GSM Network.")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["TabPane"], {
         tabId: "2"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
         sm: "12"
@@ -104044,7 +104648,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function PhoneImage(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Image__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "productInfo"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Image__WEBPACK_IMPORTED_MODULE_1___default.a, {
     src: 'https://www.unlockbase.com/sdata/images/models/airis-t483-phone-unlock-code.png',
     alt: 'T483',
     fluid: true
@@ -104075,7 +104681,7 @@ __webpack_require__.r(__webpack_exports__);
 function PhoneOrdering(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "ProductInfoText"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "T483")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Form"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["FormGroup"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Label"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "T483"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "$43")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Form"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["FormGroup"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Label"], {
     for: "exampleSelect",
     className: "mr-sm-3"
   }, "Select Your Phone's Carrier:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Input"], {
@@ -104408,7 +105014,7 @@ function (_React$Component) {
         sm: "12"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "tabContent"
-      }, "THIS IS HOW TO UNLOCK YOUR APPLE IPHONE 8 FROM ANY GSM NETWORKS SUCH AS AT&T, T-MOBILE, VODAFONE,SPRINT,VERIZON AND MANY MORE.\u2028\u2028Your Apple device is simple to unlock! Simply connect your Apple iPhone to your computer and turn on iTunes after we have processed your order. Follow the instructions on iTunes and this will unlock your cell phone to be used with any GSM network such as Rogers, Bell, Vodafone, and others! Once you place your order for your Apple iPhone Network Unlock, we will have your IMEI Number processed and email you as soon as it is completed. Once unlocked, your Apple iPhone 8 will be factory unlocked for another GSM Network.")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["TabPane"], {
+      }, "THIS IS HOW TO UNLOCK YOUR PHONE FROM ANY GSM NETWORKS SUCH AS AT&T, T-MOBILE, VODAFONE,SPRINT,VERIZON AND MANY MORE.\u2028\u2028Your Apple device is simple to unlock! Simply connect your Apple iPhone to your computer and turn on iTunes after we have processed your order. Follow the instructions on iTunes and this will unlock your cell phone to be used with any GSM network such as Rogers, Bell, Vodafone, and others! Once you place your order for your Apple iPhone Network Unlock, we will have your IMEI Number processed and email you as soon as it is completed. Once unlocked, your phone will be factory unlocked for another GSM Network.")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["TabPane"], {
         tabId: "2"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
         sm: "12"
@@ -104497,7 +105103,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function PhoneImage(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Image__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "productInfo"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Image__WEBPACK_IMPORTED_MODULE_1___default.a, {
     src: 'https://www.unlockbase.com/sdata/images/models/akmobile-ak610-phone-unlock-code.png',
     alt: 'AK610',
     fluid: true
@@ -104528,7 +105136,7 @@ __webpack_require__.r(__webpack_exports__);
 function PhoneOrdering(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "ProductInfoText"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "AK610")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Form"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["FormGroup"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Label"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "AK610"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "$36")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Form"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["FormGroup"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Label"], {
     for: "exampleSelect",
     className: "mr-sm-3"
   }, "Select Your Phone's Carrier:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Input"], {
@@ -104861,7 +105469,7 @@ function (_React$Component) {
         sm: "12"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "tabContent"
-      }, "THIS IS HOW TO UNLOCK YOUR APPLE IPHONE 8 FROM ANY GSM NETWORKS SUCH AS AT&T, T-MOBILE, VODAFONE,SPRINT,VERIZON AND MANY MORE.\u2028\u2028Your Apple device is simple to unlock! Simply connect your Apple iPhone to your computer and turn on iTunes after we have processed your order. Follow the instructions on iTunes and this will unlock your cell phone to be used with any GSM network such as Rogers, Bell, Vodafone, and others! Once you place your order for your Apple iPhone Network Unlock, we will have your IMEI Number processed and email you as soon as it is completed. Once unlocked, your Apple iPhone 8 will be factory unlocked for another GSM Network.")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["TabPane"], {
+      }, "THIS IS HOW TO UNLOCK YOUR PHONE FROM ANY GSM NETWORKS SUCH AS AT&T, T-MOBILE, VODAFONE,SPRINT,VERIZON AND MANY MORE.\u2028\u2028Your Apple device is simple to unlock! Simply connect your Apple iPhone to your computer and turn on iTunes after we have processed your order. Follow the instructions on iTunes and this will unlock your cell phone to be used with any GSM network such as Rogers, Bell, Vodafone, and others! Once you place your order for your Apple iPhone Network Unlock, we will have your IMEI Number processed and email you as soon as it is completed. Once unlocked, your phone will be factory unlocked for another GSM Network.")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["TabPane"], {
         tabId: "2"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
         sm: "12"
@@ -104950,7 +105558,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function PhoneImage(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Image__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "productInfo"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Image__WEBPACK_IMPORTED_MODULE_1___default.a, {
     src: props.img,
     alt: props.name,
     fluid: true
@@ -105314,7 +105924,7 @@ function (_React$Component) {
         sm: "12"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "tabContent"
-      }, "THIS IS HOW TO UNLOCK YOUR APPLE IPHONE 8 FROM ANY GSM NETWORKS SUCH AS AT&T, T-MOBILE, VODAFONE,SPRINT,VERIZON AND MANY MORE.\u2028\u2028Your Apple device is simple to unlock! Simply connect your Apple iPhone to your computer and turn on iTunes after we have processed your order. Follow the instructions on iTunes and this will unlock your cell phone to be used with any GSM network such as Rogers, Bell, Vodafone, and others! Once you place your order for your Apple iPhone Network Unlock, we will have your IMEI Number processed and email you as soon as it is completed. Once unlocked, your Apple iPhone 8 will be factory unlocked for another GSM Network.")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["TabPane"], {
+      }, "THIS IS HOW TO UNLOCK YOUR PHONE FROM ANY GSM NETWORKS SUCH AS AT&T, T-MOBILE, VODAFONE,SPRINT,VERIZON AND MANY MORE.\u2028\u2028Your Apple device is simple to unlock! Simply connect your Apple iPhone to your computer and turn on iTunes after we have processed your order. Follow the instructions on iTunes and this will unlock your cell phone to be used with any GSM network such as Rogers, Bell, Vodafone, and others! Once you place your order for your Apple iPhone Network Unlock, we will have your IMEI Number processed and email you as soon as it is completed. Once unlocked, your phone will be factory unlocked for another GSM Network.")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["TabPane"], {
         tabId: "2"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
         sm: "12"
@@ -105426,52 +106036,80 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Phone_Phone__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../../Phone/Phone */ "./resources/js/components/Phone/Phone.js");
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 
 
-var phones = [{
-  name: "iphone",
-  price: 200,
-  img: "https://www.sprint.com/content/dam/sprint/commerce/devices/apple/apple_iphone_6s_plus/gray/new/devicenb_650x900.png/jcr:content/renditions/cq5dam.thumbnail.290.370.png"
-}, {
-  name: "andriod",
-  price: 200,
-  img: "https://www.sprint.com/content/dam/sprint/commerce/devices/apple/apple_iphone_6s_plus/silver/new/devicenb_650x900.png/jcr:content/renditions/cq5dam.thumbnail.290.370.png"
-}, {
-  name: "google",
-  price: 200,
-  img: "https://www.sprint.com/content/dam/sprint/commerce/devices/apple/apple_iphone_6s_plus/rose_gold/new/devicenb_650x900.png/jcr:content/renditions/cq5dam.thumbnail.290.370.png"
-}, {
-  name: "att",
-  price: 200,
-  img: "https://www.sprint.com/content/dam/sprint/commerce/devices/apple/apple_iphone_6s_plus/gold/new/devicenb_650x900.png/jcr:content/renditions/cq5dam.thumbnail.290.370.png"
-}, {
-  name: "iphone2",
-  price: 200,
-  img: "https://www.sprint.com/content/dam/sprint/commerce/devices/apple/apple_iphone_6s_plus/gray/new/devicenb_650x900.png/jcr:content/renditions/cq5dam.thumbnail.290.370.png"
-}, {
-  name: "andriod2",
-  price: 200,
-  img: "https://www.sprint.com/content/dam/sprint/commerce/devices/apple/apple_iphone_6s_plus/silver/new/devicenb_650x900.png/jcr:content/renditions/cq5dam.thumbnail.290.370.png"
-}, {
-  name: "google2",
-  price: 200,
-  img: "https://www.sprint.com/content/dam/sprint/commerce/devices/apple/apple_iphone_6s_plus/rose_gold/new/devicenb_650x900.png/jcr:content/renditions/cq5dam.thumbnail.290.370.png"
-}, {
-  name: "att2",
-  price: 200,
-  img: "https://www.sprint.com/content/dam/sprint/commerce/devices/apple/apple_iphone_6s_plus/gold/new/devicenb_650x900.png/jcr:content/renditions/cq5dam.thumbnail.290.370.png"
-}];
 
-var PhoneResultsWrapper = function PhoneResultsWrapper(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__["CardColumns"], null, phones.map(function (e) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Phone_Phone__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      img: e.img,
-      name: e.name,
-      price: e.price
-    });
-  })));
-};
+
+var PhoneResultsWrapper =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(PhoneResultsWrapper, _React$Component);
+
+  function PhoneResultsWrapper(props) {
+    var _this;
+
+    _classCallCheck(this, PhoneResultsWrapper);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(PhoneResultsWrapper).call(this, props));
+    _this.state = {
+      phones: [],
+      mobiles: []
+    };
+    return _this;
+  }
+
+  _createClass(PhoneResultsWrapper, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      axios.get('/api/mobiles').then(function (response) {
+        _this2.setState({
+          phones: response.data.data
+        });
+
+        console.log('THIS IS RESPONSE', response.data.data);
+      }).catch(function (errors) {// console.log(errors);
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__["CardColumns"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__["CardDeck"], null), this.state.phones.map(function (phone, i) {
+        if (i < 100) {
+          var _React$createElement;
+
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Phone_Phone__WEBPACK_IMPORTED_MODULE_1__["default"], (_React$createElement = {
+            img: phone.id,
+            name: phone.mobiles[0].mobileName
+          }, _defineProperty(_React$createElement, "img", phone.mobiles[0].mobilePhoto), _defineProperty(_React$createElement, "key", phone.id), _defineProperty(_React$createElement, "phoneId", phone.id), _React$createElement));
+        }
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__["CardDeck"], null)));
+    }
+  }]);
+
+  return PhoneResultsWrapper;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (PhoneResultsWrapper);
 
@@ -106481,14 +107119,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Pages_HomePage_HomePage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Pages/HomePage/HomePage */ "./resources/js/components/Pages/HomePage/HomePage.js");
 /* harmony import */ var _Pages_SearchProductPage_SearchProductPage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Pages/SearchProductPage/SearchProductPage */ "./resources/js/components/Pages/SearchProductPage/SearchProductPage.js");
 /* harmony import */ var _Pages_About_about__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Pages/About/about */ "./resources/js/components/Pages/About/about.js");
-/* harmony import */ var _Pages_Contact_contact__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Pages/Contact/contact */ "./resources/js/components/Pages/Contact/contact.js");
+/* harmony import */ var _Pages_Contact_ContactPage__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Pages/Contact/ContactPage */ "./resources/js/components/Pages/Contact/ContactPage.js");
 /* harmony import */ var _Pages_HomePage_FeaturedPhones__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Pages/HomePage/FeaturedPhones */ "./resources/js/components/Pages/HomePage/FeaturedPhones.js");
 /* harmony import */ var _Pages_ProductInfoPage_PhoneImage__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../Pages/ProductInfoPage/PhoneImage */ "./resources/js/components/Pages/ProductInfoPage/PhoneImage.js");
 /* harmony import */ var _Pages_ProductInfoPage_ProductInfoPage__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../Pages/ProductInfoPage/ProductInfoPage */ "./resources/js/components/Pages/ProductInfoPage/ProductInfoPage.js");
 /* harmony import */ var _Pages_ProductInfoPage_01_ProductInfoPage_01__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../Pages/ProductInfoPage-01/ProductInfoPage_01 */ "./resources/js/components/Pages/ProductInfoPage-01/ProductInfoPage_01.js");
 /* harmony import */ var _Pages_ProductInfoPage_02_ProductInfoPage_02__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../Pages/ProductInfoPage-02/ProductInfoPage_02 */ "./resources/js/components/Pages/ProductInfoPage-02/ProductInfoPage_02.js");
 /* harmony import */ var _Pages_ProductInfoPage_03_ProductInfoPage_03__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../Pages/ProductInfoPage-03/ProductInfoPage_03 */ "./resources/js/components/Pages/ProductInfoPage-03/ProductInfoPage_03.js");
-/* harmony import */ var _Pages_ProductInfoPage_04_ProductInfoPage_04__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../Pages/ProductInfoPage-04/ProductInfoPage_04 */ "./resources/js/components/Pages/ProductInfoPage-04/ProductInfoPage_04.js");
+/* harmony import */ var _Pages_ProductInfoPage_04_ProductInfoPage_04__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../Pages/ProductInfoPage-04/ProductInfoPage_04 */ "./resources/js/components/Pages/ProductInfoPage-04/ProductInfoPage_04.js");
 
 
  //public pages
@@ -106540,13 +107178,13 @@ var Routes = function Routes() {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
     path: "/ProductInfoPage_id=4",
-    component: _Pages_ProductInfoPage_04_ProductInfoPage_04__WEBPACK_IMPORTED_MODULE_15__["default"]
+    component: _Pages_ProductInfoPage_04_ProductInfoPage_04__WEBPACK_IMPORTED_MODULE_14__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/about",
     component: _Pages_About_about__WEBPACK_IMPORTED_MODULE_6__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-    path: "/contact",
-    component: _Pages_Contact_contact__WEBPACK_IMPORTED_MODULE_7__["default"]
+    path: "/Contact",
+    component: _Pages_Contact_ContactPage__WEBPACK_IMPORTED_MODULE_7__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/FeaturedPhones",
     component: _Pages_HomePage_FeaturedPhones__WEBPACK_IMPORTED_MODULE_8__["default"]
