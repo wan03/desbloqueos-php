@@ -6,7 +6,7 @@ import Image from 'react-bootstrap/Image'
 
 function PhoneImage(props) {
     return (
-        <div>
+        <div className="productInfo">
             <Image src={'https://www.unlockbase.com/sdata/images/models/airis-t483-phone-unlock-code.png'} alt={'T483'} fluid />
         </div>
 

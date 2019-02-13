@@ -13,7 +13,7 @@ function PhoneOrdering(props) {
                 <Col>
             <div className="ProductInfoText">
                 <h3>beTouch E110</h3>
-                {/* <h6>{props.price}</h6> */}
+                <h6>$24</h6>
             </div>
             </Col>
             </Row>

@@ -6,7 +6,7 @@ import Image from 'react-bootstrap/Image'
 
 function PhoneImage(props) {
     return (
-        <div>
+        <div className="productInfo">
             <Image src={props.img} alt={props.name} fluid />
         </div>
 
