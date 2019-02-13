@@ -2,51 +2,124 @@
 
 /* HEADER */
 .HeaderWrapper {
-        position: relative;
-        padding: 0.2em 0em 0em;
-        margin: 0.5rem 0 0;
-  }
-
-  .carousel {
     position: relative;
+    padding: 0.2em 0em 0em;
+    margin: 0.5rem 0 0;
 }
-
+.carousel {
+position: relative;
+}
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+box-sizing: border-box;
 }
-
 .carousel-indicators {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 15;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: center;
-    justify-content: center;
-    padding-left: 0;
-    margin-right: 15%;
-    margin-left: 15%;
-    list-style: none;
+position: absolute;
+right: 0;
+bottom: 0;
+left: 0;
+z-index: 15;
+display: -ms-flexbox;
+display: flex;
+-ms-flex-pack: center;
+justify-content: center;
+padding-left: 0;
+margin-right: 15%;
+margin-left: 15%;
+list-style: none;
 }
 
 
+/* .carousel-inner {
+  height: 300px;
+} */
 
-  .HolyGrail-body {
-    display: flex;
-    flex: 1;
-  }
+/* FEATURED PHONE */
 
-  .carousel-inner {
-      height: 300px;
-  }
 
-  /* PHONE */
+.featuredPhonesBar{
+background-color: #1f394d;
+}
+
 .phonesWrapper {
-   padding: 30px;
+padding: 30px;
+}
+.card-body{
+text-align: center;
+}
+.card-title{
+font-size: 1.5rem;
+color: #2d2d2d;
+}
+.card img{
+width: 95%;
+padding-top:1rem;
 }
 
+
+.card {
+border-style: solid;
+border: 2px;
+border-color: #2d2d2d;
+
+}
+
+
+/* VIDEO */
+
+.centeredContent {
+margin: 0 auto;
+padding: 1rem;
+}
+
+@media (max-width: 576px) {
+
+.card-columns{
+    width:100%;
+}
+
+
+
+
+}
+
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 760px) {
+    .card-columns {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+ }
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 768px) {
+    .card-columns {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+ }
+
+/* Medium devices (tablets, less than 992px) */
+@media (min-width: 770px) {
+    .card-columns {
+        -webkit-column-count: 4;
+        -moz-column-count: 4;
+        column-count: 4;
+    }
+ }
+
+/* Large devices (desktops, less than 1200px) */
+@media (min-width: 1200px) {
+
+    .card-columns {
+        -webkit-column-count: 4;
+        -moz-column-count: 4;
+        column-count: 4;
+    }
+
+ }
 

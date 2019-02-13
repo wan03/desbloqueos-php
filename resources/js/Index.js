@@ -21,6 +21,32 @@ import "./components/Pages/main.css";
 
 
 export default class Index extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            phones: []
+        };
+      }
+      componentDidMount () {
+        axios.get('/api/mobiles').then(response => {
+          this.setState({
+            phones: response.data.data
+          });
+          console.log(response)
+        }).catch(errors => {
+            console.log(errors);
+        })
+      }
+
+
+
+
+
+
+
+
+
     render() {
         return (
             <div style={{ height: "100%" }}>
