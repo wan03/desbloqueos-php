@@ -24290,6 +24290,82 @@ exports.push([module.i, "\n\n/* HEADER */\n.HeaderWrapper {\n    position: relat
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Pages/ProductInfoPage-01/ProductInfoPage.css":
+/*!**************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/Pages/ProductInfoPage-01/ProductInfoPage.css ***!
+  \**************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".img-fluid {\n    max-height: 440px;\n}\nbody{\n    font-size: 100%;\n}\n\n\n/* Phone Ordering */\n\n.center {\n    margin: auto;\n    width: 95%;\n    border: 3px solid green;\n    padding: 10px;\n  }\n.padded{\n    padding:10px;\n}\n.ProductInfoText {\n}\n.ProductInfoText h3 {\ncolor: #353535;\nfont-size:3rem\n}\n.ProductInfoText h6 {\n    color: #7c1515;\n    font-size: 2rem;\n}\n.smallText {\n    font-size: 11px;\n}\n.delivery-time-box{\n    border:0px;\n    border-color:#7c1515;\n    margin-top: 15px;\n    margin-left: -5px;\n}\n.delivery-time-box h6{\n    color:#999999;\n    text-transform: uppercase;\n}\n.delivery-time-box p{\ncolor: #333333;\n}\n\n\n/* Product Tabs */\n\n.tabsBox {\n    display: block;\n    position: relative;\n    padding: 1em 2em 15em;\n    border-width: 0px;\n    border-style: none;\n    border-color: rgb(216, 216, 216);\n    -o-border-image: initial;\n       border-image: initial;\n    margin: 1.5rem 0px 0px;\n    width:100%;\n}\n.tabContent {\n    padding-top:1.5rem;\n}\n\n\n/* Small devices (landscape phones, 576px and up) */\n@media (min-width: 576px) {\n\n\n\n\n }\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Pages/ProductInfoPage-02/ProductInfoPage.css":
+/*!**************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/Pages/ProductInfoPage-02/ProductInfoPage.css ***!
+  \**************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".img-fluid {\n    max-height: 440px;\n}\nbody{\n    font-size: 100%;\n}\n\n\n/* Phone Ordering */\n\n.center {\n    margin: auto;\n    width: 95%;\n    border: 3px solid green;\n    padding: 10px;\n  }\n.padded{\n    padding:10px;\n}\n.ProductInfoText {\n}\n.ProductInfoText h3 {\ncolor: #353535;\nfont-size:3rem\n}\n.ProductInfoText h6 {\n    color: #7c1515;\n    font-size: 2rem;\n}\n.smallText {\n    font-size: 11px;\n}\n.delivery-time-box{\n    border:0px;\n    border-color:#7c1515;\n    margin-top: 15px;\n    margin-left: -5px;\n}\n.delivery-time-box h6{\n    color:#999999;\n    text-transform: uppercase;\n}\n.delivery-time-box p{\ncolor: #333333;\n}\n\n\n/* Product Tabs */\n\n.tabsBox {\n    display: block;\n    position: relative;\n    padding: 1em 2em 15em;\n    border-width: 0px;\n    border-style: none;\n    border-color: rgb(216, 216, 216);\n    -o-border-image: initial;\n       border-image: initial;\n    margin: 1.5rem 0px 0px;\n    width:100%;\n}\n.tabContent {\n    padding-top:1.5rem;\n}\n\n\n/* Small devices (landscape phones, 576px and up) */\n@media (min-width: 576px) {\n\n\n\n\n }\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Pages/ProductInfoPage-03/ProductInfoPage.css":
+/*!**************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/Pages/ProductInfoPage-03/ProductInfoPage.css ***!
+  \**************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".img-fluid {\n    max-height: 440px;\n}\nbody{\n    font-size: 100%;\n}\n\n\n/* Phone Ordering */\n\n.center {\n    margin: auto;\n    width: 95%;\n    border: 3px solid green;\n    padding: 10px;\n  }\n.padded{\n    padding:10px;\n}\n.ProductInfoText {\n}\n.ProductInfoText h3 {\ncolor: #353535;\nfont-size:3rem\n}\n.ProductInfoText h6 {\n    color: #7c1515;\n    font-size: 2rem;\n}\n.smallText {\n    font-size: 11px;\n}\n.delivery-time-box{\n    border:0px;\n    border-color:#7c1515;\n    margin-top: 15px;\n    margin-left: -5px;\n}\n.delivery-time-box h6{\n    color:#999999;\n    text-transform: uppercase;\n}\n.delivery-time-box p{\ncolor: #333333;\n}\n\n\n/* Product Tabs */\n\n.tabsBox {\n    display: block;\n    position: relative;\n    padding: 1em 2em 15em;\n    border-width: 0px;\n    border-style: none;\n    border-color: rgb(216, 216, 216);\n    -o-border-image: initial;\n       border-image: initial;\n    margin: 1.5rem 0px 0px;\n    width:100%;\n}\n.tabContent {\n    padding-top:1.5rem;\n}\n\n\n/* Small devices (landscape phones, 576px and up) */\n@media (min-width: 576px) {\n\n\n\n\n }\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Pages/ProductInfoPage-04/ProductInfoPage.css":
+/*!**************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/Pages/ProductInfoPage-04/ProductInfoPage.css ***!
+  \**************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".img-fluid {\n    max-height: 440px;\n}\nbody{\n    font-size: 100%;\n}\n\n\n/* Phone Ordering */\n\n.center {\n    margin: auto;\n    width: 95%;\n    border: 3px solid green;\n    padding: 10px;\n  }\n.padded{\n    padding:10px;\n}\n.ProductInfoText {\n}\n.ProductInfoText h3 {\ncolor: #353535;\nfont-size:3rem\n}\n.ProductInfoText h6 {\n    color: #7c1515;\n    font-size: 2rem;\n}\n.smallText {\n    font-size: 11px;\n}\n.delivery-time-box{\n    border:0px;\n    border-color:#7c1515;\n    margin-top: 15px;\n    margin-left: -5px;\n}\n.delivery-time-box h6{\n    color:#999999;\n    text-transform: uppercase;\n}\n.delivery-time-box p{\ncolor: #333333;\n}\n\n\n/* Product Tabs */\n\n.tabsBox {\n    display: block;\n    position: relative;\n    padding: 1em 2em 15em;\n    border-width: 0px;\n    border-style: none;\n    border-color: rgb(216, 216, 216);\n    -o-border-image: initial;\n       border-image: initial;\n    margin: 1.5rem 0px 0px;\n    width:100%;\n}\n.tabContent {\n    padding-top:1.5rem;\n}\n\n\n/* Small devices (landscape phones, 576px and up) */\n@media (min-width: 576px) {\n\n\n\n\n }\n", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Pages/ProductInfoPage/ProductInfoPage.css":
 /*!***********************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/Pages/ProductInfoPage/ProductInfoPage.css ***!
@@ -102839,8 +102915,8 @@ function (_React$Component) {
         if (i < 4) {
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Phone_Phone__WEBPACK_IMPORTED_MODULE_4__["default"] // img={phone.id}
           , {
-            name: phone.mobiles[0].mobileName,
-            img: phone.mobiles[0].mobilePhoto,
+            name: phone.mobiles[2].mobileName,
+            img: phone.mobiles[2].mobilePhoto,
             key: phone.id,
             phoneId: phone.id
           });
@@ -103041,6 +103117,1818 @@ function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage-01/PhoneImage.js":
+/*!************************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage-01/PhoneImage.js ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_bootstrap_Image__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-bootstrap/Image */ "./node_modules/react-bootstrap/Image.js");
+/* harmony import */ var react_bootstrap_Image__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap_Image__WEBPACK_IMPORTED_MODULE_1__);
+ // Layout imports
+
+
+
+function PhoneImage(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Image__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    src: 'https://www.unlockbase.com/sdata/images/models/acer-betouch-e110-phone-unlock-code.png',
+    alt: 'beTouch E110',
+    fluid: true
+  }));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (PhoneImage);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage-01/PhoneOrdering.js":
+/*!***************************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage-01/PhoneOrdering.js ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var _ProductInfoPage_01__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ProductInfoPage_01 */ "./resources/js/components/Pages/ProductInfoPage-01/ProductInfoPage_01.js");
+
+
+ // Layout imports
+
+function PhoneOrdering(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "ProductInfoText"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "beTouch E110")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Form"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["FormGroup"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Label"], {
+    for: "exampleSelect",
+    className: "mr-sm-3"
+  }, "Select Your Phone's Carrier:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Input"], {
+    type: "select",
+    name: "select",
+    id: "exampleSelect",
+    className: "mr-sm-3"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Att"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Sprint"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Verizon"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["FormGroup"], {
+    className: "mb-2 mr-sm-12 mb-sm-0"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Label"], {
+    for: "imei",
+    className: "mr-sm-3"
+  }, "Enter Your Phone's IMEI Number:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Input"], {
+    type: "text",
+    name: "ime",
+    id: "ime-field",
+    placeholder: "Enter 15 digit number here",
+    className: "mr-sm-3"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "smallText"
+  }, "Dial *#06# or Options, Status, IMEI Should be a 15-digit number")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Button"], {
+    color: "primary",
+    size: "lg",
+    block: true
+  }, "Ordena Ahora")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "delivery-time-box"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "ESTIMATED DELIVERY TIME:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "5-15 BUSINESS DAYS")))));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (PhoneOrdering);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage-01/PhonePlacement.js":
+/*!****************************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage-01/PhonePlacement.js ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var _PhoneImage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PhoneImage */ "./resources/js/components/Pages/ProductInfoPage-01/PhoneImage.js");
+/* harmony import */ var _PhoneOrdering__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./PhoneOrdering */ "./resources/js/components/Pages/ProductInfoPage-01/PhoneOrdering.js");
+ // Layout imports
+
+
+
+
+
+function PhonePlacement(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+    md: "4"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PhoneImage__WEBPACK_IMPORTED_MODULE_2__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+    md: "8"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PhoneOrdering__WEBPACK_IMPORTED_MODULE_3__["default"], null))));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (PhonePlacement);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage-01/ProductInfoHeader.js":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage-01/ProductInfoHeader.js ***!
+  \*******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../main.css */ "./resources/js/components/Pages/main.css");
+/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_main_css__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+var ProductInfoHeader = function ProductInfoHeader(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Jumbotron"], {
+    fluid: true,
+    style: {
+      backgroundColor: '',
+      color: ''
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], {
+    fluid: true
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "display-3"
+  }, "DESBLOQUEA TU CEL"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "lead"
+  }, "Vamos, Busca tu celular para desbloquearlo hoy. Liberate!"))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (ProductInfoHeader);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage-01/ProductInfoPage.css":
+/*!******************************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage-01/ProductInfoPage.css ***!
+  \******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader??ref--6-1!../../../../../node_modules/postcss-loader/src??ref--6-2!./ProductInfoPage.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Pages/ProductInfoPage-01/ProductInfoPage.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage-01/ProductInfoPage_01.js":
+/*!********************************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage-01/ProductInfoPage_01.js ***!
+  \********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _ProductInfoPage_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ProductInfoPage.css */ "./resources/js/components/Pages/ProductInfoPage-01/ProductInfoPage.css");
+/* harmony import */ var _ProductInfoPage_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_ProductInfoPage_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _ProductInfoHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ProductInfoHeader */ "./resources/js/components/Pages/ProductInfoPage-01/ProductInfoHeader.js");
+/* harmony import */ var _WrapperA__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./WrapperA */ "./resources/js/components/Pages/ProductInfoPage-01/WrapperA.js");
+/* harmony import */ var _WrapperB__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./WrapperB */ "./resources/js/components/Pages/ProductInfoPage-01/WrapperB.js");
+/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../main.css */ "./resources/js/components/Pages/main.css");
+/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_main_css__WEBPACK_IMPORTED_MODULE_5__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+ // Component imports
+
+
+
+
+
+
+var ProductInfoPage =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(ProductInfoPage, _React$Component);
+
+  function ProductInfoPage() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    _classCallCheck(this, ProductInfoPage);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(ProductInfoPage)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "state", {
+      phones: {},
+      iem: "",
+      userCarrier: ""
+    });
+
+    return _this;
+  }
+
+  _createClass(ProductInfoPage, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      axios.get('/api/mobiles' + this.props.match.params.id).then(function (response) {
+        _this2.setState({
+          phones: response.data.data
+        }); //   console.log(response)
+
+      }).catch(function (errors) {
+        console.log(errors);
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      console.log('props: ', this.props);
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProductInfoHeader__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WrapperA__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WrapperB__WEBPACK_IMPORTED_MODULE_4__["default"], null));
+    }
+  }]);
+
+  return ProductInfoPage;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (ProductInfoPage);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage-01/ProductTabs.js":
+/*!*************************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage-01/ProductTabs.js ***!
+  \*************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ProductTabs; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _ProductInfoPage_01__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ProductInfoPage_01 */ "./resources/js/components/Pages/ProductInfoPage-01/ProductInfoPage_01.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+
+
+
+
+
+var ProductTabs =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(ProductTabs, _React$Component);
+
+  function ProductTabs(props) {
+    var _this;
+
+    _classCallCheck(this, ProductTabs);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(ProductTabs).call(this, props));
+    _this.toggle = _this.toggle.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.state = {
+      activeTab: '1'
+    };
+    return _this;
+  }
+
+  _createClass(ProductTabs, [{
+    key: "toggle",
+    value: function toggle(tab) {
+      if (this.state.activeTab !== tab) {
+        this.setState({
+          activeTab: tab
+        });
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "tabsBox"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Nav"], {
+        tabs: true
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+        className: classnames__WEBPACK_IMPORTED_MODULE_2___default()({
+          active: this.state.activeTab === '1'
+        }),
+        onClick: function onClick() {
+          _this2.toggle('1');
+        }
+      }, "Instructions")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+        className: classnames__WEBPACK_IMPORTED_MODULE_2___default()({
+          active: this.state.activeTab === '2'
+        }),
+        onClick: function onClick() {
+          _this2.toggle('2');
+        }
+      }, "Information"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["TabContent"], {
+        activeTab: this.state.activeTab
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["TabPane"], {
+        tabId: "1"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+        sm: "12"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "tabContent"
+      }, "THIS IS HOW TO UNLOCK YOUR APPLE IPHONE 8 FROM ANY GSM NETWORKS SUCH AS AT&T, T-MOBILE, VODAFONE,SPRINT,VERIZON AND MANY MORE.\u2028\u2028Your Apple device is simple to unlock! Simply connect your Apple iPhone to your computer and turn on iTunes after we have processed your order. Follow the instructions on iTunes and this will unlock your cell phone to be used with any GSM network such as Rogers, Bell, Vodafone, and others! Once you place your order for your Apple iPhone Network Unlock, we will have your IMEI Number processed and email you as soon as it is completed. Once unlocked, your Apple iPhone 8 will be factory unlocked for another GSM Network.")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["TabPane"], {
+        tabId: "2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+        sm: "12"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "tabContent"
+      }, "Other content for Tab 2"))))));
+    }
+  }]);
+
+  return ProductTabs;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage-01/WrapperA.js":
+/*!**********************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage-01/WrapperA.js ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var _PhonePlacement__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PhonePlacement */ "./resources/js/components/Pages/ProductInfoPage-01/PhonePlacement.js");
+ // Layout imports
+
+
+
+
+function WrapperA(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PhonePlacement__WEBPACK_IMPORTED_MODULE_2__["default"], null)));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (WrapperA);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage-01/WrapperB.js":
+/*!**********************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage-01/WrapperB.js ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var _ProductTabs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ProductTabs */ "./resources/js/components/Pages/ProductInfoPage-01/ProductTabs.js");
+ // Layout imports
+
+
+
+
+function WrapperB(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+    className: ".col-sm-12 .col-md-7 .offset-md-2"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProductTabs__WEBPACK_IMPORTED_MODULE_2__["default"], null))));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (WrapperB);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage-02/PhoneImage.js":
+/*!************************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage-02/PhoneImage.js ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_bootstrap_Image__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-bootstrap/Image */ "./node_modules/react-bootstrap/Image.js");
+/* harmony import */ var react_bootstrap_Image__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap_Image__WEBPACK_IMPORTED_MODULE_1__);
+ // Layout imports
+
+
+
+function PhoneImage(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Image__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    src: 'https://www.unlockbase.com/sdata/images/models/aeg-9050-phone-unlock-code.png',
+    alt: '9050',
+    fluid: true
+  }));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (PhoneImage);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage-02/PhoneOrdering.js":
+/*!***************************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage-02/PhoneOrdering.js ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var _ProductInfoPage_02__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ProductInfoPage_02 */ "./resources/js/components/Pages/ProductInfoPage-02/ProductInfoPage_02.js");
+
+
+ // Layout imports
+
+function PhoneOrdering(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "ProductInfoText"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "9080")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Form"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["FormGroup"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Label"], {
+    for: "exampleSelect",
+    className: "mr-sm-3"
+  }, "Select Your Phone's Carrier:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Input"], {
+    type: "select",
+    name: "select",
+    id: "exampleSelect",
+    className: "mr-sm-3"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Att"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Sprint"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Verizon"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["FormGroup"], {
+    className: "mb-2 mr-sm-12 mb-sm-0"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Label"], {
+    for: "imei",
+    className: "mr-sm-3"
+  }, "Enter Your Phone's IMEI Number:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Input"], {
+    type: "text",
+    name: "ime",
+    id: "ime-field",
+    placeholder: "Enter 15 digit number here",
+    className: "mr-sm-3"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "smallText"
+  }, "Dial *#06# or Options, Status, IMEI Should be a 15-digit number")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Button"], {
+    color: "primary",
+    size: "lg",
+    block: true
+  }, "Ordena Ahora")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "delivery-time-box"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "ESTIMATED DELIVERY TIME:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "5-15 BUSINESS DAYS")))));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (PhoneOrdering);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage-02/PhonePlacement.js":
+/*!****************************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage-02/PhonePlacement.js ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var _PhoneImage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PhoneImage */ "./resources/js/components/Pages/ProductInfoPage-02/PhoneImage.js");
+/* harmony import */ var _PhoneOrdering__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./PhoneOrdering */ "./resources/js/components/Pages/ProductInfoPage-02/PhoneOrdering.js");
+ // Layout imports
+
+
+
+
+
+function PhonePlacement(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+    md: "4"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PhoneImage__WEBPACK_IMPORTED_MODULE_2__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+    md: "8"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PhoneOrdering__WEBPACK_IMPORTED_MODULE_3__["default"], null))));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (PhonePlacement);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage-02/ProductInfoHeader.js":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage-02/ProductInfoHeader.js ***!
+  \*******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../main.css */ "./resources/js/components/Pages/main.css");
+/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_main_css__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+var ProductInfoHeader = function ProductInfoHeader(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Jumbotron"], {
+    fluid: true,
+    style: {
+      backgroundColor: '',
+      color: ''
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], {
+    fluid: true
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "display-3"
+  }, "DESBLOQUEA TU CEL"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "lead"
+  }, "Vamos, Busca tu celular para desbloquearlo hoy. Liberate!"))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (ProductInfoHeader);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage-02/ProductInfoPage.css":
+/*!******************************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage-02/ProductInfoPage.css ***!
+  \******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader??ref--6-1!../../../../../node_modules/postcss-loader/src??ref--6-2!./ProductInfoPage.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Pages/ProductInfoPage-02/ProductInfoPage.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage-02/ProductInfoPage_02.js":
+/*!********************************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage-02/ProductInfoPage_02.js ***!
+  \********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _ProductInfoPage_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ProductInfoPage.css */ "./resources/js/components/Pages/ProductInfoPage-02/ProductInfoPage.css");
+/* harmony import */ var _ProductInfoPage_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_ProductInfoPage_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _ProductInfoHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ProductInfoHeader */ "./resources/js/components/Pages/ProductInfoPage-02/ProductInfoHeader.js");
+/* harmony import */ var _WrapperA__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./WrapperA */ "./resources/js/components/Pages/ProductInfoPage-02/WrapperA.js");
+/* harmony import */ var _WrapperB__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./WrapperB */ "./resources/js/components/Pages/ProductInfoPage-02/WrapperB.js");
+/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../main.css */ "./resources/js/components/Pages/main.css");
+/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_main_css__WEBPACK_IMPORTED_MODULE_5__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+ // Component imports
+
+
+
+
+
+
+var ProductInfoPage =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(ProductInfoPage, _React$Component);
+
+  function ProductInfoPage() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    _classCallCheck(this, ProductInfoPage);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(ProductInfoPage)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "state", {
+      phones: {},
+      iem: "",
+      userCarrier: ""
+    });
+
+    return _this;
+  }
+
+  _createClass(ProductInfoPage, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      axios.get('/api/mobiles' + this.props.match.params.id).then(function (response) {
+        _this2.setState({
+          phones: response.data.data
+        }); //   console.log(response)
+
+      }).catch(function (errors) {
+        console.log(errors);
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      console.log('props: ', this.props);
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProductInfoHeader__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WrapperA__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WrapperB__WEBPACK_IMPORTED_MODULE_4__["default"], null));
+    }
+  }]);
+
+  return ProductInfoPage;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (ProductInfoPage);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage-02/ProductTabs.js":
+/*!*************************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage-02/ProductTabs.js ***!
+  \*************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ProductTabs; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _ProductInfoPage_02__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ProductInfoPage_02 */ "./resources/js/components/Pages/ProductInfoPage-02/ProductInfoPage_02.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+
+
+
+
+
+var ProductTabs =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(ProductTabs, _React$Component);
+
+  function ProductTabs(props) {
+    var _this;
+
+    _classCallCheck(this, ProductTabs);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(ProductTabs).call(this, props));
+    _this.toggle = _this.toggle.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.state = {
+      activeTab: '1'
+    };
+    return _this;
+  }
+
+  _createClass(ProductTabs, [{
+    key: "toggle",
+    value: function toggle(tab) {
+      if (this.state.activeTab !== tab) {
+        this.setState({
+          activeTab: tab
+        });
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "tabsBox"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Nav"], {
+        tabs: true
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+        className: classnames__WEBPACK_IMPORTED_MODULE_2___default()({
+          active: this.state.activeTab === '1'
+        }),
+        onClick: function onClick() {
+          _this2.toggle('1');
+        }
+      }, "Instructions")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+        className: classnames__WEBPACK_IMPORTED_MODULE_2___default()({
+          active: this.state.activeTab === '2'
+        }),
+        onClick: function onClick() {
+          _this2.toggle('2');
+        }
+      }, "Information"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["TabContent"], {
+        activeTab: this.state.activeTab
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["TabPane"], {
+        tabId: "1"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+        sm: "12"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "tabContent"
+      }, "THIS IS HOW TO UNLOCK YOUR APPLE IPHONE 8 FROM ANY GSM NETWORKS SUCH AS AT&T, T-MOBILE, VODAFONE,SPRINT,VERIZON AND MANY MORE.\u2028\u2028Your Apple device is simple to unlock! Simply connect your Apple iPhone to your computer and turn on iTunes after we have processed your order. Follow the instructions on iTunes and this will unlock your cell phone to be used with any GSM network such as Rogers, Bell, Vodafone, and others! Once you place your order for your Apple iPhone Network Unlock, we will have your IMEI Number processed and email you as soon as it is completed. Once unlocked, your Apple iPhone 8 will be factory unlocked for another GSM Network.")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["TabPane"], {
+        tabId: "2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+        sm: "12"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "tabContent"
+      }, "Other content for Tab 2"))))));
+    }
+  }]);
+
+  return ProductTabs;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage-02/WrapperA.js":
+/*!**********************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage-02/WrapperA.js ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var _PhonePlacement__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PhonePlacement */ "./resources/js/components/Pages/ProductInfoPage-02/PhonePlacement.js");
+ // Layout imports
+
+
+
+
+function WrapperA(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PhonePlacement__WEBPACK_IMPORTED_MODULE_2__["default"], null)));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (WrapperA);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage-02/WrapperB.js":
+/*!**********************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage-02/WrapperB.js ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var _ProductTabs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ProductTabs */ "./resources/js/components/Pages/ProductInfoPage-02/ProductTabs.js");
+ // Layout imports
+
+
+
+
+function WrapperB(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+    className: ".col-sm-12 .col-md-7 .offset-md-2"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProductTabs__WEBPACK_IMPORTED_MODULE_2__["default"], null))));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (WrapperB);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage-03/PhoneImage.js":
+/*!************************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage-03/PhoneImage.js ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_bootstrap_Image__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-bootstrap/Image */ "./node_modules/react-bootstrap/Image.js");
+/* harmony import */ var react_bootstrap_Image__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap_Image__WEBPACK_IMPORTED_MODULE_1__);
+ // Layout imports
+
+
+
+function PhoneImage(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Image__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    src: 'https://www.unlockbase.com/sdata/images/models/airis-t483-phone-unlock-code.png',
+    alt: 'T483',
+    fluid: true
+  }));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (PhoneImage);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage-03/PhoneOrdering.js":
+/*!***************************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage-03/PhoneOrdering.js ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var _ProductInfoPage_03__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ProductInfoPage_03 */ "./resources/js/components/Pages/ProductInfoPage-03/ProductInfoPage_03.js");
+
+
+ // Layout imports
+
+function PhoneOrdering(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "ProductInfoText"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "T483")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Form"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["FormGroup"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Label"], {
+    for: "exampleSelect",
+    className: "mr-sm-3"
+  }, "Select Your Phone's Carrier:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Input"], {
+    type: "select",
+    name: "select",
+    id: "exampleSelect",
+    className: "mr-sm-3"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Att"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Sprint"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Verizon"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["FormGroup"], {
+    className: "mb-2 mr-sm-12 mb-sm-0"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Label"], {
+    for: "imei",
+    className: "mr-sm-3"
+  }, "Enter Your Phone's IMEI Number:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Input"], {
+    type: "text",
+    name: "ime",
+    id: "ime-field",
+    placeholder: "Enter 15 digit number here",
+    className: "mr-sm-3"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "smallText"
+  }, "Dial *#06# or Options, Status, IMEI Should be a 15-digit number")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Button"], {
+    color: "primary",
+    size: "lg",
+    block: true
+  }, "Ordena Ahora")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "delivery-time-box"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "ESTIMATED DELIVERY TIME:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "5-15 BUSINESS DAYS")))));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (PhoneOrdering);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage-03/PhonePlacement.js":
+/*!****************************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage-03/PhonePlacement.js ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var _PhoneImage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PhoneImage */ "./resources/js/components/Pages/ProductInfoPage-03/PhoneImage.js");
+/* harmony import */ var _PhoneOrdering__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./PhoneOrdering */ "./resources/js/components/Pages/ProductInfoPage-03/PhoneOrdering.js");
+ // Layout imports
+
+
+
+
+
+function PhonePlacement(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+    md: "4"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PhoneImage__WEBPACK_IMPORTED_MODULE_2__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+    md: "8"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PhoneOrdering__WEBPACK_IMPORTED_MODULE_3__["default"], null))));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (PhonePlacement);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage-03/ProductInfoHeader.js":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage-03/ProductInfoHeader.js ***!
+  \*******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../main.css */ "./resources/js/components/Pages/main.css");
+/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_main_css__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+var ProductInfoHeader = function ProductInfoHeader(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Jumbotron"], {
+    fluid: true,
+    style: {
+      backgroundColor: '',
+      color: ''
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], {
+    fluid: true
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "display-3"
+  }, "DESBLOQUEA TU CEL"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "lead"
+  }, "Vamos, Busca tu celular para desbloquearlo hoy. Liberate!"))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (ProductInfoHeader);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage-03/ProductInfoPage.css":
+/*!******************************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage-03/ProductInfoPage.css ***!
+  \******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader??ref--6-1!../../../../../node_modules/postcss-loader/src??ref--6-2!./ProductInfoPage.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Pages/ProductInfoPage-03/ProductInfoPage.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage-03/ProductInfoPage_03.js":
+/*!********************************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage-03/ProductInfoPage_03.js ***!
+  \********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _ProductInfoPage_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ProductInfoPage.css */ "./resources/js/components/Pages/ProductInfoPage-03/ProductInfoPage.css");
+/* harmony import */ var _ProductInfoPage_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_ProductInfoPage_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _ProductInfoHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ProductInfoHeader */ "./resources/js/components/Pages/ProductInfoPage-03/ProductInfoHeader.js");
+/* harmony import */ var _WrapperA__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./WrapperA */ "./resources/js/components/Pages/ProductInfoPage-03/WrapperA.js");
+/* harmony import */ var _WrapperB__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./WrapperB */ "./resources/js/components/Pages/ProductInfoPage-03/WrapperB.js");
+/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../main.css */ "./resources/js/components/Pages/main.css");
+/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_main_css__WEBPACK_IMPORTED_MODULE_5__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+ // Component imports
+
+
+
+
+
+
+var ProductInfoPage =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(ProductInfoPage, _React$Component);
+
+  function ProductInfoPage() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    _classCallCheck(this, ProductInfoPage);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(ProductInfoPage)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "state", {
+      phones: {},
+      iem: "",
+      userCarrier: ""
+    });
+
+    return _this;
+  }
+
+  _createClass(ProductInfoPage, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      axios.get('/api/mobiles' + this.props.match.params.id).then(function (response) {
+        _this2.setState({
+          phones: response.data.data
+        }); //   console.log(response)
+
+      }).catch(function (errors) {
+        console.log(errors);
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      console.log('props: ', this.props);
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProductInfoHeader__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WrapperA__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WrapperB__WEBPACK_IMPORTED_MODULE_4__["default"], null));
+    }
+  }]);
+
+  return ProductInfoPage;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (ProductInfoPage);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage-03/ProductTabs.js":
+/*!*************************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage-03/ProductTabs.js ***!
+  \*************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ProductTabs; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _ProductInfoPage_03__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ProductInfoPage_03 */ "./resources/js/components/Pages/ProductInfoPage-03/ProductInfoPage_03.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+
+
+
+
+
+var ProductTabs =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(ProductTabs, _React$Component);
+
+  function ProductTabs(props) {
+    var _this;
+
+    _classCallCheck(this, ProductTabs);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(ProductTabs).call(this, props));
+    _this.toggle = _this.toggle.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.state = {
+      activeTab: '1'
+    };
+    return _this;
+  }
+
+  _createClass(ProductTabs, [{
+    key: "toggle",
+    value: function toggle(tab) {
+      if (this.state.activeTab !== tab) {
+        this.setState({
+          activeTab: tab
+        });
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "tabsBox"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Nav"], {
+        tabs: true
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+        className: classnames__WEBPACK_IMPORTED_MODULE_2___default()({
+          active: this.state.activeTab === '1'
+        }),
+        onClick: function onClick() {
+          _this2.toggle('1');
+        }
+      }, "Instructions")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+        className: classnames__WEBPACK_IMPORTED_MODULE_2___default()({
+          active: this.state.activeTab === '2'
+        }),
+        onClick: function onClick() {
+          _this2.toggle('2');
+        }
+      }, "Information"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["TabContent"], {
+        activeTab: this.state.activeTab
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["TabPane"], {
+        tabId: "1"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+        sm: "12"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "tabContent"
+      }, "THIS IS HOW TO UNLOCK YOUR APPLE IPHONE 8 FROM ANY GSM NETWORKS SUCH AS AT&T, T-MOBILE, VODAFONE,SPRINT,VERIZON AND MANY MORE.\u2028\u2028Your Apple device is simple to unlock! Simply connect your Apple iPhone to your computer and turn on iTunes after we have processed your order. Follow the instructions on iTunes and this will unlock your cell phone to be used with any GSM network such as Rogers, Bell, Vodafone, and others! Once you place your order for your Apple iPhone Network Unlock, we will have your IMEI Number processed and email you as soon as it is completed. Once unlocked, your Apple iPhone 8 will be factory unlocked for another GSM Network.")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["TabPane"], {
+        tabId: "2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+        sm: "12"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "tabContent"
+      }, "Other content for Tab 2"))))));
+    }
+  }]);
+
+  return ProductTabs;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage-03/WrapperA.js":
+/*!**********************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage-03/WrapperA.js ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var _PhonePlacement__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PhonePlacement */ "./resources/js/components/Pages/ProductInfoPage-03/PhonePlacement.js");
+ // Layout imports
+
+
+
+
+function WrapperA(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PhonePlacement__WEBPACK_IMPORTED_MODULE_2__["default"], null)));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (WrapperA);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage-03/WrapperB.js":
+/*!**********************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage-03/WrapperB.js ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var _ProductTabs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ProductTabs */ "./resources/js/components/Pages/ProductInfoPage-03/ProductTabs.js");
+ // Layout imports
+
+
+
+
+function WrapperB(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+    className: ".col-sm-12 .col-md-7 .offset-md-2"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProductTabs__WEBPACK_IMPORTED_MODULE_2__["default"], null))));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (WrapperB);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage-04/PhoneImage.js":
+/*!************************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage-04/PhoneImage.js ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_bootstrap_Image__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-bootstrap/Image */ "./node_modules/react-bootstrap/Image.js");
+/* harmony import */ var react_bootstrap_Image__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap_Image__WEBPACK_IMPORTED_MODULE_1__);
+ // Layout imports
+
+
+
+function PhoneImage(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Image__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    src: 'https://www.unlockbase.com/sdata/images/models/akmobile-ak610-phone-unlock-code.png',
+    alt: 'AK610',
+    fluid: true
+  }));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (PhoneImage);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage-04/PhoneOrdering.js":
+/*!***************************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage-04/PhoneOrdering.js ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var _ProductInfoPage_04__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ProductInfoPage_04 */ "./resources/js/components/Pages/ProductInfoPage-04/ProductInfoPage_04.js");
+
+
+ // Layout imports
+
+function PhoneOrdering(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "ProductInfoText"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "AK610")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Form"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["FormGroup"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Label"], {
+    for: "exampleSelect",
+    className: "mr-sm-3"
+  }, "Select Your Phone's Carrier:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Input"], {
+    type: "select",
+    name: "select",
+    id: "exampleSelect",
+    className: "mr-sm-3"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Att"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Sprint"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Verizon"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["FormGroup"], {
+    className: "mb-2 mr-sm-12 mb-sm-0"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Label"], {
+    for: "imei",
+    className: "mr-sm-3"
+  }, "Enter Your Phone's IMEI Number:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Input"], {
+    type: "text",
+    name: "ime",
+    id: "ime-field",
+    placeholder: "Enter 15 digit number here",
+    className: "mr-sm-3"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "smallText"
+  }, "Dial *#06# or Options, Status, IMEI Should be a 15-digit number")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Button"], {
+    color: "primary",
+    size: "lg",
+    block: true
+  }, "Ordena Ahora")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "delivery-time-box"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "ESTIMATED DELIVERY TIME:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "5-15 BUSINESS DAYS")))));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (PhoneOrdering);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage-04/PhonePlacement.js":
+/*!****************************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage-04/PhonePlacement.js ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var _PhoneImage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PhoneImage */ "./resources/js/components/Pages/ProductInfoPage-04/PhoneImage.js");
+/* harmony import */ var _PhoneOrdering__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./PhoneOrdering */ "./resources/js/components/Pages/ProductInfoPage-04/PhoneOrdering.js");
+ // Layout imports
+
+
+
+
+
+function PhonePlacement(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+    md: "4"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PhoneImage__WEBPACK_IMPORTED_MODULE_2__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+    md: "8"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PhoneOrdering__WEBPACK_IMPORTED_MODULE_3__["default"], null))));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (PhonePlacement);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage-04/ProductInfoHeader.js":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage-04/ProductInfoHeader.js ***!
+  \*******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../main.css */ "./resources/js/components/Pages/main.css");
+/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_main_css__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+var ProductInfoHeader = function ProductInfoHeader(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Jumbotron"], {
+    fluid: true,
+    style: {
+      backgroundColor: '',
+      color: ''
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], {
+    fluid: true
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "display-3"
+  }, "DESBLOQUEA TU CEL"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "lead"
+  }, "Vamos, Busca tu celular para desbloquearlo hoy. Liberate!"))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (ProductInfoHeader);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage-04/ProductInfoPage.css":
+/*!******************************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage-04/ProductInfoPage.css ***!
+  \******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader??ref--6-1!../../../../../node_modules/postcss-loader/src??ref--6-2!./ProductInfoPage.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Pages/ProductInfoPage-04/ProductInfoPage.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage-04/ProductInfoPage_04.js":
+/*!********************************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage-04/ProductInfoPage_04.js ***!
+  \********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _ProductInfoPage_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ProductInfoPage.css */ "./resources/js/components/Pages/ProductInfoPage-04/ProductInfoPage.css");
+/* harmony import */ var _ProductInfoPage_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_ProductInfoPage_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _ProductInfoHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ProductInfoHeader */ "./resources/js/components/Pages/ProductInfoPage-04/ProductInfoHeader.js");
+/* harmony import */ var _WrapperA__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./WrapperA */ "./resources/js/components/Pages/ProductInfoPage-04/WrapperA.js");
+/* harmony import */ var _WrapperB__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./WrapperB */ "./resources/js/components/Pages/ProductInfoPage-04/WrapperB.js");
+/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../main.css */ "./resources/js/components/Pages/main.css");
+/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_main_css__WEBPACK_IMPORTED_MODULE_5__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+ // Component imports
+
+
+
+
+
+
+var ProductInfoPage =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(ProductInfoPage, _React$Component);
+
+  function ProductInfoPage() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    _classCallCheck(this, ProductInfoPage);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(ProductInfoPage)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "state", {
+      phones: {},
+      iem: "",
+      userCarrier: ""
+    });
+
+    return _this;
+  }
+
+  _createClass(ProductInfoPage, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      axios.get('/api/mobiles' + this.props.match.params.id).then(function (response) {
+        _this2.setState({
+          phones: response.data.data
+        }); //   console.log(response)
+
+      }).catch(function (errors) {
+        console.log(errors);
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      console.log('props: ', this.props);
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProductInfoHeader__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WrapperA__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WrapperB__WEBPACK_IMPORTED_MODULE_4__["default"], null));
+    }
+  }]);
+
+  return ProductInfoPage;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (ProductInfoPage);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage-04/ProductTabs.js":
+/*!*************************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage-04/ProductTabs.js ***!
+  \*************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ProductTabs; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _ProductInfoPage_04__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ProductInfoPage_04 */ "./resources/js/components/Pages/ProductInfoPage-04/ProductInfoPage_04.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+
+
+
+
+
+var ProductTabs =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(ProductTabs, _React$Component);
+
+  function ProductTabs(props) {
+    var _this;
+
+    _classCallCheck(this, ProductTabs);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(ProductTabs).call(this, props));
+    _this.toggle = _this.toggle.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.state = {
+      activeTab: '1'
+    };
+    return _this;
+  }
+
+  _createClass(ProductTabs, [{
+    key: "toggle",
+    value: function toggle(tab) {
+      if (this.state.activeTab !== tab) {
+        this.setState({
+          activeTab: tab
+        });
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "tabsBox"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Nav"], {
+        tabs: true
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+        className: classnames__WEBPACK_IMPORTED_MODULE_2___default()({
+          active: this.state.activeTab === '1'
+        }),
+        onClick: function onClick() {
+          _this2.toggle('1');
+        }
+      }, "Instructions")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+        className: classnames__WEBPACK_IMPORTED_MODULE_2___default()({
+          active: this.state.activeTab === '2'
+        }),
+        onClick: function onClick() {
+          _this2.toggle('2');
+        }
+      }, "Information"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["TabContent"], {
+        activeTab: this.state.activeTab
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["TabPane"], {
+        tabId: "1"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+        sm: "12"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "tabContent"
+      }, "THIS IS HOW TO UNLOCK YOUR APPLE IPHONE 8 FROM ANY GSM NETWORKS SUCH AS AT&T, T-MOBILE, VODAFONE,SPRINT,VERIZON AND MANY MORE.\u2028\u2028Your Apple device is simple to unlock! Simply connect your Apple iPhone to your computer and turn on iTunes after we have processed your order. Follow the instructions on iTunes and this will unlock your cell phone to be used with any GSM network such as Rogers, Bell, Vodafone, and others! Once you place your order for your Apple iPhone Network Unlock, we will have your IMEI Number processed and email you as soon as it is completed. Once unlocked, your Apple iPhone 8 will be factory unlocked for another GSM Network.")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["TabPane"], {
+        tabId: "2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+        sm: "12"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "tabContent"
+      }, "Other content for Tab 2"))))));
+    }
+  }]);
+
+  return ProductTabs;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage-04/WrapperA.js":
+/*!**********************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage-04/WrapperA.js ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var _PhonePlacement__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PhonePlacement */ "./resources/js/components/Pages/ProductInfoPage-04/PhonePlacement.js");
+ // Layout imports
+
+
+
+
+function WrapperA(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PhonePlacement__WEBPACK_IMPORTED_MODULE_2__["default"], null)));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (WrapperA);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProductInfoPage-04/WrapperB.js":
+/*!**********************************************************************!*\
+  !*** ./resources/js/components/Pages/ProductInfoPage-04/WrapperB.js ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var _ProductTabs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ProductTabs */ "./resources/js/components/Pages/ProductInfoPage-04/ProductTabs.js");
+ // Layout imports
+
+
+
+
+function WrapperB(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+    className: ".col-sm-12 .col-md-7 .offset-md-2"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProductTabs__WEBPACK_IMPORTED_MODULE_2__["default"], null))));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (WrapperB);
 
 /***/ }),
 
@@ -104567,7 +106455,7 @@ function Phone(props) {
     src: props.img,
     alt: props.name
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__["CardBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__["CardTitle"], null, props.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/ProductInfoPage?id=".concat(props.phoneId)
+    to: "/ProductInfoPage_id=".concat(props.phoneId)
   }, "Go to product")));
 }
 
@@ -104592,14 +106480,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Toolbar_Toolbar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Toolbar/Toolbar */ "./resources/js/components/Toolbar/Toolbar.js");
 /* harmony import */ var _Pages_HomePage_HomePage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Pages/HomePage/HomePage */ "./resources/js/components/Pages/HomePage/HomePage.js");
 /* harmony import */ var _Pages_SearchProductPage_SearchProductPage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Pages/SearchProductPage/SearchProductPage */ "./resources/js/components/Pages/SearchProductPage/SearchProductPage.js");
-/* harmony import */ var _Pages_ProductInfoPage_ProductInfoPage__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Pages/ProductInfoPage/ProductInfoPage */ "./resources/js/components/Pages/ProductInfoPage/ProductInfoPage.js");
-/* harmony import */ var _Pages_About_about__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Pages/About/about */ "./resources/js/components/Pages/About/about.js");
-/* harmony import */ var _Pages_Contact_contact__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Pages/Contact/contact */ "./resources/js/components/Pages/Contact/contact.js");
-/* harmony import */ var _Pages_HomePage_FeaturedPhones__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../Pages/HomePage/FeaturedPhones */ "./resources/js/components/Pages/HomePage/FeaturedPhones.js");
-/* harmony import */ var _Pages_ProductInfoPage_PhoneImage__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../Pages/ProductInfoPage/PhoneImage */ "./resources/js/components/Pages/ProductInfoPage/PhoneImage.js");
+/* harmony import */ var _Pages_About_about__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Pages/About/about */ "./resources/js/components/Pages/About/about.js");
+/* harmony import */ var _Pages_Contact_contact__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Pages/Contact/contact */ "./resources/js/components/Pages/Contact/contact.js");
+/* harmony import */ var _Pages_HomePage_FeaturedPhones__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Pages/HomePage/FeaturedPhones */ "./resources/js/components/Pages/HomePage/FeaturedPhones.js");
+/* harmony import */ var _Pages_ProductInfoPage_PhoneImage__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../Pages/ProductInfoPage/PhoneImage */ "./resources/js/components/Pages/ProductInfoPage/PhoneImage.js");
+/* harmony import */ var _Pages_ProductInfoPage_ProductInfoPage__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../Pages/ProductInfoPage/ProductInfoPage */ "./resources/js/components/Pages/ProductInfoPage/ProductInfoPage.js");
+/* harmony import */ var _Pages_ProductInfoPage_01_ProductInfoPage_01__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../Pages/ProductInfoPage-01/ProductInfoPage_01 */ "./resources/js/components/Pages/ProductInfoPage-01/ProductInfoPage_01.js");
+/* harmony import */ var _Pages_ProductInfoPage_02_ProductInfoPage_02__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../Pages/ProductInfoPage-02/ProductInfoPage_02 */ "./resources/js/components/Pages/ProductInfoPage-02/ProductInfoPage_02.js");
+/* harmony import */ var _Pages_ProductInfoPage_03_ProductInfoPage_03__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../Pages/ProductInfoPage-03/ProductInfoPage_03 */ "./resources/js/components/Pages/ProductInfoPage-03/ProductInfoPage_03.js");
+/* harmony import */ var _Pages_ProductInfoPage_04_ProductInfoPage_04__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../Pages/ProductInfoPage-04/ProductInfoPage_04 */ "./resources/js/components/Pages/ProductInfoPage-04/ProductInfoPage_04.js");
 
 
  //public pages
+
+
+
+
 
 
 
@@ -104628,19 +106524,35 @@ var Routes = function Routes() {
     component: _Pages_SearchProductPage_SearchProductPage__WEBPACK_IMPORTED_MODULE_5__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/ProductInfoPage",
-    component: _Pages_ProductInfoPage_ProductInfoPage__WEBPACK_IMPORTED_MODULE_6__["default"]
+    component: _Pages_ProductInfoPage_ProductInfoPage__WEBPACK_IMPORTED_MODULE_10__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    exact: true,
+    path: "/ProductInfoPage_id=1",
+    component: _Pages_ProductInfoPage_01_ProductInfoPage_01__WEBPACK_IMPORTED_MODULE_11__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    exact: true,
+    path: "/ProductInfoPage_id=2",
+    component: _Pages_ProductInfoPage_02_ProductInfoPage_02__WEBPACK_IMPORTED_MODULE_12__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    exact: true,
+    path: "/ProductInfoPage_id=3",
+    component: _Pages_ProductInfoPage_03_ProductInfoPage_03__WEBPACK_IMPORTED_MODULE_13__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    exact: true,
+    path: "/ProductInfoPage_id=4",
+    component: _Pages_ProductInfoPage_04_ProductInfoPage_04__WEBPACK_IMPORTED_MODULE_15__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/about",
-    component: _Pages_About_about__WEBPACK_IMPORTED_MODULE_7__["default"]
+    component: _Pages_About_about__WEBPACK_IMPORTED_MODULE_6__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/contact",
-    component: _Pages_Contact_contact__WEBPACK_IMPORTED_MODULE_8__["default"]
+    component: _Pages_Contact_contact__WEBPACK_IMPORTED_MODULE_7__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/FeaturedPhones",
-    component: _Pages_HomePage_FeaturedPhones__WEBPACK_IMPORTED_MODULE_9__["default"]
+    component: _Pages_HomePage_FeaturedPhones__WEBPACK_IMPORTED_MODULE_8__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/PhoneImage",
-    component: _Pages_ProductInfoPage_PhoneImage__WEBPACK_IMPORTED_MODULE_10__["default"]
+    component: _Pages_ProductInfoPage_PhoneImage__WEBPACK_IMPORTED_MODULE_9__["default"]
   })));
 };
 

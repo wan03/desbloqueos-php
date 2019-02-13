@@ -55,8 +55,8 @@ class FeaturedPhones extends React.Component {
                   <Phone
 
                   // img={phone.id}
-                  name={phone.mobiles[0].mobileName}
-                  img={phone.mobiles[0].mobilePhoto}
+                  name={phone.mobiles[2].mobileName}
+                  img={phone.mobiles[2].mobilePhoto}
                   key={phone.id}
                   phoneId={phone.id}
                 />
