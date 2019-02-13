@@ -8,7 +8,7 @@ import Toolbar from "../Toolbar/Toolbar";
 import Home from "../Pages/HomePage/HomePage";
 import Celulares from "../Pages/SearchProductPage/SearchProductPage";
 import About from "../Pages/About/about";
-import Contact from "../Pages/Contact/contact";
+import ContactPage from "../Pages/Contact/ContactPage";
 import FeaturedPhones from "../Pages/HomePage/FeaturedPhones";
 import PhoneImage from "../Pages/ProductInfoPage/PhoneImage";
 
@@ -42,7 +42,7 @@ const Routes = () => {
                 <Route exact path="/ProductInfoPage_id=3" component={ProductInfoPage_03} />
                 <Route exact path="/ProductInfoPage_id=4" component={ProductInfoPage_04} />
                 <Route path="/about" component={About} />
-                <Route path="/contact" component={Contact} />
+                <Route path="/Contact" component={ContactPage} />
                 <Route path="/FeaturedPhones" component={FeaturedPhones} />
                 <Route path="/PhoneImage" component={PhoneImage} />
 
