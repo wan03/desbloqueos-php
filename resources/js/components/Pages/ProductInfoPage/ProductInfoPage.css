@@ -1,9 +1,7 @@
 .img-fluid {
     max-height: 440px;
 }
-
 body{
-
     font-size: 100%;
 }
 
@@ -16,32 +14,22 @@ body{
     border: 3px solid green;
     padding: 10px;
   }
-
-
 .padded{
     padding:10px;
 }
-
 .ProductInfoText {
-
-
 }
-
 .ProductInfoText h3 {
 color: #353535;
 font-size:3rem
 }
-
 .ProductInfoText h6 {
     color: #7c1515;
     font-size: 2rem;
-    }
-
+}
 .smallText {
     font-size: 11px;
-
 }
-
 .delivery-time-box{
     border:0px;
     border-color:#7c1515;
@@ -69,10 +57,16 @@ color: #333333;
     border-image: initial;
     margin: 1.5rem 0px 0px;
     width:100%;
-
 }
-
 .tabContent {
     padding-top:1.5rem;
-
 }
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+
+
+
+ }

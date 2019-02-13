@@ -45,12 +45,18 @@ body {
     /* equivalent to 20px */
   }
 
+/* HEADER */
 
   .jumbotron h3 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    font-weight: 600;
   }
 
-
+  .jumbotron{
+    height: 250px;
+    background-color: #1f394d;
+    color: white;
+}
 
 
 

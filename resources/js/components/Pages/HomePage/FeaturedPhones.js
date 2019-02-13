@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import {BrowserRouter as Router, Link, Route} from 'react-router-dom';
+import Hidden from '@material-ui/core/Hidden';
+
 
 import Phone from '../../Phone/Phone'
 import {
@@ -48,7 +50,7 @@ class FeaturedPhones extends React.Component {
           <CardColumns>
             <CardDeck/>
              {this.state.phones.map((phone, i) => {
-               if( i < 3 ) {
+               if( i < 4 ) {
                  return(
                   <Phone
 
@@ -60,7 +62,6 @@ class FeaturedPhones extends React.Component {
                 />
                  )
                }
-
              })
         }
         <CardDeck/>

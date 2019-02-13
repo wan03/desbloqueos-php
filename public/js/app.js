@@ -4833,6 +4833,536 @@ var _Grow = _interopRequireDefault(__webpack_require__(/*! ./Grow */ "./node_mod
 
 /***/ }),
 
+/***/ "./node_modules/@material-ui/core/Hidden/Hidden.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/@material-ui/core/Hidden/Hidden.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _objectWithoutProperties2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/objectWithoutProperties.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
+
+var _HiddenJs = _interopRequireDefault(__webpack_require__(/*! ./HiddenJs */ "./node_modules/@material-ui/core/Hidden/HiddenJs.js"));
+
+var _HiddenCss = _interopRequireDefault(__webpack_require__(/*! ./HiddenCss */ "./node_modules/@material-ui/core/Hidden/HiddenCss.js"));
+
+/**
+ * Responsively hides children based on the selected implementation.
+ */
+function Hidden(props) {
+  var implementation = props.implementation,
+      other = (0, _objectWithoutProperties2.default)(props, ["implementation"]);
+
+  if (implementation === 'js') {
+    return _react.default.createElement(_HiddenJs.default, other);
+  }
+
+  return _react.default.createElement(_HiddenCss.default, other);
+}
+
+ true ? Hidden.propTypes = {
+  /**
+   * The content of the component.
+   */
+  children: _propTypes.default.node,
+
+  /**
+   * @ignore
+   */
+  className: _propTypes.default.string,
+
+  /**
+   * Specify which implementation to use.  'js' is the default, 'css' works better for
+   * server-side rendering.
+   */
+  implementation: _propTypes.default.oneOf(['js', 'css']),
+
+  /**
+   * You can use this property when choosing the `js` implementation with server-side rendering.
+   *
+   * As `window.innerWidth` is unavailable on the server,
+   * we default to rendering an empty component during the first mount.
+   * You might want to use an heuristic to approximate
+   * the screen width of the client browser screen width.
+   *
+   * For instance, you could be using the user-agent or the client-hints.
+   * https://caniuse.com/#search=client%20hint
+   */
+  initialWidth: _propTypes.default.oneOf(['xs', 'sm', 'md', 'lg', 'xl']),
+
+  /**
+   * If true, screens this size and down will be hidden.
+   */
+  lgDown: _propTypes.default.bool,
+
+  /**
+   * If true, screens this size and up will be hidden.
+   */
+  lgUp: _propTypes.default.bool,
+
+  /**
+   * If true, screens this size and down will be hidden.
+   */
+  mdDown: _propTypes.default.bool,
+
+  /**
+   * If true, screens this size and up will be hidden.
+   */
+  mdUp: _propTypes.default.bool,
+
+  /**
+   * Hide the given breakpoint(s).
+   */
+  only: _propTypes.default.oneOfType([_propTypes.default.oneOf(['xs', 'sm', 'md', 'lg', 'xl']), _propTypes.default.arrayOf(_propTypes.default.oneOf(['xs', 'sm', 'md', 'lg', 'xl']))]),
+
+  /**
+   * If true, screens this size and down will be hidden.
+   */
+  smDown: _propTypes.default.bool,
+
+  /**
+   * If true, screens this size and up will be hidden.
+   */
+  smUp: _propTypes.default.bool,
+
+  /**
+   * If true, screens this size and down will be hidden.
+   */
+  xlDown: _propTypes.default.bool,
+
+  /**
+   * If true, screens this size and up will be hidden.
+   */
+  xlUp: _propTypes.default.bool,
+
+  /**
+   * If true, screens this size and down will be hidden.
+   */
+  xsDown: _propTypes.default.bool,
+
+  /**
+   * If true, screens this size and up will be hidden.
+   */
+  xsUp: _propTypes.default.bool
+} : undefined;
+Hidden.defaultProps = {
+  implementation: 'js',
+  lgDown: false,
+  lgUp: false,
+  mdDown: false,
+  mdUp: false,
+  smDown: false,
+  smUp: false,
+  xlDown: false,
+  xlUp: false,
+  xsDown: false,
+  xsUp: false
+};
+var _default = Hidden;
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/Hidden/HiddenCss.js":
+/*!************************************************************!*\
+  !*** ./node_modules/@material-ui/core/Hidden/HiddenCss.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _objectWithoutProperties2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/objectWithoutProperties.js"));
+
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
+
+var _warning = _interopRequireDefault(__webpack_require__(/*! warning */ "./node_modules/warning/warning.js"));
+
+var _createBreakpoints = __webpack_require__(/*! ../styles/createBreakpoints */ "./node_modules/@material-ui/core/styles/createBreakpoints.js");
+
+var _helpers = __webpack_require__(/*! ../utils/helpers */ "./node_modules/@material-ui/core/utils/helpers.js");
+
+var _withStyles = _interopRequireDefault(__webpack_require__(/*! ../styles/withStyles */ "./node_modules/@material-ui/core/styles/withStyles.js"));
+
+var styles = function styles(theme) {
+  var hidden = {
+    display: 'none'
+  };
+  return _createBreakpoints.keys.reduce(function (acc, key) {
+    acc["only".concat((0, _helpers.capitalize)(key))] = (0, _defineProperty2.default)({}, theme.breakpoints.only(key), hidden);
+    acc["".concat(key, "Up")] = (0, _defineProperty2.default)({}, theme.breakpoints.up(key), hidden);
+    acc["".concat(key, "Down")] = (0, _defineProperty2.default)({}, theme.breakpoints.down(key), hidden);
+    return acc;
+  }, {});
+};
+/**
+ * @ignore - internal component.
+ */
+
+
+function HiddenCss(props) {
+  var children = props.children,
+      classes = props.classes,
+      className = props.className,
+      lgDown = props.lgDown,
+      lgUp = props.lgUp,
+      mdDown = props.mdDown,
+      mdUp = props.mdUp,
+      only = props.only,
+      smDown = props.smDown,
+      smUp = props.smUp,
+      xlDown = props.xlDown,
+      xlUp = props.xlUp,
+      xsDown = props.xsDown,
+      xsUp = props.xsUp,
+      other = (0, _objectWithoutProperties2.default)(props, ["children", "classes", "className", "lgDown", "lgUp", "mdDown", "mdUp", "only", "smDown", "smUp", "xlDown", "xlUp", "xsDown", "xsUp"]);
+   true ? (0, _warning.default)(Object.keys(other).length === 0 || Object.keys(other).length === 1 && other.hasOwnProperty('ref'), "Material-UI: unsupported properties received ".concat(Object.keys(other).join(', '), " by `<Hidden />`.")) : undefined;
+  var classNames = [];
+
+  if (className) {
+    classNames.push(className);
+  }
+
+  for (var i = 0; i < _createBreakpoints.keys.length; i += 1) {
+    var breakpoint = _createBreakpoints.keys[i];
+    var breakpointUp = props["".concat(breakpoint, "Up")];
+    var breakpointDown = props["".concat(breakpoint, "Down")];
+
+    if (breakpointUp) {
+      classNames.push(classes["".concat(breakpoint, "Up")]);
+    }
+
+    if (breakpointDown) {
+      classNames.push(classes["".concat(breakpoint, "Down")]);
+    }
+  }
+
+  if (only) {
+    var onlyBreakpoints = Array.isArray(only) ? only : [only];
+    onlyBreakpoints.forEach(function (breakpoint) {
+      classNames.push(classes["only".concat((0, _helpers.capitalize)(breakpoint))]);
+    });
+  }
+
+  return _react.default.createElement("div", {
+    className: classNames.join(' ')
+  }, children);
+}
+
+ true ? HiddenCss.propTypes = {
+  /**
+   * The content of the component.
+   */
+  children: _propTypes.default.node,
+
+  /**
+   * Override or extend the styles applied to the component.
+   * See [CSS API](#css-api) below for more details.
+   */
+  classes: _propTypes.default.object.isRequired,
+
+  /**
+   * @ignore
+   */
+  className: _propTypes.default.string,
+
+  /**
+   * Specify which implementation to use.  'js' is the default, 'css' works better for
+   * server-side rendering.
+   */
+  implementation: _propTypes.default.oneOf(['js', 'css']),
+
+  /**
+   * If true, screens this size and down will be hidden.
+   */
+  lgDown: _propTypes.default.bool,
+
+  /**
+   * If true, screens this size and up will be hidden.
+   */
+  lgUp: _propTypes.default.bool,
+
+  /**
+   * If true, screens this size and down will be hidden.
+   */
+  mdDown: _propTypes.default.bool,
+
+  /**
+   * If true, screens this size and up will be hidden.
+   */
+  mdUp: _propTypes.default.bool,
+
+  /**
+   * Hide the given breakpoint(s).
+   */
+  only: _propTypes.default.oneOfType([_propTypes.default.oneOf(['xs', 'sm', 'md', 'lg', 'xl']), _propTypes.default.arrayOf(_propTypes.default.oneOf(['xs', 'sm', 'md', 'lg', 'xl']))]),
+
+  /**
+   * If true, screens this size and down will be hidden.
+   */
+  smDown: _propTypes.default.bool,
+
+  /**
+   * If true, screens this size and up will be hidden.
+   */
+  smUp: _propTypes.default.bool,
+
+  /**
+   * If true, screens this size and down will be hidden.
+   */
+  xlDown: _propTypes.default.bool,
+
+  /**
+   * If true, screens this size and up will be hidden.
+   */
+  xlUp: _propTypes.default.bool,
+
+  /**
+   * If true, screens this size and down will be hidden.
+   */
+  xsDown: _propTypes.default.bool,
+
+  /**
+   * If true, screens this size and up will be hidden.
+   */
+  xsUp: _propTypes.default.bool
+} : undefined;
+
+var _default = (0, _withStyles.default)(styles, {
+  name: 'MuiPrivateHiddenCss'
+})(HiddenCss);
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/Hidden/HiddenJs.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/@material-ui/core/Hidden/HiddenJs.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
+
+var _createBreakpoints = __webpack_require__(/*! ../styles/createBreakpoints */ "./node_modules/@material-ui/core/styles/createBreakpoints.js");
+
+var _withWidth = _interopRequireWildcard(__webpack_require__(/*! ../withWidth */ "./node_modules/@material-ui/core/withWidth/index.js"));
+
+var _utils = __webpack_require__(/*! @material-ui/utils */ "./node_modules/@material-ui/utils/index.es.js");
+
+/**
+ * @ignore - internal component.
+ */
+function HiddenJs(props) {
+  var children = props.children,
+      only = props.only,
+      width = props.width;
+  var visible = true; // `only` check is faster to get out sooner if used.
+
+  if (only) {
+    if (Array.isArray(only)) {
+      for (var i = 0; i < only.length; i += 1) {
+        var breakpoint = only[i];
+
+        if (width === breakpoint) {
+          visible = false;
+          break;
+        }
+      }
+    } else if (only && width === only) {
+      visible = false;
+    }
+  } // Allow `only` to be combined with other props. If already hidden, no need to check others.
+
+
+  if (visible) {
+    // determine visibility based on the smallest size up
+    for (var _i = 0; _i < _createBreakpoints.keys.length; _i += 1) {
+      var _breakpoint = _createBreakpoints.keys[_i];
+      var breakpointUp = props["".concat(_breakpoint, "Up")];
+      var breakpointDown = props["".concat(_breakpoint, "Down")];
+
+      if (breakpointUp && (0, _withWidth.isWidthUp)(_breakpoint, width) || breakpointDown && (0, _withWidth.isWidthDown)(_breakpoint, width)) {
+        visible = false;
+        break;
+      }
+    }
+  }
+
+  if (!visible) {
+    return null;
+  }
+
+  return children;
+}
+
+HiddenJs.propTypes = {
+  /**
+   * The content of the component.
+   */
+  children: _propTypes.default.node,
+
+  /**
+   * @ignore
+   */
+  className: _propTypes.default.string,
+
+  /**
+   * Specify which implementation to use.  'js' is the default, 'css' works better for
+   * server-side rendering.
+   */
+  implementation: _propTypes.default.oneOf(['js', 'css']),
+
+  /**
+   * You can use this property when choosing the `js` implementation with server-side rendering.
+   *
+   * As `window.innerWidth` is unavailable on the server,
+   * we default to rendering an empty component during the first mount.
+   * You might want to use an heuristic to approximate
+   * the screen width of the client browser screen width.
+   *
+   * For instance, you could be using the user-agent or the client-hints.
+   * https://caniuse.com/#search=client%20hint
+   */
+  initialWidth: _propTypes.default.oneOf(['xs', 'sm', 'md', 'lg', 'xl']),
+
+  /**
+   * If true, screens this size and down will be hidden.
+   */
+  lgDown: _propTypes.default.bool,
+
+  /**
+   * If true, screens this size and up will be hidden.
+   */
+  lgUp: _propTypes.default.bool,
+
+  /**
+   * If true, screens this size and down will be hidden.
+   */
+  mdDown: _propTypes.default.bool,
+
+  /**
+   * If true, screens this size and up will be hidden.
+   */
+  mdUp: _propTypes.default.bool,
+
+  /**
+   * Hide the given breakpoint(s).
+   */
+  only: _propTypes.default.oneOfType([_propTypes.default.oneOf(['xs', 'sm', 'md', 'lg', 'xl']), _propTypes.default.arrayOf(_propTypes.default.oneOf(['xs', 'sm', 'md', 'lg', 'xl']))]),
+
+  /**
+   * If true, screens this size and down will be hidden.
+   */
+  smDown: _propTypes.default.bool,
+
+  /**
+   * If true, screens this size and up will be hidden.
+   */
+  smUp: _propTypes.default.bool,
+
+  /**
+   * @ignore
+   * width prop provided by withWidth decorator.
+   */
+  width: _propTypes.default.string.isRequired,
+
+  /**
+   * If true, screens this size and down will be hidden.
+   */
+  xlDown: _propTypes.default.bool,
+
+  /**
+   * If true, screens this size and up will be hidden.
+   */
+  xlUp: _propTypes.default.bool,
+
+  /**
+   * If true, screens this size and down will be hidden.
+   */
+  xsDown: _propTypes.default.bool,
+
+  /**
+   * If true, screens this size and up will be hidden.
+   */
+  xsUp: _propTypes.default.bool
+};
+
+if (true) {
+  HiddenJs.propTypes = (0, _utils.exactProp)(HiddenJs.propTypes);
+}
+
+var _default = (0, _withWidth.default)()(HiddenJs);
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/Hidden/index.js":
+/*!********************************************************!*\
+  !*** ./node_modules/@material-ui/core/Hidden/index.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "default", {
+  enumerable: true,
+  get: function get() {
+    return _Hidden.default;
+  }
+});
+
+var _Hidden = _interopRequireDefault(__webpack_require__(/*! ./Hidden */ "./node_modules/@material-ui/core/Hidden/Hidden.js"));
+
+/***/ }),
+
 /***/ "./node_modules/@material-ui/core/IconButton/IconButton.js":
 /*!*****************************************************************!*\
   !*** ./node_modules/@material-ui/core/IconButton/IconButton.js ***!
@@ -16989,6 +17519,282 @@ function setRef(ref, value) {
 
 /***/ }),
 
+/***/ "./node_modules/@material-ui/core/withWidth/index.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/@material-ui/core/withWidth/index.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var _exportNames = {};
+Object.defineProperty(exports, "default", {
+  enumerable: true,
+  get: function get() {
+    return _withWidth.default;
+  }
+});
+
+var _withWidth = _interopRequireWildcard(__webpack_require__(/*! ./withWidth */ "./node_modules/@material-ui/core/withWidth/withWidth.js"));
+
+Object.keys(_withWidth).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _withWidth[key];
+    }
+  });
+});
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/withWidth/withWidth.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/@material-ui/core/withWidth/withWidth.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = exports.isWidthDown = exports.isWidthUp = void 0;
+
+var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
+
+var _objectWithoutProperties2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/objectWithoutProperties.js"));
+
+var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js"));
+
+var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js"));
+
+var _possibleConstructorReturn2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js"));
+
+var _getPrototypeOf2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js"));
+
+var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
+
+var _reactEventListener = _interopRequireDefault(__webpack_require__(/*! react-event-listener */ "./node_modules/react-event-listener/dist/react-event-listener.cjs.js"));
+
+var _debounce = _interopRequireDefault(__webpack_require__(/*! debounce */ "./node_modules/debounce/index.js"));
+
+var _utils = __webpack_require__(/*! @material-ui/utils */ "./node_modules/@material-ui/utils/index.es.js");
+
+var _hoistNonReactStatics = _interopRequireDefault(__webpack_require__(/*! hoist-non-react-statics */ "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js"));
+
+var _withTheme = _interopRequireDefault(__webpack_require__(/*! ../styles/withTheme */ "./node_modules/@material-ui/core/styles/withTheme.js"));
+
+var _createBreakpoints = __webpack_require__(/*! ../styles/createBreakpoints */ "./node_modules/@material-ui/core/styles/createBreakpoints.js");
+
+var _getThemeProps2 = _interopRequireDefault(__webpack_require__(/*! ../styles/getThemeProps */ "./node_modules/@material-ui/core/styles/getThemeProps.js"));
+
+// < 1kb payload overhead when lodash/debounce is > 3kb.
+// By default, returns true if screen width is the same or greater than the given breakpoint.
+var isWidthUp = function isWidthUp(breakpoint, width) {
+  var inclusive = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+
+  if (inclusive) {
+    return _createBreakpoints.keys.indexOf(breakpoint) <= _createBreakpoints.keys.indexOf(width);
+  }
+
+  return _createBreakpoints.keys.indexOf(breakpoint) < _createBreakpoints.keys.indexOf(width);
+}; // By default, returns true if screen width is the same or less than the given breakpoint.
+
+
+exports.isWidthUp = isWidthUp;
+
+var isWidthDown = function isWidthDown(breakpoint, width) {
+  var inclusive = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+
+  if (inclusive) {
+    return _createBreakpoints.keys.indexOf(width) <= _createBreakpoints.keys.indexOf(breakpoint);
+  }
+
+  return _createBreakpoints.keys.indexOf(width) < _createBreakpoints.keys.indexOf(breakpoint);
+};
+
+exports.isWidthDown = isWidthDown;
+
+var withWidth = function withWidth() {
+  var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  return function (Component) {
+    var _options$withTheme = options.withTheme,
+        withThemeOption = _options$withTheme === void 0 ? false : _options$withTheme,
+        _options$noSSR = options.noSSR,
+        noSSR = _options$noSSR === void 0 ? false : _options$noSSR,
+        initialWidthOption = options.initialWidth,
+        _options$resizeInterv = options.resizeInterval,
+        resizeInterval = _options$resizeInterv === void 0 ? 166 : _options$resizeInterv;
+
+    var WithWidth =
+    /*#__PURE__*/
+    function (_React$Component) {
+      (0, _inherits2.default)(WithWidth, _React$Component);
+
+      function WithWidth(props) {
+        var _this;
+
+        (0, _classCallCheck2.default)(this, WithWidth);
+        _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(WithWidth).call(this, props));
+        _this.state = {
+          width: noSSR ? _this.getWidth() : undefined
+        };
+
+        if (typeof window !== 'undefined') {
+          _this.handleResize = (0, _debounce.default)(function () {
+            var width2 = _this.getWidth();
+
+            if (width2 !== _this.state.width) {
+              _this.setState({
+                width: width2
+              });
+            }
+          }, resizeInterval);
+        }
+
+        return _this;
+      }
+
+      (0, _createClass2.default)(WithWidth, [{
+        key: "componentDidMount",
+        value: function componentDidMount() {
+          var width = this.getWidth();
+
+          if (width !== this.state.width) {
+            this.setState({
+              width: width
+            });
+          }
+        }
+      }, {
+        key: "componentWillUnmount",
+        value: function componentWillUnmount() {
+          this.handleResize.clear();
+        }
+      }, {
+        key: "getWidth",
+        value: function getWidth() {
+          var innerWidth = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : window.innerWidth;
+          var breakpoints = this.props.theme.breakpoints;
+          var width = null;
+          /**
+           * Start with the slowest value as low end devices often have a small screen.
+           *
+           * innerWidth |xs      sm      md      lg      xl
+           *            |-------|-------|-------|-------|------>
+           * width      |  xs   |  sm   |  md   |  lg   |  xl
+           */
+
+          var index = 1;
+
+          while (width === null && index < _createBreakpoints.keys.length) {
+            var currentWidth = _createBreakpoints.keys[index]; // @media are inclusive, so reproduce the behavior here.
+
+            if (innerWidth < breakpoints.values[currentWidth]) {
+              width = _createBreakpoints.keys[index - 1];
+              break;
+            }
+
+            index += 1;
+          }
+
+          width = width || 'xl';
+          return width;
+        }
+      }, {
+        key: "render",
+        value: function render() {
+          var _getThemeProps = (0, _getThemeProps2.default)({
+            theme: this.props.theme,
+            name: 'MuiWithWidth',
+            props: (0, _extends2.default)({}, this.props)
+          }),
+              initialWidth = _getThemeProps.initialWidth,
+              theme = _getThemeProps.theme,
+              width = _getThemeProps.width,
+              other = (0, _objectWithoutProperties2.default)(_getThemeProps, ["initialWidth", "theme", "width"]);
+
+          var more = (0, _extends2.default)({
+            width: width || this.state.width || initialWidth || initialWidthOption
+          }, other); // When rendering the component on the server,
+          // we have no idea about the client browser screen width.
+          // In order to prevent blinks and help the reconciliation of the React tree
+          // we are not rendering the child component.
+          //
+          // An alternative is to use the `initialWidth` property.
+
+          if (more.width === undefined) {
+            return null;
+          }
+
+          if (withThemeOption) {
+            more.theme = theme;
+          }
+
+          return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(Component, more), _react.default.createElement(_reactEventListener.default, {
+            target: "window",
+            onResize: this.handleResize
+          }));
+        }
+      }]);
+      return WithWidth;
+    }(_react.default.Component);
+
+     true ? WithWidth.propTypes = {
+      /**
+       * As `window.innerWidth` is unavailable on the server,
+       * we default to rendering an empty component during the first mount.
+       * You might want to use an heuristic to approximate
+       * the screen width of the client browser screen width.
+       *
+       * For instance, you could be using the user-agent or the client-hints.
+       * https://caniuse.com/#search=client%20hint
+       */
+      initialWidth: _propTypes.default.oneOf(['xs', 'sm', 'md', 'lg', 'xl']),
+
+      /**
+       * @ignore
+       */
+      theme: _propTypes.default.object.isRequired,
+
+      /**
+       * Bypass the width calculation logic.
+       */
+      width: _propTypes.default.oneOf(['xs', 'sm', 'md', 'lg', 'xl'])
+    } : undefined;
+
+    if (true) {
+      WithWidth.displayName = "WithWidth(".concat((0, _utils.getDisplayName)(Component), ")");
+    }
+
+    (0, _hoistNonReactStatics.default)(WithWidth, Component);
+    return (0, _withTheme.default)()(WithWidth);
+  };
+};
+
+var _default = withWidth;
+exports.default = _default;
+
+/***/ }),
+
 /***/ "./node_modules/@material-ui/icons/Directions.js":
 /*!*******************************************************!*\
   !*** ./node_modules/@material-ui/icons/Directions.js ***!
@@ -23477,7 +24283,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "\r\n\r\n/* HEADER */\r\n.HeaderWrapper {\r\n        position: relative;\r\n        padding: 0.2em 0em 0em;\r\n        margin: 0.5rem 0 0;\r\n  }\r\n\r\n  .carousel {\r\n    position: relative;\r\n}\r\n\r\n*,\r\n*::before,\r\n*::after {\r\n  box-sizing: border-box;\r\n}\r\n\r\n.carousel-indicators {\r\n    position: absolute;\r\n    right: 0;\r\n    bottom: 0;\r\n    left: 0;\r\n    z-index: 15;\r\n    display: flex;\r\n    justify-content: center;\r\n    padding-left: 0;\r\n    margin-right: 15%;\r\n    margin-left: 15%;\r\n    list-style: none;\r\n}\r\n\r\n\r\n\r\n  .HolyGrail-body {\r\n    display: flex;\r\n    flex: 1;\r\n  }\r\n\r\n  .carousel-inner {\r\n      height: 300px;\r\n  }\r\n\r\n  /* PHONE */\r\n.phonesWrapper {\r\n   padding: 30px;\r\n}\r\n\r\n\r\n", ""]);
+exports.push([module.i, "\n\n/* HEADER */\n.HeaderWrapper {\n    position: relative;\n    padding: 0.2em 0em 0em;\n    margin: 0.5rem 0 0;\n}\n.carousel {\nposition: relative;\n}\n*,\n*::before,\n*::after {\nbox-sizing: border-box;\n}\n.carousel-indicators {\nposition: absolute;\nright: 0;\nbottom: 0;\nleft: 0;\nz-index: 15;\ndisplay: flex;\njustify-content: center;\npadding-left: 0;\nmargin-right: 15%;\nmargin-left: 15%;\nlist-style: none;\n}\n\n\n/* .carousel-inner {\n  height: 300px;\n} */\n\n/* FEATURED PHONE */\n\n\n.featuredPhonesBar{\nbackground-color: #1f394d;\n}\n\n.phonesWrapper {\npadding: 30px;\n}\n.card-body{\ntext-align: center;\n}\n.card-title{\nfont-size: 1.5rem;\ncolor: #2d2d2d;\n}\n.card img{\nwidth: 95%;\npadding-top:1rem;\n}\n\n\n.card {\nborder-style: solid;\nborder: 2px;\nborder-color: #2d2d2d;\n\n}\n\n\n/* VIDEO */\n\n.centeredContent {\nmargin: 0 auto;\npadding: 1rem;\n}\n\n@media (max-width: 576px) {\n\n.card-columns{\n    width:100%;\n}\n\n\n\n\n}\n\n\n/* Extra small devices (portrait phones, less than 576px) */\n@media (max-width: 760px) {\n    .card-columns {\n        -webkit-column-count: 2;\n        column-count: 2;\n    }\n }\n\n/* Small devices (landscape phones, less than 768px) */\n@media (max-width: 768px) {\n    .card-columns {\n        -webkit-column-count: 2;\n        column-count: 2;\n    }\n }\n\n/* Medium devices (tablets, less than 992px) */\n@media (min-width: 770px) {\n    .card-columns {\n        -webkit-column-count: 4;\n        column-count: 4;\n    }\n }\n\n/* Large devices (desktops, less than 1200px) */\n@media (min-width: 1200px) {\n\n    .card-columns {\n        -webkit-column-count: 4;\n        column-count: 4;\n    }\n\n }\n\n", ""]);
 
 // exports
 
@@ -23496,7 +24302,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".img-fluid {\r\n    max-height: 440px;\r\n}\r\n\r\nbody{\r\n\r\n    font-size: 100%;\r\n}\r\n\r\n\r\n/* Phone Ordering */\r\n\r\n.center {\r\n    margin: auto;\r\n    width: 95%;\r\n    border: 3px solid green;\r\n    padding: 10px;\r\n  }\r\n\r\n\r\n.padded{\r\n    padding:10px;\r\n}\r\n\r\n.ProductInfoText {\r\n\r\n\r\n}\r\n\r\n.ProductInfoText h3 {\r\ncolor: #353535;\r\nfont-size:3rem\r\n}\r\n\r\n.ProductInfoText h6 {\r\n    color: #7c1515;\r\n    font-size: 2rem;\r\n    }\r\n\r\n.smallText {\r\n    font-size: 11px;\r\n\r\n}\r\n\r\n.delivery-time-box{\r\n    border:0px;\r\n    border-color:#7c1515;\r\n    margin-top: 15px;\r\n    margin-left: -5px;\r\n}\r\n.delivery-time-box h6{\r\n    color:#999999;\r\n    text-transform: uppercase;\r\n}\r\n.delivery-time-box p{\r\ncolor: #333333;\r\n}\r\n\r\n\r\n/* Product Tabs */\r\n\r\n.tabsBox {\r\n    display: block;\r\n    position: relative;\r\n    padding: 1em 2em 15em;\r\n    border-width: 0px;\r\n    border-style: none;\r\n    border-color: rgb(216, 216, 216);\r\n    -o-border-image: initial;\r\n       border-image: initial;\r\n    margin: 1.5rem 0px 0px;\r\n    width:100%;\r\n\r\n}\r\n\r\n.tabContent {\r\n    padding-top:1.5rem;\r\n\r\n}\r\n", ""]);
+exports.push([module.i, ".img-fluid {\n    max-height: 440px;\n}\nbody{\n    font-size: 100%;\n}\n\n\n/* Phone Ordering */\n\n.center {\n    margin: auto;\n    width: 95%;\n    border: 3px solid green;\n    padding: 10px;\n  }\n.padded{\n    padding:10px;\n}\n.ProductInfoText {\n}\n.ProductInfoText h3 {\ncolor: #353535;\nfont-size:3rem\n}\n.ProductInfoText h6 {\n    color: #7c1515;\n    font-size: 2rem;\n}\n.smallText {\n    font-size: 11px;\n}\n.delivery-time-box{\n    border:0px;\n    border-color:#7c1515;\n    margin-top: 15px;\n    margin-left: -5px;\n}\n.delivery-time-box h6{\n    color:#999999;\n    text-transform: uppercase;\n}\n.delivery-time-box p{\ncolor: #333333;\n}\n\n\n/* Product Tabs */\n\n.tabsBox {\n    display: block;\n    position: relative;\n    padding: 1em 2em 15em;\n    border-width: 0px;\n    border-style: none;\n    border-color: rgb(216, 216, 216);\n    -o-border-image: initial;\n       border-image: initial;\n    margin: 1.5rem 0px 0px;\n    width:100%;\n}\n.tabContent {\n    padding-top:1.5rem;\n}\n\n\n/* Small devices (landscape phones, 576px and up) */\n@media (min-width: 576px) {\n\n\n\n\n }\n", ""]);
 
 // exports
 
@@ -23515,7 +24321,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "html {\r\n    height:100%;\r\n}\r\n\r\nbody {\r\n    margin:0;\r\n    padding:0;\r\n    height: 100%;\r\n    font-size: 100%;\r\n}\r\n\r\n  h1 {\r\n    font-size: 2rem;\r\n    /* 2x body copy size = 32px */\r\n    line-height: 1.25;\r\n    /* 45px / 36px */\r\n  }\r\n\r\n  h2 {\r\n    font-size: 1.625rem;\r\n    /* 1.625x body copy size = 26px */\r\n    line-height: 1.15384615;\r\n    /* 30px / 26px */\r\n  }\r\n\r\n  h3 {\r\n    font-size: 1.375rem;\r\n    /* 1.375x body copy size = 22px */\r\n    line-height: 1.13636364;\r\n    /* 25px / 22px */\r\n  }\r\n\r\n  h4 {\r\n    font-size: 1.125rem;\r\n    /* 1.125x body copy size = 18px */\r\n    line-height: 1.11111111;\r\n  }\r\n\r\n  /* Body Content */\r\n\r\n  #page {\r\n    font-size: 1rem;\r\n    /* equivalent to 16px */\r\n    line-height: 1.25;\r\n    /* equivalent to 20px */\r\n  }\r\n\r\n\r\n  .jumbotron h3 {\r\n    font-size: 3rem;\r\n  }\r\n\r\n\r\n\r\n\r\n\r\n\r\n  @media (min-width: 43.75em) {\r\n    #page {\r\n      font-size: 1rem;\r\n      /* equivalent to 16px */\r\n      line-height: 1.375;\r\n      /* equivalent to 22px */\r\n    }\r\n  }\r\n\r\n\r\n/* MEDIA Q*/\r\n\r\n@media (min-width: 43.75em) {\r\n    h1 {\r\n      font-size: 2.5rem;\r\n      /* 2.5x body copy size = 40px */\r\n      line-height: 1.125;\r\n    }\r\n\r\n    h2 {\r\n        font-size: 2rem;\r\n        /* 2x body copy size = 32px */\r\n        line-height: 1.25;\r\n      }\r\n\r\n      h3 {\r\n        font-size: 1.5rem;\r\n        /* 1.5x body copy size = 24px */\r\n        line-height: 1.25;\r\n      }\r\n\r\n      h4 {\r\n        line-height: 1.22222222;\r\n        /* (22px / 18px */\r\n      }\r\n  }\r\n\r\n  @media (min-width: 56.25em) {\r\n    h1 {\r\n      font-size: 3rem;\r\n      /* 3x body copy size = 48px */\r\n      line-height: 1.05;\r\n      /* keep to a multiple of the 20px line height\r\n      and something more appropriate for display headings */\r\n    }\r\n\r\n    h2 {\r\n        font-size: 2.25rem;\r\n        /* 2.25x body copy size = 36px */\r\n        line-height: 1.25;\r\n      }\r\n\r\n      h3 {\r\n        font-size: 1.75rem;\r\n        /* 1.75x body copy size = 28px */\r\n        line-height: 1.25;\r\n      }\r\n\r\n      h4 {\r\n        line-height: 1.10;\r\n        /* (22px / 18px */\r\n      }\r\n  }\r\n\r\n", ""]);
+exports.push([module.i, "html {\n    height:100%;\n}\n\nbody {\n    margin:0;\n    padding:0;\n    height: 100%;\n    font-size: 100%;\n}\n\n  h1 {\n    font-size: 2rem;\n    /* 2x body copy size = 32px */\n    line-height: 1.25;\n    /* 45px / 36px */\n  }\n\n  h2 {\n    font-size: 1.625rem;\n    /* 1.625x body copy size = 26px */\n    line-height: 1.15384615;\n    /* 30px / 26px */\n  }\n\n  h3 {\n    font-size: 1.375rem;\n    /* 1.375x body copy size = 22px */\n    line-height: 1.13636364;\n    /* 25px / 22px */\n  }\n\n  h4 {\n    font-size: 1.125rem;\n    /* 1.125x body copy size = 18px */\n    line-height: 1.11111111;\n  }\n\n  /* Body Content */\n\n  #page {\n    font-size: 1rem;\n    /* equivalent to 16px */\n    line-height: 1.25;\n    /* equivalent to 20px */\n  }\n\n/* HEADER */\n\n  .jumbotron h3 {\n    font-size: 2.5rem;\n    font-weight: 600;\n  }\n\n  .jumbotron{\n    height: 250px;\n    background-color: #1f394d;\n    color: white;\n}\n\n\n\n\n  @media (min-width: 43.75em) {\n    #page {\n      font-size: 1rem;\n      /* equivalent to 16px */\n      line-height: 1.375;\n      /* equivalent to 22px */\n    }\n  }\n\n\n/* MEDIA Q*/\n\n@media (min-width: 43.75em) {\n    h1 {\n      font-size: 2.5rem;\n      /* 2.5x body copy size = 40px */\n      line-height: 1.125;\n    }\n\n    h2 {\n        font-size: 2rem;\n        /* 2x body copy size = 32px */\n        line-height: 1.25;\n      }\n\n      h3 {\n        font-size: 1.5rem;\n        /* 1.5x body copy size = 24px */\n        line-height: 1.25;\n      }\n\n      h4 {\n        line-height: 1.22222222;\n        /* (22px / 18px */\n      }\n  }\n\n  @media (min-width: 56.25em) {\n    h1 {\n      font-size: 3rem;\n      /* 3x body copy size = 48px */\n      line-height: 1.05;\n      /* keep to a multiple of the 20px line height\n      and something more appropriate for display headings */\n    }\n\n    h2 {\n        font-size: 2.25rem;\n        /* 2.25x body copy size = 36px */\n        line-height: 1.25;\n      }\n\n      h3 {\n        font-size: 1.75rem;\n        /* 1.75x body copy size = 28px */\n        line-height: 1.25;\n      }\n\n      h4 {\n        line-height: 1.10;\n        /* (22px / 18px */\n      }\n  }\n\n", ""]);
 
 // exports
 
@@ -23553,7 +24359,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".toolbar {\r\n    position: fixed;\r\n    top: 0;\r\n    left:0;\r\n    width: 100%;\r\n    background: #333333;\r\n    height:56px;\r\n    z-index: 200;\r\n}\r\n\r\n.toolbar_nav {\r\n    display: flex;\r\n    height:100%;\r\n    align-items: center;\r\n    padding: 0 1rem;\r\n}\r\n\r\n.toolbar_nav_items ul{\r\n    list-style: none;\r\n    margin:0;\r\n    padding: 0;\r\n    display:flex;\r\n\r\n}\r\n\r\n.toolbar_nav_items li{\r\n    padding: 0 0.5rem;\r\n\r\n}\r\n\r\n.toolbar_logo {\r\n    margin-left:1rem;\r\n\r\n}\r\n\r\n.toolbar_logo a {\r\n    color: white;\r\n    text-decoration: none;\r\n    font-size: 1.5rem;\r\n\r\n}\r\n\r\n.spacer {\r\n    flex: 1;\r\n}\r\n\r\n.toolbar_nav_items a{\r\n    color: white;\r\n    text-decoration: none;\r\n\r\n}\r\n\r\n.toolbar_nav_items a:hover,\r\n.toolbar_nav_items a:active{\r\n    color: #999999;\r\n}\r\n\r\n\r\n\r\n\r\n", ""]);
+exports.push([module.i, ".toolbar {\n    position: fixed;\n    top: 0;\n    left:0;\n    width: 100%;\n    background: #333333;\n    height:56px;\n    z-index: 200;\n}\n\n.toolbar_nav {\n    display: flex;\n    height:100%;\n    align-items: center;\n    padding: 0 1rem;\n}\n\n.toolbar_nav_items ul{\n    list-style: none;\n    margin:0;\n    padding: 0;\n    display:flex;\n\n}\n\n.toolbar_nav_items li{\n    padding: 0 0.5rem;\n\n}\n\n.toolbar_logo {\n    margin-left:1rem;\n\n}\n\n.toolbar_logo a {\n    color: white;\n    text-decoration: none;\n    font-size: 1.5rem;\n\n}\n\n.spacer {\n    flex: 1;\n}\n\n.toolbar_nav_items a{\n    color: white;\n    text-decoration: none;\n\n}\n\n.toolbar_nav_items a:hover,\n.toolbar_nav_items a:active{\n    color: #999999;\n}\n\n/* Small devices (landscape phones, 576px and up) */\n@media (max-width: 576px) {\n\n\n\n    .toolbar_logo {\n        margin-left:1.5rem;\n        font-size: 9px;\n\n    }\n\n    .toolbar_logo a {\n        color: white;\n        text-decoration: none;\n        font-size: 1rem;\n\n    }\n\n    .toolbar_nav_items a{\n        color: white;\n        text-decoration: none;\n        font-size: 0px;\n\n    }\n\n}\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -101691,13 +102497,34 @@ var Index =
 function (_Component) {
   _inherits(Index, _Component);
 
-  function Index() {
+  function Index(props) {
+    var _this;
+
     _classCallCheck(this, Index);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Index).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Index).call(this, props));
+    _this.state = {
+      phones: []
+    };
+    return _this;
   }
 
   _createClass(Index, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      axios.get('/api/mobiles').then(function (response) {
+        _this2.setState({
+          phones: response.data.data
+        });
+
+        console.log(response);
+      }).catch(function (errors) {
+        console.log(errors);
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -101934,8 +102761,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
-/* harmony import */ var _Phone_Phone__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Phone/Phone */ "./resources/js/components/Phone/Phone.js");
-/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var _material_ui_core_Hidden__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/Hidden */ "./node_modules/@material-ui/core/Hidden/index.js");
+/* harmony import */ var _material_ui_core_Hidden__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Hidden__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _Phone_Phone__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../Phone/Phone */ "./resources/js/components/Phone/Phone.js");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -101953,6 +102782,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -102008,9 +102838,9 @@ function (_React$Component) {
       // const { phones } = this.state
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "phonesWrapper"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["CardColumns"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["CardDeck"], null), this.state.phones.map(function (phone, i) {
-        if (i < 3) {
-          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Phone_Phone__WEBPACK_IMPORTED_MODULE_3__["default"] // img={phone.id}
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["CardColumns"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["CardDeck"], null), this.state.phones.map(function (phone, i) {
+        if (i < 4) {
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Phone_Phone__WEBPACK_IMPORTED_MODULE_4__["default"] // img={phone.id}
           , {
             name: phone.mobiles[0].mobileName,
             img: phone.mobiles[0].mobilePhoto,
@@ -102018,7 +102848,7 @@ function (_React$Component) {
             phoneId: phone.id
           });
         }
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["CardDeck"], null)));
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["CardDeck"], null)));
     }
   }]);
 
@@ -102044,20 +102874,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var items = [{
-  src: 'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ba800aa1d%20text%20%7B%20fill%3A%23555%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ba800aa1d%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22285.921875%22%20y%3D%22218.3%22%3EFirst%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E',
-  altText: 'Slide 1',
-  caption: 'Slide 1',
-  header: 'Slide 1 Header'
+  src: 'http://deershire.com/wp-content/uploads/2019/slide-01.jpg',
+  altText: 'Una muchacha de pelo rizo castaño bregando con sú celular arriba de un edificio. El Titulo dice: Para que esperar? Desbloquea tu celular ahora.'
 }, {
-  src: 'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ba800aa20%20text%20%7B%20fill%3A%23444%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ba800aa20%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23666%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22247.3203125%22%20y%3D%22218.3%22%3ESecond%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E',
-  altText: 'Slide 2',
-  caption: 'Slide 2',
-  header: 'Slide 2 Header'
+  src: 'http://deershire.com/wp-content/uploads/2019/slide-02.jpg',
+  altText: 'Un muchaho sonriendo debloqueando sú celular. El Titulo dice: Rapido Y Seguro, Liberate de servicios no queridos.'
 }, {
-  src: 'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ba800aa21%20text%20%7B%20fill%3A%23333%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ba800aa21%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23555%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22277%22%20y%3D%22218.3%22%3EThird%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E',
-  altText: 'Slide 3',
-  caption: 'Slide 3',
-  header: 'Slide 3 Header'
+  src: 'http://deershire.com/wp-content/uploads/2019/slide-03.jpg',
+  altText: 'Teléfonos antiguos de rueda en diferentes colores. El Titulo dice: Adios celular antiguo, Desbloquealo y vendelo.'
 }];
 
 var HomeHeader = function HomeHeader() {
@@ -102128,11 +102952,19 @@ __webpack_require__.r(__webpack_exports__);
 function HomePage(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "HeaderWrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_HomeHeader__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FeaturedPhones__WEBPACK_IMPORTED_MODULE_3__["default"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "carousel"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_HomeHeader__WEBPACK_IMPORTED_MODULE_2__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], {
+    className: "featuredPhonesBar"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FeaturedPhones__WEBPACK_IMPORTED_MODULE_3__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
     md: "6"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Como Desbloquear Tu Celular"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Empieza este video. Todo lo que necesitas es el numero IMEI de tu telefono.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "centeredContent"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "No Sabes Como Desbloquear T\xFA Celular?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Empieza este video. Todo lo que necesitas es el numero IMEI de tu telefono. Entonces en nuestra pagina Seleciona en que paiz comprastes el telefono. Seleciona la marca de telefono y el modelo. Entonces ordenalo y en un par de dias tienes un celular libre."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
     md: "6"
-  }, "Home Video", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_HomeVideo__WEBPACK_IMPORTED_MODULE_4__["default"], null))))));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "centeredContent"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_HomeVideo__WEBPACK_IMPORTED_MODULE_4__["default"], null))))));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (HomePage);
@@ -102188,7 +103020,7 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       var opts = {
-        height: '400',
+        height: '200',
         width: '100%',
         playerVars: {// https://developers.google.com/youtube/player_parameters
           // autoplay: 1
