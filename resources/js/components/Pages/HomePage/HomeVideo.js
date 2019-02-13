@@ -5,7 +5,7 @@ import YouTube from 'react-youtube';
 export default class HomeVideo extends React.Component {
   render() {
     const opts = {
-      height: '400',
+      height: '200',
       width: '100%',
       playerVars: { // https://developers.google.com/youtube/player_parameters
         // autoplay: 1
